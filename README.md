@@ -1,14 +1,14 @@
 # Dotfiles
 ## 🚀 Installation
 
-Install my homebrew casks and fomulaes (Optional):
-```bash
-brew bundle --file=~/dotfiles/Brewfile
-```
-
 Install everything with a single command:
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/install.sh)
+```
+
+Install my homebrew casks and fomulaes (Optional):
+```bash
+brew bundle --file=~/dotfiles/Brewfile
 ```
 
 🔒 Personal use only:
