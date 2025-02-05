@@ -1,4 +1,4 @@
-# ⚠️ Make sure to backup `.zshrc` and `.config`
+# ⚠️ Backup `.zshrc` and `.config`
 
 🚀 Install everything with a single command:
 ```bash
