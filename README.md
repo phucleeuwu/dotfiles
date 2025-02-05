@@ -8,7 +8,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/
 
 🔒 Personal use only:
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/o.sh) -1
+bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/o.sh) -i
 ```
 
 Install my homebrew casks and fomulaes (Optional):
