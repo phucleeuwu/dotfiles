@@ -10,4 +10,4 @@ archive.tar.gz
 push.sh
 private.sh
 op
-raycastconf
+.gitattributes
