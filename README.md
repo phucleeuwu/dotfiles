@@ -1,26 +1,31 @@
-# ⚠️ Backup `.zshrc` and `.config`
+## ⚠️ Backup `.zshrc` and `.config`
 
 🚀 Install everything with a single command:
+
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/install.sh)
 ```
 
 🍺 Install my homebrew casks and fomulaes (Optional):
+
 ```bash
 brew bundle --file=~/dotfiles/Brewfile
 ```
 
-## 🔒 Personal use only:
+### 🔒 Personal use only
+
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/o.sh) -i
 ```
 
-## Breakdown of the `install.sh`
+### Breakdown of the `install.sh`
+
 1. Clone the dotfiles repository.
 2. Sync the configuration files to `~/.config/` using `stow`.
 3. Remove all unnecessary files
 
-# 📂 Contents
+## 📂 Contents
+
 This repository includes configurations for:
 
 - **Aerospace** 🚀 – My favourite tiling window manager for macOS.
@@ -40,4 +45,3 @@ This repository includes configurations for:
 - **Bat** 🦇 – Settings for the Bat command-line tool.
 - **Ghostty** 👻 – Configuration for the Ghostty terminal.
 - **Karabiner Elements** ⌨️ – Settings for many useful keyboard modifications like `capslock` as `␛` and `⌃` at the same time.
-
