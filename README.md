@@ -1,4 +1,4 @@
-## ⚠️ Backup `.zshrc` and `.config`
+## ⚠️ Backup `.zshrc` and `.config` first
 
 🚀 Install everything with a single command:
 
