@@ -3,15 +3,12 @@ alias edit-zsh="nvim ~/.zshrc"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+bindkey '^w' autosuggest-execute
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/.rbenv/shims:$PATH"
-
+export LANG=en_US.UTF-8
 # ---- FZF -----
-
+# Dirs
+alias ..="cd .."
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
@@ -69,7 +66,9 @@ _fzf_comprun() {
 alias cat=bat
 
 # ---- Eza (better ls) -----
-
+alias l="eza -l --icons --git -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias ltree="eza --tree --level=2  --icons --git"
 alias ls="eza --icons=always"
 # ---- TheFuck -----
 
