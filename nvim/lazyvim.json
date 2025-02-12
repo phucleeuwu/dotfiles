@@ -5,7 +5,8 @@
     "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.editor.snacks_picker",
     "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.lang.toml"
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.ui.smear-cursor"
   ],
   "install_version": 7,
   "news": {
