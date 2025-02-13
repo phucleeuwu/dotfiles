@@ -3,7 +3,7 @@
 🚀 Install everything with a single command:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/Dotflow/main/!.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/Dotflow/main/i.sh)
 ```
 
 🍺 Install my homebrew casks and fomulaes (Optional):
