@@ -1,4 +1,6 @@
-## ⚠️ Backup `.zshrc` and `.config` first
+# dotfiles
+
+## ⚠️ Backup your `config` files
 
 🚀 Install everything with a single command:
 
