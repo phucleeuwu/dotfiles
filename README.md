@@ -3,7 +3,7 @@
 🚀 Install everything with a single command:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/o.sh)
 ```
 
 🍺 Install my homebrew casks and fomulaes (Optional):
