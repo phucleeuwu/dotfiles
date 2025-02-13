@@ -65,9 +65,10 @@ brew "stow"
 brew "superfile"
 brew "tesseract-lang"
 brew "thefuck"
+brew "vite"
 brew "watchman"
 brew "wget"
-brew "yazi", link: false
+brew "yazi", args: ["HEAD"]
 brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
