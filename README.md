@@ -12,11 +12,9 @@ bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/
 brew bundle --file=~/dotfiles/Brewfile
 ```
 
-### 🔒 Personal use only
 
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/o.sh) -i
-```
+
+
 
 ### Breakdown of the `install.sh`
 
