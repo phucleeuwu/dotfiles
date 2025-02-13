@@ -23,7 +23,7 @@
 # timezone = "local"
 
 ## enable or disable automatic sync
-# auto_sync = true
+auto_sync = true
 
 ## enable or disable automatic update checks
 # update_check = true
@@ -49,7 +49,7 @@
 ## in any directory within a git repository tree (default: false).
 ##
 ## To use workspace mode by default when available, set this to true and
-## set filter_mode to "workspace" or leave it unspecified and 
+## set filter_mode to "workspace" or leave it unspecified and
 ## set search.filters to include "workspace" before other filter modes.
 # workspaces = false
 
@@ -155,7 +155,7 @@ enter_accept = true
 ## keybinding is defined.  If this is set to "emacs", "vim-insert", or
 ## "vim-normal", the startup keymap mode in the Atuin search is forced to be
 ## the specified one.
-keymap_mode = "vim-normal"
+# keymap_mode = "auto"
 
 ## Cursor style in each keymap mode.  If specified, the cursor style is changed
 ## in entering the cursor shape.  Available values are "default" and
