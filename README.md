@@ -1,6 +1,4 @@
-# dotfiles 💩
-
-## ⚠️ Backup your `config` files
+# ⚠️ Backup your `config` files
 
 🚀 Install everything with a single command:
 
@@ -14,7 +12,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dot.manager/main/
 brew bundle --file=~/dotfiles/Brewfile
 ```
 
-### 📂 Breakdown of the `install.sh`
+## 📂 Breakdown of the `install.sh`
 
 1. Clone the dotfiles repository.
 2. Sync the configuration files to `~/.config/` using `stow`.
