@@ -2,10 +2,10 @@ alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="nvim ~/.zshrc"
 
 export PATH="/opt/homebrew/bin:$PATH"
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-bindkey '^w' autosuggest-execute
 export LG_CONFIG_FILE=~/.config/lazygit/config.yml
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^w' autosuggest-execute
 alias lzd='lazydocker'
 alias lg='lazygit'
 eval "$(atuin init zsh)"
