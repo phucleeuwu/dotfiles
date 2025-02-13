@@ -1,4 +1,3 @@
-
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="nvim ~/.zshrc"
 
@@ -106,4 +105,3 @@ function y() {
 	rm -f -- "$tmp"
 }
 export LG_CONFIG_FILE=~/.config/lazygit/config.yml
-export PATH=$PATH:/Users/dog/.spicetify
