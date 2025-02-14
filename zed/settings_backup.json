@@ -7,13 +7,39 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "disabled_globs": [],
+    "mode": "eager_preview"
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
+  "inline_completions": {
+    "disabled_globs": [".env", "so.inp", "so.out", "so.out"]
+  },
+  "show_inline_completions": true,
+  "languages": {
+    "Markdown": {
+      "show_inline_completions": false
+    },
+    "C++": {
+      "show_inline_completions": true
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "terminal": {
     "dock": "bottom",
     "font_family": "MesloLGL Nerd Font Mono"
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-1.5-flash"
+    },
+    "version": "2"
   },
   "vim_mode": true,
   "relative_line_numbers": true,
