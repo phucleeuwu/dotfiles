@@ -31,7 +31,7 @@ automatically-unhide-macos-hidden-apps = false
 [gaps]
 inner.horizontal = 8
 inner.vertical = 8
-outer = { left = 10, bottom = 10, top = 10, right = 10 }
+outer = { left = 8, bottom = 8, top = 8, right = 8 }
 
 # Main Key Bindings
 [mode.main.binding]
