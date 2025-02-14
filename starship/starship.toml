@@ -1,20 +1,50 @@
+"$schema" = 'https://starship.rs/config-schema.json'
 add_newline = false
-# A minimal left prompt
+
+# Left-side prompt (minimalist)
 format = """$directory$character"""
 palette = "catppuccin_mocha"
-# move the rest of the prompt to the right
-right_format = """$all"""
+
+# Right-side prompt (extra info)
+right_format = """$cmd_duration$git_status$all"""
+
 command_timeout = 1000
 
 [character]
-vicmd_symbol = "[N] >>>"
-success_symbol = '[➜](bold green)'
+# Note the use of Catppuccin color 'peach'
+success_symbol = "[[󰄛](green) ➜](peach)"
+error_symbol = "[[󰄛](red) ❯](peach)"
+vimcmd_symbol = "[󰄛 ❮](subtext1)"        # For use with zsh-vi-mode
 
-[directory.substitutions]
-'~/tests/starship-custom' = 'work-project'
+[directory]
+truncate_to_repo = false
+truncation_length = 4
+truncation_symbol = "…/"
+style = "bold lavender"
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style)'
+symbol = " "
+style = "bold mauve"
+
+[git_status]
+format = '([ $all_status$ahead_behind]($style))'
+style = "yellow"
+conflicted = "⚠️ "
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+untracked = "?"
+stashed = "📦"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[cmd_duration]
+min_time = 500
+format = "[ ↻ $duration]($style)"
+style = "bold yellow"
 
 [aws]
 format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
@@ -37,6 +67,7 @@ contexts = [
 [docker_context]
 disabled = true
 
+# Keep your existing Catppuccin Mocha theme
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"
