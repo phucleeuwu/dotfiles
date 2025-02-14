@@ -1,4 +1,4 @@
-# ⚠️ Backup your `config` files first
+# ⚠️ Backup your `config files` 
 
 🚀 Install everything with a single command:
 
