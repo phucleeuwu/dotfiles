@@ -7,6 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "disabled_globs": [],
+    "mode": "eager_preview"
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -19,9 +33,5 @@
   "relative_line_numbers": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte (Blur)",
-    "dark": "Catppuccin Mocha (Blur)"
-  }
+  "theme": "Catppuccin Mocha (Blur)"
 }
