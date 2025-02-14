@@ -2,6 +2,12 @@
 # Aliases
 # ===============================
 
+# FastFetch (Better `Neofetch`)
+alias ff="fastfetch"
+
+# OneFetch (Git Repo Stats)
+alias of="onefetch"
+
 # Navigation
 alias ..="cd .."
 

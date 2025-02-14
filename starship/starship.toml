@@ -43,7 +43,7 @@ deleted = "✘"
 
 [cmd_duration]
 min_time = 500
-format = "[ ↻ $duration]($style)"
+format = "[ ↻ $duration ]($style)"
 style = "bold yellow"
 
 [aws]
@@ -61,7 +61,7 @@ disabled = true
 detect_files = ['Dockerfile']
 format = '[$symbol$context( \($namespace\))]($style) '
 contexts = [
-  { context_pattern = "arn:aws:eks:us-west-2:577926974532:cluster/zd-pvc-omer", style = "green", context_alias = "omerxx", symbol = " " },
+    { context_pattern = "arn:aws:eks:us-west-2:577926974532:cluster/zd-pvc-omer", style = "green", context_alias = "omerxx", symbol = " " },
 ]
 
 [docker_context]
