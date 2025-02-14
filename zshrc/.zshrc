@@ -24,10 +24,6 @@ alias lt="eza --tree --level=2 --long --icons --git"
 alias ltree="eza --tree --level=2 --icons --git"
 alias ls="eza --icons=always"
 
-# TheFuck command correction
-eval "$(thefuck --alias)"
-eval "$(thefuck --alias fk)"
-
 # ===============================
 # Environment Variables
 # ===============================
