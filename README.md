@@ -14,6 +14,10 @@ brew bundle --file=~/dotfiles/Brewfile
 
 ## 📂 Breakdown of the `install.sh`
 
-1. Clone the dotfiles repository.
-2. Sync the configuration files to `~/.config/` using `stow`.
-3. Remove all unnecessary files
+	1.	Installs Homebrew (if not installed).
+	2.	Clones the dotfiles repository into ~/dotfiles.
+	3.	Removes existing ~/.zshrc and ~/.config to prevent conflicts.
+	4.	Uses Stow to symlink dotfiles to their proper locations.
+	5.	Asks if you want to remove unwanted files (e.g., .gitignore, .stowrc).
+	6.	Installs Homebrew packages from Brewfile (optional).
+
