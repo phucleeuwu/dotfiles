@@ -90,11 +90,6 @@ style = "green"
 format = "[ $output ]($style)"
 shell = ["bash"]
 
-# [custom.hypr]
-# style = "blue"
-# format = "[ ]($style)"
-# detect_files = ["hyprland.conf"]
-
 # Nerd fonts preset
 [aws]
 symbol = "  "
@@ -248,6 +243,7 @@ symbol = " "
 
 [zig]
 symbol = " "
+
 # Keep your existing Catppuccin Mocha theme
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
