@@ -67,14 +67,15 @@ symbol = "☁️ "
 style = "bold blue"
 
 [directory.substitutions]
-"Documents" = "󰈙"
+"Documents" = "󰈙 "
+"Dev" = " "
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
 "Repos" = " "
 "Videos" = " "
 "obsidianVault" = "󰏪 󰠮 "
-".config" = " "
+"dotfiles" = " "
 
 # Custom entries
 [custom.yazi]
