@@ -118,3 +118,4 @@ y() {
   fi
   rm -f -- "$tmp"
 }
+source ~/.config/op/plugins.sh
