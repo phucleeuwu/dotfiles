@@ -24,6 +24,11 @@
       "keyColor": "red"
     },
     {
+      "type": "shell",
+      "key": "   Shell",
+      "keyColor": "magenta",
+    },
+    {
       "type": "kernel",
       "key": "   Kernel",
       "format": "{2}",
@@ -43,12 +48,6 @@
     {
       "type": "terminal",
       "key": "  >_ Terminal",
-      "keyColor": "yellow"
-    },
-    {
-      "type": "wm",
-      "key": "  󱗃 WM",
-      "format": "{2}",
       "keyColor": "yellow"
     },
     {
