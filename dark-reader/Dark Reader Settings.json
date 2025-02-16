@@ -18,7 +18,7 @@
         "lightSchemeBackgroundColor": "#dcdad7",
         "lightSchemeTextColor": "#181a1b",
         "scrollbarColor": "auto",
-        "selectionColor": "auto",
+        "selectionColor": "#585b70",
         "styleSystemControls": false,
         "lightColorScheme": "Default",
         "darkColorScheme": "Catppuccin",
@@ -144,7 +144,7 @@
     "disabledFor": [],
     "changeBrowserTheme": false,
     "syncSettings": true,
-    "syncSitesFixes": false,
+    "syncSitesFixes": true,
     "automation": {
         "behavior": "OnOff",
         "enabled": false,
