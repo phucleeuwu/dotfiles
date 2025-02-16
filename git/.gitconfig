@@ -7,3 +7,5 @@
   true-color = always
   hyperlinks = true
   line-numbers = true
+[credential]
+	helper = osxkeychain
