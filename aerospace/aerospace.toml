@@ -1,6 +1,3 @@
-# Place a copy of this config to ~/.aerospace.toml
-# After that, you can edit ~/.aerospace.toml to your liking
-
 # Commands to run after login (requires 'start-at-login' to be true)
 after-login-command = []
 after-startup-command = []
@@ -79,10 +76,11 @@ alt-shift-4 = 'move-node-to-workspace 4'
 alt-f = 'fullscreen'
 
 # Workspace Navigation
-alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # Resize Mode
+alt-shift-r = 'mode resize'
+alt-shift-semicolon = 'mode service'
 [mode.resize.binding]
 h = 'resize width -50'
 j = 'resize height +50'
