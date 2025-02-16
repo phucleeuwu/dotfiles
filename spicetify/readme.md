@@ -15,8 +15,8 @@ This repository contains my personalized Spicetify backup configuration, featuri
 Install spicetify and marketplace command:
 
 ```bash
-  brew install spicetify-cli
-  spicetify config custom_apps marketplace && spicetify apply
+brew install spicetify-cli
+spicetify config custom_apps marketplace && spicetify apply
 ```
 
 1. Open **Marketplace settings** and navigate to **Backup/Restore**.
