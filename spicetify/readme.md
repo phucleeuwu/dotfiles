@@ -15,7 +15,8 @@ This repository contains my personalized Spicetify backup configuration, featuri
 Install spicetify and marketplace command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+  brew install spicetify-cli
+  spicetify config custom_apps marketplace && spicetify apply
 ```
 
 1. Open **Marketplace settings** and navigate to **Backup/Restore**.
@@ -32,8 +33,7 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 - **Lyrics Display**: To enable lyrics, install the `lyrics-plus` custom app using the following command:
 
   ```sh
-  spicetify config custom_apps lyrics-plus
-  spicetify apply
+  spicetify config custom_apps lyrics-plus && spicetify apply
   ```
 
 Enjoy your enhanced Spotify experience! 🎵
