@@ -30,19 +30,8 @@ spicetify backup apply
 - **Fullscreen Mode**: I have pre-configured the **Fullscreen Extension by daksh2k**. Simply press `f` to toggle fullscreen mode on and off, `x` to config,`q` show queue, `l` toggle lyrics.
 - **Minimalist & Beautiful UI**: The configuration is designed to be clean and visually appealing.
 - **Includes `adblock` for "freemium" users**.
-- **Lyrics Display**: To enable lyrics, install the `lyrics-plus` custom app using the following command:
-
-  ```sh
-  spicetify config custom_apps lyrics-plus && spicetify apply
-  ```
 
 Enjoy your enhanced Spotify experience! 🎵
-
-## Update and apply
-
-```bash
-spicetify update && spicetify backup apply
-```
 
 ## Notes
 
