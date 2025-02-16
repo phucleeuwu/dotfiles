@@ -34,11 +34,12 @@ alias rgt="rg --type"  # Search by file type, e.g., `rgt js "function"`
 
 # Eza (Better `ls`)
 alias l="eza -l --icons --git -a"
-alias ld="eza -lD --icons=auto" # Long list dirs
-alias lf="eza -lf  --icons=auto" 
+alias ld="eza -lD --icons --git -a" 
+alias lf="eza -lf  --icons --git -a" 
 alias lt="eza --tree --level=2 --long --icons --git"
 alias tree="eza --tree --icons --git"
 alias ls="eza --icons=always"
+alias la="eza --icons=always --git -a"
 
 # Zoxide (Better `cd`)
 eval "$(zoxide init zsh)"
