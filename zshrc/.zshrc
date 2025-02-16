@@ -2,31 +2,43 @@
 # Aliases
 # ===============================
 
-# FastFetch (Better `Neofetch`)
-alias ff="fastfetch"
-
-# OneFetch (Git Repo Stats)
-alias of="onefetch"
-
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
 
 # Lazygit & Lazydocker
-alias lg='lazygit'
-alias lzd='lazydocker'
+alias lg="lazygit"
+alias lzd="lazydocker"
+
+# Git Repo Stats
+alias of="onefetch"
+
+# FastFetch (Better `Neofetch`)
+alias ff="fastfetch"
 
 # Bat (Better `cat`)
 alias cat="bat"
 
+# Fd (Find alternative)
+alias fdf="fd --type=f"  # Find files only
+alias fdd="fd --type=d"  # Find directories only
+
+# Ripgrep (Better `grep`)
+alias rgt="rg --type"  # Search by file type, e.g., `rgt js "function"`
+
 # Eza (Better `ls`)
 alias l="eza -l --icons --git -a"
+alias ld="eza -lD --icons=auto" # Long list dirs
 alias lt="eza --tree --level=2 --long --icons --git"
-alias ltree="eza --tree --level=2 --icons --git"
+alias tree="eza --tree --icons --git"
 alias ls="eza --icons=always"
+
+# Zoxide (Better `cd`)
+eval "$(zoxide init zsh)"
+alias cd="z"
 
 # ===============================
 # Environment Variables
@@ -35,10 +47,6 @@ alias ls="eza --icons=always"
 export PATH="/opt/homebrew/bin:$PATH"
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-
-# Bun package manager
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # ===============================
 # Plugins & Enhancements
@@ -49,18 +57,11 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^w' autosuggest-execute
 
-# Atuin (better history)
+# Atuin (Better History)
 eval "$(atuin init zsh)"
 
-# Zoxide (better `cd`)
-eval "$(zoxide init zsh)"
-alias cd="z"
-
-# Starship (prompt theme)
+# Starship (Prompt Theme)
 eval "$(starship init zsh)"
-
-# Bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # ===============================
 # FZF Configuration
