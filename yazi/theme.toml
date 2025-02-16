@@ -23,7 +23,7 @@ count_selected = { fg = "#1e1e2e", bg = "#94e2d5" }
 border_symbol = "│"
 border_style = { fg = "#7f849c" }
 
-syntect_theme = "~/.config/bat/themes/Catppuccin-mocha.tmTheme"
+syntect_theme = "~/.config/bat/themes/Catppuccin Mocha.tmTheme"
 
 [mode]
 normal_main = { fg = "#1e1e2e", bg = "#94e2d5", bold = true }
