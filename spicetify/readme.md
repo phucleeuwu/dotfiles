@@ -2,6 +2,7 @@
 # Spicetify Config
 
 This repository contains my personalized Spicetify backup configuration, featuring a minimalist and beautiful setup. It includes a fullscreen extension and support for lyrics display.
+
 ## Screenshot
 
 ![Spicetify Setup](https://raw.githubusercontent.com/phucleeuwu/spicetify-config/refs/heads/main/Screenshot%202025-02-04%20at%2014.20.19.png)
@@ -17,13 +18,11 @@ Install spicetify and marketplace command:
 curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 ```
 
-1. Install **Spotify Backup by Ohitstom** from the **Marketplace**.
-2. Reload the Spotify app.
-3. Open **Marketplace settings** and navigate to **Backup/Restore**.
-4. Import `spotify-backup.json`.
-5. You're all set!
+1. Open **Marketplace settings** and navigate to **Backup/Restore**.
+2. Import `spotify-backup.json`.
+3. You're all set!
 
-## ⚠️My spicetify config only beautiful if you play a song and press `F` toggle fullscreen mode.
+## ⚠️My spicetify config only beautiful if you play a song and press `F` toggle fullscreen mode
 
 ## Features & Usage
 
