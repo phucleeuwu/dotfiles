@@ -51,7 +51,7 @@ style = "bold mauve"
 
 [cmd_duration]
 min_time = 10000
-format = "[ ↻ $duration ]($style)"
+format = "[ 󰚭$duration ]($style)"
 style = "bold yellow"
 
 [hg_branch]
