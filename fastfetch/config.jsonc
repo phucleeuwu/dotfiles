@@ -13,17 +13,6 @@
       "format": "┌──────────────────────────────────────────┐"
     },
     {
-      "type": "chassis",
-      "key": "  󰇺 Chassis",
-      "format": "{3}"
-    },
-    {
-      "type": "os",
-      "key": "   OS",
-      "format": "{2}",
-      "keyColor": "red"
-    },
-    {
       "type": "shell",
       "key": "   Shell",
       "keyColor": "magenta",
@@ -86,12 +75,6 @@
       "type": "memory",
       "key": "    Memory",
       "keyColor": "magenta"
-    },
-    {
-      "type": "command",
-      "key": "  󱦟 OS Age ",
-      "keyColor": "red",
-      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
     },
     {
       "type": "uptime",
