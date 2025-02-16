@@ -67,13 +67,13 @@ symbol = "☁️ "
 style = "bold blue"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Dev" = " "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-"Repos" = " "
-"Videos" = " "
+"documents" = "󰈙 "
+"dev" = " "
+"downloads" = " "
+"music" = " "
+"pictures" = " "
+"repos" = " "
+"videos" = " "
 "obsidianVault" = "󰏪 󰠮 "
 "dotfiles" = " "
 
@@ -93,7 +93,7 @@ shell = ["bash"]
 
 # Nerd fonts preset
 [aws]
-symbol = "  "
+symbol = " "
 
 [buf]
 symbol = " "
