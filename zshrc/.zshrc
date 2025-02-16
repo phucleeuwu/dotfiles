@@ -2,6 +2,9 @@
 # Aliases
 # ===============================
 
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+alias mkdir='mkdir -p'
+
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
