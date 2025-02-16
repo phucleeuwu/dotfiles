@@ -10,6 +10,10 @@ alias of="onefetch"
 
 # Navigation
 alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
 
 # Lazygit & Lazydocker
 alias lg='lazygit'

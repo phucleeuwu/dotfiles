@@ -15,7 +15,6 @@
                 "rules": [
                     {
                         "description": "Use Command + HJKL to navigate app switcher",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {

@@ -27,11 +27,18 @@
   },
   "terminal": {
     "dock": "bottom",
-    "font_family": "MesloLGL Nerd Font Mono"
+    "font_family": "JetBrainsMono Nerd Font Mono"
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "git-firefly": true,
+    "catppuccin-blur": true,
+    "toml": true
   },
   "vim_mode": true,
   "relative_line_numbers": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
-  "theme": "Catppuccin Mocha (Blur)"
+  "theme": "Catppuccin Mocha (Blur)",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono"
 }
