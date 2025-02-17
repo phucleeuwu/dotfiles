@@ -6,13 +6,13 @@
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/Dotflow/main/i.sh)
 ```
 
-⇅ Upgrade all with a single command:
+⇅ Upgrade everything with a single command (brew install topgrade):
 
 ```bash
 topgrade
 ```
 
-## 📂 Breakdown of the `install.sh`
+## 📂 Breakdown of the `i.sh`
 
 1. Installs Homebrew 🍺 (if not installed).
 2. Clones the dotfiles repository into ~/dotfiles.
