@@ -33,12 +33,13 @@ alias fdd="fd --type=d"  # Find directories only
 alias rgt="rg --type"  # Search by file type, e.g., `rgt js "function"`
 
 # Eza (Better `ls`)
+alias ls="eza --icons"
 alias l="eza -l --icons --git -a"
-alias ld="eza -lD --icons --git -a" 
-alias lf="eza -lf  --icons --git -a" 
-alias lt="eza --tree --level=2 --long --icons --git"
-alias tree="eza --tree --icons --git"
-alias ls="eza --icons --git"
+alias ld="eza -lD --icons --git -a"
+alias lf="eza -lf --icons --git -a"
+alias lt="eza --tree --level=2 --long --icons"  # No --git here since it's for long format
+alias tree="eza --tree --icons"  # No --git here either
+alias la="eza -a --icons"  # No --git here, as it's unnecessary
 
 # Zoxide (Better `cd`)
 eval "$(zoxide init zsh)"
@@ -48,7 +49,7 @@ alias cd="z"
 # Environment Variables
 # ===============================
 
-source ~/dotfiles/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 export PATH="/opt/homebrew/bin:$PATH"
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
