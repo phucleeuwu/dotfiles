@@ -6,7 +6,7 @@
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/Dotflow/main/i.sh)
 ```
 
-⇅ Upgrade everything with a single command `brew install topgrade`:
+⇅ Upgrade everything `brew install topgrade`:
 
 ```bash
 topgrade
