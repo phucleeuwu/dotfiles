@@ -6,6 +6,12 @@
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/Dotflow/main/i.sh)
 ```
 
+⇅ Upgrade all with a single command:
+
+```bash
+topgrade
+```
+
 ## 📂 Breakdown of the `install.sh`
 
 1. Installs Homebrew 🍺 (if not installed).
