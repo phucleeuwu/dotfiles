@@ -74,7 +74,7 @@ alt-shift-4 = 'move-node-to-workspace 4'
 alt-f = 'fullscreen'
 
 # Workspace Navigation
-rightalt-tab = 'workspace-back-and-forth'
+alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # Resize Mode
