@@ -38,8 +38,7 @@ alias ld="eza -lD --icons --git -a"
 alias lf="eza -lf  --icons --git -a" 
 alias lt="eza --tree --level=2 --long --icons --git"
 alias tree="eza --tree --icons --git"
-alias ls="eza --icons=always"
-alias la="eza --icons=always --git -a"
+alias ls="eza --icons --git"
 
 # Zoxide (Better `cd`)
 eval "$(zoxide init zsh)"
@@ -49,6 +48,7 @@ alias cd="z"
 # Environment Variables
 # ===============================
 
+source ~/dotfiles/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 export PATH="/opt/homebrew/bin:$PATH"
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
