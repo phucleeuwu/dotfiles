@@ -93,6 +93,7 @@ disable = ["vim", "spicetify"]
 
 # Custom commands
 [commands]
+Bat = "bat cache --build"
 Neovim = "nvim --headless '+Lazy check' '+Lazy sync' '+Lazy install' '+Lazy update' '+Lazy clean' +qa"
 yazi = "ya pack -u"
 # "Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
