@@ -1,4 +1,4 @@
-theme = catppuccin-mocha
+theme = dark:catppuccin-mocha,light:catppuccin-latte
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 19
 mouse-hide-while-typing = true
