@@ -49,7 +49,6 @@ alias cd="z"
 # Environment Variables
 # ===============================
 
-# source ~/dotfiles/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 export PATH="/opt/homebrew/bin:$PATH"
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
