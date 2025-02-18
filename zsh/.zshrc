@@ -49,7 +49,6 @@ alias cd="z"
 # Environment Variables
 # ===============================
 
-source ~/dotfiles/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 export PATH="/opt/homebrew/bin:$PATH"
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
@@ -72,7 +71,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light jeffreytse/zsh-vi-mode
 zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-completions
-zinit light phucleeuwu/dotfiles
+zinit light phucleeuwu/zsh-syntax-highlighting
 
 # Additional Alias and Completions
 fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
