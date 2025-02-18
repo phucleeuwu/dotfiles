@@ -72,6 +72,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light jeffreytse/zsh-vi-mode
 zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-completions
+zinit light phucleeuwu/dotfiles
 
 # Additional Alias and Completions
 fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
