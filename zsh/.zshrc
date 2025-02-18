@@ -49,6 +49,7 @@ alias cd="z"
 # Environment Variables
 # ===============================
 
+source ~/dotfiles/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 export PATH="/opt/homebrew/bin:$PATH"
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
@@ -72,8 +73,11 @@ zinit light jeffreytse/zsh-vi-mode
 zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-completions
 
-zinit snippet OMZP::command-not-found
+# Additional Alias and Completions
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 zinit snippet OMZP::sudo
+zinit snippet OMZP::brew
+
 # ===============================
 # Plugins & Enhancements
 # ===============================
@@ -122,7 +126,6 @@ export FZF_DEFAULT_OPTS="
 # ===============================
 # Yazi (Better File Manager)
 # ===============================
-
 y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
