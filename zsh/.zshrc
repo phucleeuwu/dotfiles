@@ -26,8 +26,8 @@ alias ff="fastfetch"
 alias cat="bat"
 
 # Fd (Find alternative)
-alias fdf="fd --type=f"  # Find files only
-alias fdd="fd --type=d"  # Find directories only
+alias fdf="fd --type=f --hidden"  # Find files only
+alias fdd="fd --type=d --hidden"  # Find directories only
 
 # Ripgrep (Better `grep`)
 alias rgt="rg --type"  # Search by file type, e.g., `rgt js "function"`
@@ -49,19 +49,35 @@ alias cd="z"
 # Environment Variables
 # ===============================
 
-source ~/dotfiles/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+# source ~/dotfiles/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 export PATH="/opt/homebrew/bin:$PATH"
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
 # ===============================
-# Plugins & Enhancements
+# Zinit Plugin Manager 
 # ===============================
 
-# Zsh Syntax Highlighting & Autosuggestions
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^w' autosuggest-execute
+# Load Zinit (using the cache)
+source /opt/homebrew/opt/zinit/zinit.zsh
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Zinit Ice options for speed
+zinit ice wait lucid depth"1"
+
+# Load Plugins with these options
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light jeffreytse/zsh-vi-mode
+zinit light Aloxaf/fzf-tab
+zinit light zsh-users/zsh-completions
+
+zinit snippet OMZP::command-not-found
+zinit snippet OMZP::sudo
+# ===============================
+# Plugins & Enhancements
+# ===============================
 
 # Atuin (Better History)
 eval "$(atuin init zsh)"
@@ -72,9 +88,29 @@ eval "$(starship init zsh)"
 # ===============================
 # FZF Configuration
 # ===============================
-
-# Set up FZF key bindings and fuzzy completion
 eval "$(fzf --zsh)"
+
+# Fzf Tab Completion
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+# NOTE: don't use escape sequences (like '%F{red}%d%f') here, fzf-tab will ignore them
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+# preview directory's content with eza when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+# custom fzf flags
+# NOTE: fzf-tab does not follow FZF_DEFAULT_OPTS by default
+zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
+# To make fzf-tab follow FZF_DEFAULT_OPTS.
+# NOTE: This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+# switch group using `<` and `>`
+zstyle ':fzf-tab:*' switch-group '<' '>'
+# Set up FZF key bindings and fuzzy completion
 
 # FZF Color Theme
 export FZF_DEFAULT_OPTS="
@@ -83,39 +119,6 @@ export FZF_DEFAULT_OPTS="
   --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
   --color=selected-bg:#45475a
   --multi"
-
-# Use `fd` as the default finder
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-
-# Custom FZF path completion using `fd`
-_fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
-}
-
-_fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
-}
-
-# File & Directory Preview for FZF
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
-
-export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-
-# Advanced FZF Command Customization
-_fzf_comprun() {
-  local command=$1
-  shift
-
-  case "$command" in
-    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
-    export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
-    ssh)          fzf --preview 'dig {}'                   "$@" ;;
-    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
-  esac
-}
 
 # ===============================
 # Yazi (Better File Manager)
@@ -129,3 +132,5 @@ y() {
   fi
   rm -f -- "$tmp"
 }
+
+autoload -Uz compinit && compinit
