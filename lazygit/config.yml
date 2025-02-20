@@ -1,0 +1,185 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+gui:
+  scrollHeight: 10 # how many lines you scroll by
+  scrollPastBottom: false # enable scrolling past the bottom
+  sidePanelWidth: 0.25 # number from 0 to 1
+  expandFocusedSidePanel: true
+  theme:
+    activeBorderColor:
+      - "#a6da95"
+      - bold
+    inactiveBorderColor:
+      - "#a5adcb"
+    optionsTextColor:
+      - "#8aadf4"
+    selectedLineBgColor:
+      - "#363a4f"
+    cherryPickedCommitBgColor:
+      - "#494d64"
+    cherryPickedCommitFgColor:
+      - "#b7bdf8"
+    unstagedChangesColor:
+      - "#ed8796"
+    defaultFgColor:
+      - "#cad3f5"
+    searchingActiveBorderColor:
+      - "#eed49f"
+  commitLength:
+    show: true
+  branchColors:
+    "release": "#eed49f"
+    "hotfix": "#ed8796"
+    "feature": "#a6da95"
+  showBottomLine: false # for hiding the bottom information line (unless it has important information to tell you)
+  nerdFontsVersion: "3" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
+  commandLogSize: 5
+  showDivergenceFromBaseBranch: "arrowAndNumber"
+  filterMode: "fuzzy"
+  showPanelJumps: false
+  skipRewordInEditorWarning: false # for skipping the confirmation before launching the reword editor
+  border: "rounded" # one of 'single' | 'double' | 'rounded' | 'hidden'
+  statusPanelView: "dashboard"
+git:
+  paging:
+    colorArg: always
+    pager: delta --paging=never --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' {{branchName}} --"
+  allBranchesLogCmd: "git log --graph --all --color=always --abbrev-commit --date-relative --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+  parseEmoji: true
+  autoFetch: false
+os:
+  edit: '[ -z "$NVIM" ] && (nvim -- {{filename}}) || (nvim --server "$NVIM" --remote-send "q" && nvim --server "$NVIM" --remote {{filename}})'
+disableStartupPopups: true
+notARepository: "skip" # one of: 'prompt' | 'create' | 'skip' | 'quit'
+keybinding:
+  universal:
+    quit: "q"
+    quit-alt1: "<c-c>" # alternative/alias of quit
+    return: "<esc>" # return to previous menu, will quit if there's nowhere to return
+    quitWithoutChangingDirectory: "Q"
+    togglePanel: "<tab>" # goto the next panel
+    prevItem: "<up>" # go one line up
+    nextItem: "<down>" # go one line down
+    prevItem-alt: "k" # go one line up
+    nextItem-alt: "j" # go one line down
+    prevPage: "K" # go to next page in list
+    nextPage: "J" # go to previous page in list
+    gotoTop: "<" # go to top of list
+    gotoBottom: ">" # go to bottom of list
+    scrollLeft: "H" # scroll left within list view
+    scrollRight: "L" # scroll right within list view
+    prevBlock: "<left>" # goto the previous block / panel
+    nextBlock: "<right>" # goto the next block / panel
+    prevBlock-alt: "" # goto the previous block / panel
+    nextBlock-alt: "" # goto the next block / panel
+    jumpToBlock: ["1", "2", "3", "4", "5"] # goto the Nth block / panel
+    nextMatch: "n"
+    prevMatch: "N"
+    optionMenu: <disabled> # show help menu
+    optionMenu-alt1: "?" # show help menu
+    select: "<space>"
+    goInto: "<enter>"
+    openRecentRepos: "<c-r>"
+    confirm: "<enter>"
+    remove: "d"
+    new: "n"
+    edit: "e"
+    openFile: "o"
+    scrollUpMain: "<pgup>" # main panel scroll up
+    scrollDownMain: "<pgdown>" # main panel scroll down
+    scrollUpMain-alt1: "<c-u>" # main panel scroll up
+    scrollDownMain-alt1: "<c-d>" # main panel scroll down
+    scrollUpMain-alt2: "<disabled>" # main panel scroll up
+    scrollDownMain-alt2: "<disabled>" # main panel scroll down
+    executeShellCommand: ":"
+    createRebaseOptionsMenu: "m"
+    pushFiles: "P"
+    pullFiles: "p"
+    refresh: "R"
+    createPatchOptionsMenu: "<c-p>"
+    nextTab: "l"
+    prevTab: "h"
+    nextScreenMode: "+"
+    prevScreenMode: "_"
+    undo: "z"
+    redo: "<c-z>"
+    filteringMenu: "<c-s>"
+    diffingMenu: "W"
+    diffingMenu-alt: "<c-e>" # deprecated
+    copyToClipboard: "<c-o>"
+    submitEditorText: "<enter>"
+    extrasMenu: "@"
+    toggleWhitespaceInDiffView: "<c-w>"
+    increaseContextInDiffView: "}"
+    decreaseContextInDiffView: "{"
+  status:
+    checkForUpdate: "u"
+    recentRepos: "<enter>"
+  files:
+    commitChanges: "c"
+    commitChangesWithoutHook: "w" # commit changes without pre-commit hook
+    amendLastCommit: "A"
+    commitChangesWithEditor: "C"
+    ignoreFile: "i"
+    refreshFiles: "r"
+    stashAllChanges: "s"
+    viewStashOptions: "S"
+    toggleStagedAll: "a" # stage/unstage all
+    viewResetOptions: "D"
+    fetch: "f"
+    toggleTreeView: "`"
+    openMergeTool: "M"
+    openStatusFilter: "<c-b>"
+  branches:
+    createPullRequest: "o"
+    viewPullRequestOptions: "O"
+    checkoutBranchByName: "c"
+    forceCheckoutBranch: "F"
+    rebaseBranch: "r"
+    renameBranch: "R"
+    mergeIntoCurrentBranch: "M"
+    viewGitFlowOptions: "i"
+    fastForward: "f" # fast-forward this branch from its upstream
+    createTag: "T"
+    pushTag: "P"
+    setUpstream: "u" # set as upstream of checked-out branch
+    fetchRemote: "f"
+  commits:
+    squashDown: "s"
+    renameCommit: "r"
+    renameCommitWithEditor: "R"
+    viewResetOptions: "g"
+    markCommitAsFixup: "f"
+    createFixupCommit: "F" # create fixup commit for this commit
+    squashAboveCommits: "S"
+    moveDownCommit: "<c-j>" # move commit down one
+    moveUpCommit: "<c-k>" # move commit up one
+    amendToCommit: "A"
+    pickCommit: "p" # pick commit (when mid-rebase)
+    revertCommit: "t"
+    pasteCommits: "v"
+    tagCommit: "T"
+    checkoutCommit: "<space>"
+    resetCherryPick: "<c-R>"
+    openLogMenu: "<c-l>"
+    viewBisectOptions: "b"
+  stash:
+    popStash: "g"
+    renameStash: "r"
+  commitFiles:
+    checkoutCommitFile: "c"
+  main:
+    toggleSelectHunk: "a"
+    pickBothHunks: "b"
+  submodules:
+    init: "i"
+    update: "u"
+    bulkMenu: "b"
+customCommands:
+  - key: "C"
+    command: "git cz"
+    description: "commit with commitizen"
+    context: "files"
+    loadingText: "opening commitizen commit tool"
+    subprocess: true

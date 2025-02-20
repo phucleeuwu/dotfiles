@@ -1,0 +1,90 @@
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[manager]
+ratio = [1, 4, 3]
+sort_by = "natural"
+sort_dir_first = true
+
+[opener]
+folder = [
+  { run = 'hyprctl dispatch exec "[float; size 60% 60%; center 1] nemo" "$1"', orphan = true, desc = "nemo", for = "macOS" },
+  { run = '''zsh -c "nvim "$1""''', block = true, desc = "neovim", for = "macOS" },
+  { run = 'ghostty --detach nvim "$@"', orphan = true, desc = "neovim (detached)", for = "macOS" },
+  { run = '''zsh -c "lazygit -p "$1""''', block = true, desc = "lazygit", for = "macOS" },
+  { run = 'codium  "$@"', orphan = true, desc = "vscodium", for = "macOS" },
+  { run = 'ghostty "$@"', orphan = true, desc = "ghostty", for = "macOS" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "macOS" },
+]
+
+text = [
+  { run = '$EDITOR "$@"', block = true, desc = "$EDITOR", for = "macOS" },
+  { run = 'nvim "$@"', block = true, desc = "neovim", for = "macOS" },
+  { run = 'ghostty --detach nvim "$@"', block = true, desc = "neovim (detached)", for = "macOS" },
+  { run = 'codium  "$@"', orphan = true, desc = "vscodium", for = "macOS" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "macOS" },
+]
+
+document = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "macOS" },
+  { run = 'zathura "$@"', orphan = true, desc = "zathura", for = "macOS" },
+  { run = 'libreoffice "$@"', orphan = true, desc = "libreoffice", for = "macOS" },
+]
+
+image = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "macOS" },
+  { run = 'qimgv "$@"', orphan = true, desc = "qimgv", for = "macOS" },
+  { run = 'krita "$@"', orphan = true, desc = "krita", for = "macOS" },
+  { run = 'satty --filename "$@"', orphan = true, desc = "satty", for = "macOS" },
+]
+
+video = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "macOS" },
+  { run = 'mpv "$@"', orphan = true, desc = "mpv", for = "macOS" },
+  { run = 'vlc "$@"', orphan = true, desc = "vlc", for = "macOS" },
+]
+
+audio = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "macOS" },
+  { run = 'mpv "$@"', orphan = true, desc = "mpv", for = "macOS" },
+  { run = 'vlc "$@"', orphan = true, desc = "vlc", for = "macOS" },
+]
+
+fallback = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "macOS" },
+]
+
+[open]
+rules = [
+  { name = "*/", use = "folder" },
+
+  { mime = "text/*", use = "text" },
+  { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
+  { mime = "application/octet-stream", use = "video" },
+  { mime = "audio/*", use = "audio" },
+  { mime = "inode/x-empty", use = "text" },
+  { mime = "application/json", use = "text" },
+
+  { mime = "application/zip", use = "archive" },
+  { mime = "application/gzip", use = "archive" },
+  { mime = "application/x-bzip", use = "archive" },
+  { mime = "application/x-bzip2", use = "archive" },
+  { mime = "application/x-tar", use = "archive" },
+  { mime = "application/x-7z-compressed", use = "archive" },
+  { mime = "application/x-rar", use = "archive" },
+  { mime = "application/pdf", use = "document" },
+  { mime = "application/epub+zip", use = "document" },
+  { mime = "application/x-mobipocket-ebook", use = "document" },
+
+  { mime = "*", use = "fallback" },
+]
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"

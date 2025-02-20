@@ -1,0 +1,48 @@
+// ✨Zed config with vim, command+shift+r shortcut to run .cpp and .py file
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / shift-;)
+{
+  "edit_predictions": {
+    "disabled_globs": [],
+    "mode": "eager_preview"
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "terminal": {
+    "dock": "bottom",
+    "font_family": "JetBrainsMono Nerd Font Mono"
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "git-firefly": true,
+    "catppuccin-blur": true,
+    "toml": true
+  },
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte (Blur)",
+    "dark": "Catppuccin Mocha (Blur)"
+  },
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono"
+}
