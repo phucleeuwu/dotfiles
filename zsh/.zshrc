@@ -2,7 +2,7 @@
 # 🌙 Environment Variables                             #
 # ─────────────────────────────────────────────────────#
 export XDG_CONFIG_HOME="$HOME/.config"
-eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/opt/homebrew/bin:$PATH"
 export HOMEBREW_NO_ANALYTICS=1
 source /opt/homebrew/opt/zinit/zinit.zsh
 
@@ -19,7 +19,6 @@ zinit depth"1" lucid nocd light-mode atload"joke" for phucleeuwu/cowsay
 # ─────────────────────────────────────────────────────#
 # 🔌 OhMyZsh + Zinit Turbo (Plugins, Aliases, Configs) #
 # ─────────────────────────────────────────────────────#
-
 zinit depth"1" wait lucid nocd light-mode for \
   atinit"zicompinit; zicdreplay; unalias zi" \
       zsh-users/zsh-syntax-highlighting \
@@ -49,4 +48,4 @@ zinit depth"1" wait lucid nocd light-mode for \
       OMZP::gitignore \
       OMZP::git \
       OMZP::git-auto-fetch \
-      OMZP::magic-enter 
+      OMZP::magic-enter
