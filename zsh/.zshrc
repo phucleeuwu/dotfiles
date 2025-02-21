@@ -8,8 +8,8 @@ source /opt/homebrew/opt/zinit/zinit.zsh
 
 # 🚀 Load Shell Prompt
 # eval "$(starship init zsh)"
-# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/pure.omp.json)"
-eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/dreamsofautonomy/zen-omp/refs/heads/main/zen.toml')"
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/pure.omp.json)"
+# eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/dreamsofautonomy/zen-omp/refs/heads/main/zen.toml')"
 # 🐢 Atuin (Better Shell History)
 eval "$(atuin init zsh)"
 
