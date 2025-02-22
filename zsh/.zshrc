@@ -1,6 +1,4 @@
-# ─────────────────────────────────────────────────────#
-# 🌙 Environment Variables                             #
-# ─────────────────────────────────────────────────────#
+# 🌙 Environment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="/opt/homebrew/bin:$PATH"
 export HOMEBREW_NO_ANALYTICS=1
@@ -12,9 +10,6 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/pure.omp
 
 # 🐢 Atuin (Better Shell History)
 eval "$(atuin init zsh)"
-
-# 🐄 Cowsay (For Fun)
-# zinit depth"1" lucid nocd light-mode atload"joke | lolcat" for phucleeuwu/cowsay
 
 # ─────────────────────────────────────────────────────#
 # 🔌 OhMyZsh + Zinit Turbo (Plugins, Aliases, Configs) #
