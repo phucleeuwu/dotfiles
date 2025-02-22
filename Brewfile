@@ -6,7 +6,6 @@ tap "oven-sh/bun"
 brew "atuin", restart_service: :changed
 brew "bat"
 brew "coreutils"
-brew "cowsay"
 brew "eza"
 brew "fastfetch"
 brew "fd"
