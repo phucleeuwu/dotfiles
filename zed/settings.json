@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / shift-;)
 {
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "buffer_font_family": "Hack Nerd Font Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
   "edit_predictions": {
     "disabled_globs": [],
     "mode": "eager_preview"
@@ -35,14 +40,9 @@
     "catppuccin-blur": true,
     "toml": true
   },
-  "vim_mode": true,
-  "relative_line_numbers": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte (Blur)",
     "dark": "Catppuccin Mocha (Blur)"
-  },
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono"
+  }
 }
