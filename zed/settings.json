@@ -27,7 +27,7 @@
   },
   "terminal": {
     "dock": "bottom",
-    "font_family": "JetBrainsMono Nerd Font Mono"
+    "font_family": "Hack Nerd Font Mono"
   },
   "auto_install_extensions": {
     "html": true,
