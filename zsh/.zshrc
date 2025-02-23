@@ -1,3 +1,5 @@
+touch ~/.hushlogin && echo " $(date '+%Y-%m-%d  %H:%M')"
+
 # 🌙 Environment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="/opt/homebrew/bin:$PATH"
@@ -43,4 +45,4 @@ zinit depth"1" wait lucid nocd light-mode for \
       OMZP::gitignore \
       OMZP::git \
       OMZP::git-auto-fetch \
-      OMZP::magic-enter
+      OMZP::magic-enter 
