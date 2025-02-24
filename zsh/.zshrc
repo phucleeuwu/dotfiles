@@ -5,7 +5,6 @@
 # 🌙 Environment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="/opt/homebrew/bin:$PATH"
-export HOMEBREW_NO_ANALYTICS=1
 source /opt/homebrew/opt/zinit/zinit.zsh
 
 # 🚀 Load Shell Prompt
