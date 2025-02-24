@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "jandedobbeleer/oh-my-posh"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
 brew "atuin", restart_service: :changed
