@@ -1,6 +1,6 @@
 # ⚠️ Back up your `.config` files
 
-🚀 Install everything with a single command:
+🚀 Install everything:
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/Dotflow/main/i.sh)
