@@ -3,7 +3,7 @@
 🚀 Install everything:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/Dotflow/main/i.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
 ```
 
 ⇅ Upgrade everything (requires [topgrade](https://github.com/topgrade-rs/topgrade)):
