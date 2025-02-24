@@ -6,7 +6,7 @@
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/Dotflow/main/i.sh)
 ```
 
-⇅ Upgrade everything (requires [`topgrade`](https://github.com/topgrade-rs/topgrade):
+⇅ Upgrade everything (requires [`topgrade`](https://github.com/topgrade-rs/topgrade)):
 
 ```bash
 topgrade
