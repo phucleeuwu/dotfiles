@@ -12,7 +12,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/Dotflow/main/i.sh
 topgrade
 ```
 
-## 📂 Breakdown of the `i.sh`
+## 📂 Breakdown of the [`i.sh`](https://github.com/phucleeuwu/dotflow/blob/main/i.sh)
 
 1. Installs 🍺 [Homebrew](https://brew.sh/) (if not installed).
 2. Clones the dotfiles repository into `~/dotfiles`.
