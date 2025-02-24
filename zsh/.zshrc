@@ -18,5 +18,5 @@ eval "$(atuin init zsh)"
 # 🐄 Cowsay (For Fun)
 # zinit depth"1" lucid nocd light-mode atload"joke | lolcat" for phucleeuwu/cowsay.zsh
 
-# 🔌 OhMyZsh + Aliases (with Zinit-Turbo plugins manager)
+# 🔌 OhMyZsh + Aliases (with Zinit plugins manager)
 zinit depth"1" lucid nocd light-mode for phucleeuwu/my.zsh
