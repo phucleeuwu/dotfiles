@@ -1,4 +1,4 @@
-touch ~/.hushlogin && echo " $(date '+%Y-%m-%d  %H:%M')" | lolcat 
+# touch ~/.hushlogin && echo " $(date '+%Y-%m-%d  %H:%M')" | lolcat 
 
 # 🌙 Environment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
