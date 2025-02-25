@@ -38,6 +38,7 @@
     "html": true,
     "git-firefly": true,
     "catppuccin-blur": true,
+    "lua": true,
     "toml": true
   },
   "theme": {
