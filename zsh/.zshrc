@@ -9,7 +9,7 @@ source /opt/homebrew/opt/zinit/zinit.zsh
 
 # 🚀 Load Shell Prompt
 # eval "$(starship init zsh)"
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/pure.omp.json)"
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/tokyonight_storm.omp.json)"
 
 # 🐢 Atuin (Better Shell History)
 eval "$(atuin init zsh)"
