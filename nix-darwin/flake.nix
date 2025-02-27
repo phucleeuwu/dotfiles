@@ -30,6 +30,7 @@
           pkgs.aerospace
           pkgs.lazygit
           pkgs.zinit
+          pkgs.oh-my-posh
         ];
 
       # Necessary for using flakes on this system.
