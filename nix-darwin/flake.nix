@@ -13,7 +13,14 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [ pkgs.vim
+        [ 
+          pkgs.bun
+          pkgs.zsh
+          pkgs.gh
+          pkgs.neovim
+          pkgs.ripgrep
+          pkgs.tmux
+          pkgs.zoxide
         ];
 
       # Necessary for using flakes on this system.
@@ -31,6 +38,48 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
+      programs.zsh.enable = true;  # default shell on catalina
+      security.pam.services.sudo_local.touchIdAuth = true;
+
+      system.defaults = {
+        dock.autohide = true;
+        dock.mru-spaces = false;
+        dock.static-only = true;
+        dock.tilesize = 40;
+        dock.autohide-delay = 0.0;
+        dock.autohide-time-modifier = 0.0;
+        dock.largesize = 80;
+        dock.showhidden = true;
+        dock.show-recents = false;
+        finder.AppleShowAllExtensions = true;
+        finder.FXPreferredViewStyle = "clmv";
+        finder.ShowStatusBar = true;
+        finder.ShowPathbar = true;
+        finder.FXRemoveOldTrashItems = true;
+        finder.FXDefaultSearchScope = "SCcf";
+        finder.CreateDesktop = false;
+        finder.NewWindowTarget = "Home";
+        trackpad.Clicking = true;
+        trackpad.ActuationStrength = 0;
+        spaces.spans-displays = false;
+        loginwindow.GuestEnabled = false;
+        controlcenter.BatteryShowPercentage = true;
+        NSGlobalDomain._HIHideMenuBar = true;
+        NSGlobalDomain.AppleShowAllFiles = true;
+        NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
+        NSGlobalDomain.NSAutomaticInlinePredictionEnabled = false;
+        NSGlobalDomain.NSAutomaticDashSubstitutionEnabled = false;
+        NSGlobalDomain.NSAutomaticPeriodSubstitutionEnabled = false;
+        NSGlobalDomain.NSAutomaticQuoteSubstitutionEnabled = false;
+        NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
+        NSGlobalDomain.InitialKeyRepeat = 15;
+        NSGlobalDomain.KeyRepeat = 2;
+        NSGlobalDomain."com.apple.sound.beep.volume" = 0.6065307;
+        NSGlobalDomain."com.apple.trackpad.scaling" = 3.0;
+        NSGlobalDomain."com.apple.swipescrolldirection" = false;
+      };
+
     };
   in
   {
