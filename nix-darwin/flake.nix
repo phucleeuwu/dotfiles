@@ -40,15 +40,13 @@
           pkgs.stow
           pkgs.fastfetch
           pkgs.onefetch
+          pkgs.kmonad
           #apps
           pkgs.iina
-          pkgs.ayugram-desktop
-          pkgs.caprine
           pkgs.chatgpt
           pkgs.spotify
           pkgs.raycast
           pkgs.karabiner-elements
-          pkgs.arc-browser
         ];
 
       # Set Git commit hash for darwin-version.
@@ -62,7 +60,8 @@
       security.pam.services.sudo_local.touchIdAuth = true;
       nixpkgs.config.allowUnfree = true;
       environment.variables.EDITOR = "neovim";
-
+      services.karabiner-elements.enable = true;
+      
       system.defaults = {
         dock.autohide = true;
         dock.mru-spaces = false;
