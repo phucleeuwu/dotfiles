@@ -1,1 +1,4 @@
 ls
+yazi
+ls
+cd
