@@ -17,28 +17,38 @@
       environment.systemPackages =
         [ 
           pkgs.bun
+          pkgs.eza
+          pkgs.zsh
           pkgs.bat
           pkgs.gh
           pkgs.yazi
           pkgs.neovim
           pkgs.ripgrep
+          pkgs.fd
+          pkgs.fzf
           pkgs.tmux
           pkgs.zoxide
-          pkgs.fd
-          pkgs.jq
           pkgs.delta
           pkgs.starship
           pkgs.topgrade
           pkgs.aerospace
           pkgs.lazygit
           pkgs.zinit
-          pkgs.oh-my-posh
-          pkgs.chatgpt
           pkgs.atuin
-          pkgs.imagemagick
+          pkgs.oh-my-posh
           pkgs.coreutils
+          pkgs.stow
           pkgs.fastfetch
-          pkgs.poppler
+          pkgs.onefetch
+          #apps
+          pkgs.iina
+          pkgs.ayugram-desktop
+          pkgs.caprine
+          pkgs.chatgpt
+          pkgs.spotify
+          pkgs.raycast
+          pkgs.karabiner-elements
+          pkgs.arc-browser
         ];
 
       # Set Git commit hash for darwin-version.
@@ -52,9 +62,6 @@
       security.pam.services.sudo_local.touchIdAuth = true;
       nixpkgs.config.allowUnfree = true;
       environment.variables.EDITOR = "neovim";
-
-
-
 
       system.defaults = {
         dock.autohide = true;
@@ -98,7 +105,6 @@
     };
   in
   {
-    # Build darwin flake using:
     # $ darwin-rebuild build --flake .#phucs-MacBook-Air
     darwinConfigurations."phucs-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [ 
