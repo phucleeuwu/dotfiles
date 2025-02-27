@@ -16,11 +16,20 @@
         [ 
           pkgs.bun
           pkgs.zsh
+          pkgs.zsh-nix-shell
           pkgs.gh
           pkgs.neovim
           pkgs.ripgrep
           pkgs.tmux
           pkgs.zoxide
+          pkgs.yazi
+          pkgs.fd
+          pkgs.delta
+          pkgs.starship
+          pkgs.topgrade
+          pkgs.aerospace
+          pkgs.lazygit
+          pkgs.zinit
         ];
 
       # Necessary for using flakes on this system.
