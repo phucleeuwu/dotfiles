@@ -18,6 +18,7 @@
       environment.systemPackages =
         [ 
           pkgs.bun
+          pkgs.curl
           pkgs.git
           pkgs.eza
           pkgs.zsh
@@ -87,7 +88,6 @@
         dock.largesize = 80;
         dock.showhidden = true;
         dock.show-recents = false;
-        finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "clmv";
         finder.ShowStatusBar = true;
         finder.ShowPathbar = true;
@@ -102,6 +102,7 @@
         controlcenter.BatteryShowPercentage = true;
         NSGlobalDomain._HIHideMenuBar = true;
         NSGlobalDomain.AppleShowAllFiles = true;
+        NSGlobalDomain.AppleShowAllExtensions = true;
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
         NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
         NSGlobalDomain.NSAutomaticInlinePredictionEnabled = false;
@@ -130,7 +131,6 @@
           nix-homebrew = {
             enable = true;
             user = "phuc";
-            autoMigrate = true;
           };
         }
         #home-manager
