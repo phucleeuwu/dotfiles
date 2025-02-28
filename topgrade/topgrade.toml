@@ -15,7 +15,7 @@
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["vim", "spicetify", "yarn", "node", "pnpm", "bun"]
+disable = ["vim", "spicetify", "yarn", "node", "pnpm", "bun", "homebrew"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]

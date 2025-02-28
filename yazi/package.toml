@@ -30,8 +30,8 @@ hash = "b82022e48c23a2c8d0879b7bc46990a0"
 
 [[plugin.deps]]
 use = "DreamMaoMao/fg"
-rev = "daf6960"
-hash = "a109ca1014888b177eae13e667e57e82"
+rev = "652d02a"
+hash = "e078909d3a4bccc8bfa0ee194514a55"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
