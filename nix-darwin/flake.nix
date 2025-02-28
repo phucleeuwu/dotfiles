@@ -6,23 +6,11 @@
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    homebrew-core = {
-      url = "github:homebrew/homebrew-core";
-      flake = true;
-    };
-    homebrew-cask = {
-      url = "github:homebrew/homebrew-cask";
-      flake = true;
-    };
-    homebrew-bundle = {
-      url = "github:homebrew/homebrew-bundle";
-      flake = true;
-    };
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, homebrew-core, homebrew-cask, homebrew-bundle, ... }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, ... }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -30,6 +18,7 @@
       environment.systemPackages =
         [ 
           pkgs.bun
+          pkgs.git
           pkgs.eza
           pkgs.zsh
           pkgs.bat
@@ -125,13 +114,14 @@
         NSGlobalDomain."com.apple.sound.beep.volume" = 0.6065307;
         NSGlobalDomain."com.apple.trackpad.scaling" = 3.0;
         NSGlobalDomain."com.apple.swipescrolldirection" = false;
+        LaunchServices.LSQuarantine = false;
       };
 
     };
   in
   {
-    # $ darwin-rebuild build --flake .#phucs-MacBook-Air
-    darwinConfigurations."phucs-MacBook-Air" = nix-darwin.lib.darwinSystem {
+    # darwin-rebuild --flake .
+    darwinConfigurations."phuclees-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [ 
         configuration 
         #Homebrew
@@ -139,13 +129,7 @@
         {
           nix-homebrew = {
             enable = true;
-            user = "dog";
-            taps = { 
-              "homebrew/homebrew-core" = homebrew-core;
-              "homebrew/homebrew-cask" = homebrew-cask;
-              "homebrew/homebrew-bundle" = homebrew-bundle;
-            };
-            mutableTaps = false;
+            user = "phuc";
             autoMigrate = true;
           };
         }
