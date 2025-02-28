@@ -40,7 +40,6 @@
           pkgs.stow
           pkgs.fastfetch
           pkgs.onefetch
-          pkgs.kmonad
           #apps
           pkgs.iina
           pkgs.chatgpt
