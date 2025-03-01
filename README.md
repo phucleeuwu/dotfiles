@@ -1,6 +1,7 @@
 # Install my dotfiles with nix and nix-darwin
 
-🛠️ Link my dotfiles:
+🛠️ Link my `dotfiles`:
+
 ```bash
 stow .
 stow git zsh -t ~
