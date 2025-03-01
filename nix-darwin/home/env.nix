@@ -1,6 +1,6 @@
 {
   home.sessionVariables = {
-    # Example: Set default editor
+    XDG_CONFIG_HOME = "$HOME/.config";
     EDITOR = "nvim";
   };
 }
