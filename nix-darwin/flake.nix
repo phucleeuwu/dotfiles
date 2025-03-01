@@ -12,7 +12,15 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
   let
-    configuration = { pkgs, ... }: {
+    username = "phuc";
+    configuration = { pkgs, config, ... }: {
+      users = {
+        users.${username} = {
+          home = "/Users/${username}";
+          name = "${username}";
+        };
+      };
+
       environment.systemPackages =
         [ 
           pkgs.atuin
@@ -67,13 +75,12 @@
         onActivation.cleanup = "zap";
       };
 
+      system.stateVersion = 6;
       nix.settings.experimental-features = "nix-command flakes";
       system.configurationRevision = self.rev or self.dirtyRev or null;
-      system.stateVersion = 6;
       nixpkgs.hostPlatform = "aarch64-darwin";
       security.pam.services.sudo_local.touchIdAuth = true;
       nixpkgs.config.allowUnfree = true;
-      home-manager.backupFileExtension = "backup";
       
       system.defaults = {
         trackpad.Clicking = true;
@@ -121,23 +128,20 @@
   {
     # darwin-rebuild switch --flake .
     darwinConfigurations."phuclees-MacBook-Air" = nix-darwin.lib.darwinSystem {
-      system = "aarch64-darwin";
       modules = [ 
         configuration 
-
         nix-homebrew.darwinModules.nix-homebrew
         {
           nix-homebrew = {
             enable = true;
-            user = "phuc";
+            user = "${username}";
             autoMigrate = true;
           };
         }
-
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.phuc = import ./home.nix;
+          home-manager.users.${username} = import ./home.nix;
         }
       ];
     };
