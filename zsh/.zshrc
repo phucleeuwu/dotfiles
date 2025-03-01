@@ -35,6 +35,7 @@ zinit depth"1" wait lucid nocd light-mode for \
       aloxaf/fzf-tab \
       hlissner/zsh-autopair \
       fdellwing/zsh-bat \
+      tarrasch/zsh-bd \
       phucleeuwu/yazi-zoxide.zsh \
       phucleeuwu/navi-plus-plus.zsh \
       phucleeuwu/plugins-config.zsh \

@@ -13,19 +13,18 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, ... }:
   let
     configuration = { pkgs, ... }: {
-      # List packages installed in system profile. To search by name, run:
-      # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [ 
+          pkgs.atuin
           pkgs.bun
           pkgs.curl
           pkgs.git
+          pkgs.gh
           pkgs.eza
           pkgs.zsh
+          pkgs.helix
           pkgs.bat
-          pkgs.gh
           pkgs.yazi
-          pkgs.neovim
           pkgs.ripgrep
           pkgs.fd
           pkgs.fzf
@@ -34,16 +33,16 @@
           pkgs.delta
           pkgs.starship
           pkgs.topgrade
-          pkgs.aerospace
           pkgs.lazygit
+          pkgs.neovim
           pkgs.zinit
-          pkgs.atuin
           pkgs.oh-my-posh
           pkgs.coreutils
           pkgs.stow
           pkgs.fastfetch
           pkgs.onefetch
           #apps
+          pkgs.aerospace
           pkgs.iina
         ];
 
@@ -75,7 +74,6 @@
       nixpkgs.hostPlatform = "aarch64-darwin";
       security.pam.services.sudo_local.touchIdAuth = true;
       nixpkgs.config.allowUnfree = true;
-      environment.variables.EDITOR = "neovim";
       
       system.defaults = {
         dock.autohide = true;
@@ -121,11 +119,11 @@
     };
   in
   {
-    # darwin-rebuild --flake .
+    # darwin-rebuild switch --flake .
     darwinConfigurations."phuclees-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [ 
         configuration 
-        #Homebrew
+
         nix-homebrew.darwinModules.nix-homebrew
         {
           nix-homebrew = {
@@ -133,11 +131,11 @@
             user = "phuc";
           };
         }
-        #home-manager
+
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          # home-manager.users.dog = import ./home.nix;
+          home-manager.users.phuc = import ./home.nix;
         }
       ];
     };
