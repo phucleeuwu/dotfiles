@@ -33,7 +33,6 @@
           pkgs.zoxide
           pkgs.delta
           pkgs.starship
-          pkgs.topgrade
           pkgs.lazygit
           pkgs.neovim
           pkgs.zinit
@@ -132,6 +131,7 @@
           nix-homebrew = {
             enable = true;
             user = "phuc";
+            autoMigrate = true;
           };
         }
 
