@@ -12,9 +12,9 @@ command_timeout = 1000
 
 [character]
 # Note the use of Catppuccin color 'peach'
-success_symbol = "[[](white) ➜](peach)"
-error_symbol = "[[](red) ❯](peach)"
-vimcmd_symbol = "[ ❮](subtext1)"        # For use with zsh-vi-mode
+success_symbol = "[[󰄛](green) ❯](peach)"
+error_symbol = "[[󰄛](red) ❯](peach)"
+vimcmd_symbol = "[󰄛 ❮](subtext1)"        # For use with zsh-vi-mode
 
 [directory]
 truncate_to_repo = false
@@ -273,4 +273,3 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
-white = "#ffffff"
