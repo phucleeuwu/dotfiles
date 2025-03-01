@@ -76,6 +76,12 @@
       home-manager.backupFileExtension = "backup";
       
       system.defaults = {
+        trackpad.Clicking = true;
+        trackpad.ActuationStrength = 0;
+        LaunchServices.LSQuarantine = false;
+        spaces.spans-displays = false;
+        loginwindow.GuestEnabled = false;
+        controlcenter.BatteryShowPercentage = true;
         dock.autohide = true;
         dock.mru-spaces = false;
         dock.static-only = true;
@@ -93,11 +99,6 @@
         finder.FXDefaultSearchScope = "SCcf";
         finder.CreateDesktop = false;
         finder.NewWindowTarget = "Home";
-        trackpad.Clicking = true;
-        trackpad.ActuationStrength = 0;
-        spaces.spans-displays = false;
-        loginwindow.GuestEnabled = false;
-        controlcenter.BatteryShowPercentage = true;
         NSGlobalDomain._HIHideMenuBar = true;
         NSGlobalDomain.AppleShowAllFiles = true;
         NSGlobalDomain.AppleShowAllExtensions = true;
@@ -113,7 +114,6 @@
         NSGlobalDomain."com.apple.sound.beep.volume" = 0.6065307;
         NSGlobalDomain."com.apple.trackpad.scaling" = 3.0;
         NSGlobalDomain."com.apple.swipescrolldirection" = false;
-        LaunchServices.LSQuarantine = false;
       };
 
     };
@@ -137,7 +137,7 @@
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          # home-manager.users.phuc = import ./home.nix;
+          home-manager.users.phuc = import ./home.nix;
         }
       ];
     };
