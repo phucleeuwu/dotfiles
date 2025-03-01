@@ -1,4 +1,0 @@
-function lci --wraps='eza $EZA_STANDARD_OPTIONS $EZA_LI_OPTIONS $EZA_LC_OPTIONS' --description 'alias lci eza $EZA_STANDARD_OPTIONS $EZA_LI_OPTIONS $EZA_LC_OPTIONS'
-  eza $EZA_STANDARD_OPTIONS $EZA_LI_OPTIONS $EZA_LC_OPTIONS $argv
-        
-end

@@ -1,4 +1,0 @@
-function lca --wraps='eza $EZA_STANDARD_OPTIONS $EZA_LA_OPTIONS $EZA_LC_OPTIONS' --description 'alias lca eza $EZA_STANDARD_OPTIONS $EZA_LA_OPTIONS $EZA_LC_OPTIONS'
-  eza $EZA_STANDARD_OPTIONS $EZA_LA_OPTIONS $EZA_LC_OPTIONS $argv
-        
-end
