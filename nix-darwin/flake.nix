@@ -43,6 +43,7 @@
           pkgs.onefetch
           #apps
           pkgs.aerospace
+          pkgs.spotify
           pkgs.iina
         ];
 
@@ -55,13 +56,11 @@
         casks = [
           "zed"
           "ayugram"
-          "spotify"
           "chatgpt"
           "arc"
           "ghostty"
           "karabiner-elements"
           "raycast"
-          "pearcleaner"
           "font-hack-nerd-font"
           "messenger"
         ];
@@ -138,7 +137,7 @@
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.phuc = import ./home.nix;
+          # home-manager.users.phuc = import ./home.nix;
         }
       ];
     };
