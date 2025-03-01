@@ -10,7 +10,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, ... }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
   let
     configuration = { pkgs, ... }: {
       environment.systemPackages =
@@ -68,13 +68,13 @@
         onActivation.cleanup = "zap";
       };
 
-      nix.configureBuildUsers = true;
       nix.settings.experimental-features = "nix-command flakes";
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 6;
       nixpkgs.hostPlatform = "aarch64-darwin";
       security.pam.services.sudo_local.touchIdAuth = true;
       nixpkgs.config.allowUnfree = true;
+      home-manager.backupFileExtension = "backup";
       
       system.defaults = {
         dock.autohide = true;
@@ -137,10 +137,11 @@
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.phuc = import ./home.nix;
+          # home-manager.users.phuc = import ./home.nix;
         }
       ];
     };
+    darwinPackages = self.darwinConfigurations."phuclees-MacBook-Air".pkgs;
   };
 }
 
