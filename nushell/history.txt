@@ -1,4 +1,0 @@
-ls
-yazi
-ls
-cd
