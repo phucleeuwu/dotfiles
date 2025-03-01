@@ -11,6 +11,7 @@
     ./env.nix         # Session variables
     ./zsh.nix
     ./bat.nix
+    ./git.nix
   ];
 
   # Let Home Manager install and manage itself.

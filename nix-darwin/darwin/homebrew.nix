@@ -8,7 +8,6 @@
     ];
     casks = [
       "zed"
-      "ayugram"
       "chatgpt"
       "arc"
       "ghostty"

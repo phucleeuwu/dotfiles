@@ -2,12 +2,10 @@
 
 {
   home.packages = [
-    pkgs.nerd-fonts.hack
     pkgs.aerospace
     pkgs.atuin
     pkgs.bat
     pkgs.bun
-    pkgs.catppuccin
     pkgs.coreutils
     pkgs.curl
     pkgs.delta
@@ -21,9 +19,12 @@
     pkgs.iina
     pkgs.lazygit
     pkgs.neovim
+    pkgs.nerd-fonts.hack
     pkgs.nodejs
+    pkgs.nil
     pkgs.oh-my-posh
     pkgs.onefetch
+    pkgs.paper-plane
     pkgs.raycast
     pkgs.ripgrep
     pkgs.spotify
