@@ -7,6 +7,7 @@
     pkgs.atuin
     pkgs.bat
     pkgs.bun
+    pkgs.catppuccin
     pkgs.coreutils
     pkgs.curl
     pkgs.delta

@@ -10,6 +10,7 @@
     ./dotfiles.nix    # Dotfile management
     ./env.nix         # Session variables
     ./zsh.nix
+    ./bat.nix
   ];
 
   # Let Home Manager install and manage itself.
