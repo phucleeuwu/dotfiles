@@ -68,6 +68,7 @@
         onActivation.cleanup = "zap";
       };
 
+      nix.configureBuildUsers = true;
       nix.settings.experimental-features = "nix-command flakes";
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 6;
@@ -121,6 +122,7 @@
   {
     # darwin-rebuild switch --flake .
     darwinConfigurations."phuclees-MacBook-Air" = nix-darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
       modules = [ 
         configuration 
 
