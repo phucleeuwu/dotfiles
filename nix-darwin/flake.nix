@@ -16,6 +16,7 @@
       environment.systemPackages =
         [ 
           pkgs.atuin
+          pkgs.nodejs
           pkgs.bun
           pkgs.curl
           pkgs.git
