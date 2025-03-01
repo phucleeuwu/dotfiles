@@ -66,16 +66,16 @@ format = "on [$symbol$domain]($style) "
 symbol = "☁️ "
 style = "bold blue"
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Dev" = " "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-"Repos" = " "
-"Videos" = " "
-"ObsidianVault" = "󰏪 󰠮 "
-"dotfiles" = " "
+# [directory.substitutions]
+# "Documents" = "󰈙 "
+# "Dev" = " "
+# "Downloads" = " "
+# "Music" = " "
+# "Pictures" = " "
+# "Repos" = " "
+# "Videos" = " "
+# "ObsidianVault" = "󰏪 󰠮 "
+# "dotfiles" = " "
 
 # Custom entries
 [custom.yazi]
