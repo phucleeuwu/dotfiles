@@ -6,7 +6,7 @@
 
 #### Install everything (requires [`Lix` - `Nix fork`](https://github.com/lix-project/lix))
 
-> **Note:** Check [`flakes.nix`](./nix/nix-darwin/flakes.nix) username before install
+> **Note:** Check [`flake.nix`](./nix/nix-darwin/flake.nix) username before install
 
 ```bash
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/nix-darwin
@@ -25,6 +25,8 @@ darwin-rebuild switch --flake ~/dotfiles/nix/nix-darwin
 ### 😡 **For Nix Haters**
 
 #### Install everything with my [`Dotfiles Script`](https://github.com/phucleeuwu/dotflow)
+
+> The install script will link `raycast` and `github-copilot` from your `~/Documents/Personal/*`. I store these folders there for convenience since Finder backup them to ICloud.
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
