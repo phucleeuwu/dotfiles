@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 {
-  home.username = "phuc";
-  home.homeDirectory = "/Users/phuc";
+  # home.username = "phuc";
+  # home.homeDirectory = "/Users/phuc";
+  xdg.enable = true;
 
   home.stateVersion = "24.11"; # Don't change unless necessary.
 
@@ -12,6 +13,7 @@
     ./zsh.nix
     ./bat.nix
     ./git.nix
+    ./nushell.nix
   ];
 
   # Let Home Manager install and manage itself.

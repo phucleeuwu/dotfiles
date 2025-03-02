@@ -17,10 +17,6 @@
     hostname = "phuclees-MacBook-Air"; #change to your hostname
     configuration = { pkgs, ... }: {
 
-      # environment.systemPackages = [
-      #     pkgs.home-manager
-      # ];
-
       users.users.${username} = {
         home = "/Users/${username}";
         name = "${username}";
@@ -31,7 +27,6 @@
       system.stateVersion = 6;
       nixpkgs.hostPlatform = "${system}";
       security.pam.services.sudo_local.touchIdAuth = true;
-      nixpkgs.config.allowUnfree = true;
     };
   in
   {
@@ -49,7 +44,7 @@
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.${username} = import ./home/home.nix;
+          home-manager.users.${username} = import ./home/default.nix;
         }
       ];
     };

@@ -2,7 +2,6 @@
 
 {
   home.packages = [
-    pkgs.aerospace
     pkgs.atuin
     pkgs.bat
     pkgs.bun
@@ -16,18 +15,15 @@
     pkgs.gh
     pkgs.git
     pkgs.helix
-    pkgs.iina
     pkgs.lazygit
+    pkgs.nchat
+    pkgs.nushell
     pkgs.neovim
     pkgs.nerd-fonts.hack
     pkgs.nodejs
-    pkgs.nil
     pkgs.oh-my-posh
     pkgs.onefetch
-    pkgs.paper-plane
-    pkgs.raycast
     pkgs.ripgrep
-    pkgs.spotify
     pkgs.starship
     pkgs.stow
     pkgs.tmux

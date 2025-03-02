@@ -1,6 +1,7 @@
+{ config, pkgs, ... }:
+
 {
   home.sessionVariables = {
-    XDG_CONFIG_HOME = "$HOME/.config";
-    EDITOR = "nvim";
+    EDITOR = "${pkgs.neovim}/bin/nvim";
   };
 }
