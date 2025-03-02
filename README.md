@@ -1,8 +1,8 @@
 # My Dotfiles
 
-## Install with Nix (or Stow for Nix haters)
+## Install with Nix (or Stow for Nix Haters)
 
-### 📚 **For Nix Users**
+### 😍 **For Nix Lovers**
 
 #### Install everything (requires [`Lix` - `Nix fork`](https://github.com/lix-project/lix))
 
@@ -20,7 +20,7 @@ darwin-rebuild switch --flake ~/dotfiles/nix-darwin
 
 ---
 
-### 😡 **For Nix haters**
+### 😡 **For Nix Haters**
 
 #### Install everything with my [`Dotfiles Script`](https://github.com/phucleeuwu/dotflow)
 
