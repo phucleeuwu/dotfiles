@@ -4,7 +4,7 @@
 
 ### 📦 **For Nix Users**
 
-#### Install everything (requires [lix-nix fork](https://github.com/lix-project/lix))
+#### Install everything (requires [`Lix` - `Nix fork`](https://github.com/lix-project/lix))
 
 ```bash
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix-darwin
@@ -20,18 +20,14 @@ darwin-rebuild switch --flake ~/dotfiles/nix-darwin
 
 ### 😡 **For Nix haters**
 
-#### 🚀 Install everything with my [dotfiles manage script](https://github.com/phucleeuwu/dotflow)
+#### 🚀 Install everything with my [`Dotfiles Script`](https://github.com/phucleeuwu/dotflow)
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
 ```
 
-#### ⇅ Upgrade everything (requires [topgrade](https://github.com/topgrade-rs/topgrade))
+#### ⇅ Upgrade everything (requires [`Topgrade`](https://github.com/topgrade-rs/topgrade))
 
 ```bash
 topgrade
 ```
-
----
-
-📝 **Repo:** [phucleeuwu/dotfiles](https://github.com/phucleeuwu/dotfiles)
