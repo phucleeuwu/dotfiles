@@ -2,16 +2,16 @@
 
 {
   enable = true;
-  enableZshIntegration = true;
-  enableNushellIntegration = true;
   enableFishIntegration = true;
+  enableNushellIntegration = true;
+  enableZshIntegration = true;
   settings = {
     auto_sync = true;
-    update_check = false;
     search_mode = "fuzzy";
-    style = "full";
-    inline_height = 0;
+    # style = "full";
+    inline_height = 20;
     enter_accept = true;
-    keymap_mode = "vim-insert";
+    keymap_mode = "vim-normal";
+    records = true;
   };
 }

@@ -2,8 +2,9 @@
 
 {
   enable = true;
-  enableZshIntegration = true;
   enableFishIntegration = true;
+  # enableNushellIntegration = true;
+  enableZshIntegration = true;
   installBatSyntax = true;
   settings = {
     theme = "catppuccin-mocha";

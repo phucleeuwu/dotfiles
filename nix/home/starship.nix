@@ -2,9 +2,9 @@
 
 {
   enable = false;
-  enableZshIntegration = true;
   enableFishIntegration = true;
   enableNushellIntegration = true;
+  enableZshIntegration = true;
   enableTransience = true;
   settings = {
     "$schema" = "https://starship.rs/config-schema.json";
