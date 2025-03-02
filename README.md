@@ -1,6 +1,6 @@
 # My Dotfiles
 
-## 🚀 Install with Nix (or Stow for Nix haters)
+## Install with Nix (or Stow for Nix haters)
 
 ### 📚 **For Nix Users**
 
