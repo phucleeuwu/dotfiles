@@ -2,7 +2,7 @@
 
 ## Install with Nix (or Stow for Nix Haters)
 
-### 😍 **For Nix Lovers**
+### 😻 **For Nix Lovers**
 
 #### Install everything (requires [`Lix` - `Nix fork`](https://github.com/lix-project/lix))
 
