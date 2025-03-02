@@ -2,7 +2,7 @@
 
 ## 🚀 Install with Nix (or Stow for Nix haters)
 
-### 📦 **For Nix Users**
+### 📚 **For Nix Users**
 
 #### Install everything (requires [`Lix` - `Nix fork`](https://github.com/lix-project/lix))
 
@@ -15,6 +15,8 @@ nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix-darwin
 ```bash
 darwin-rebuild switch --flake ~/dotfiles/nix-darwin
 ```
+
+> **Note:** After installing your dotfiles with Nix, you should restart your Mac to apply system-wide changes properly.
 
 ---
 
@@ -31,3 +33,4 @@ bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh
 ```bash
 topgrade
 ```
+

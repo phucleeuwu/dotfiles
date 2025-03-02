@@ -1,4 +1,3 @@
-git
 .stowrc
 .DS_Store
 .git
@@ -7,3 +6,7 @@ README.md
 browser😻
 spicetify-config
 nix-darwin
+git
+zsh
+home
+brew

@@ -11,6 +11,7 @@
     pkgs.eza
     pkgs.fastfetch
     pkgs.fd
+    pkgs.fish
     pkgs.fzf
     pkgs.gh
     pkgs.git
