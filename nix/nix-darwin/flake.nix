@@ -10,13 +10,13 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, ... }:
   let
     system = "aarch64-darwin"; # Ensure this matches your system
     username = "phuc"; #change to your username `whoami`
     hostname = "phuclees-MacBook-Air"; #change to your hostname `scutil --get LocalHostName`
 
-    configuration = { config, pkgs, ... }: {
+    configuration = { config, pkgs, lib, ... }: {
 
       users.users.${username} = {
         home = "/Users/${username}";
