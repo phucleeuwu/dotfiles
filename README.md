@@ -7,13 +7,13 @@
 #### Install everything (requires [`Lix` - `Nix fork`](https://github.com/lix-project/lix))
 
 ```bash
-nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix-darwin
+nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/nix-darwin
 ```
 
 #### ⇅ Upgrade everything
 
 ```bash
-darwin-rebuild switch --flake ~/dotfiles/nix-darwin
+darwin-rebuild switch --flake ~/dotfiles/nix/nix-darwin
 ```
 
 > **Note:** After installing your dotfiles with Nix, you should restart your Mac to apply system-wide changes properly.
@@ -33,4 +33,3 @@ bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh
 ```bash
 topgrade
 ```
-

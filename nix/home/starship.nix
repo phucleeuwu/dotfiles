@@ -1,10 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  enable = true;
+  enable = false;
   enableZshIntegration = true;
-  enableNushellIntegration = true;
   enableFishIntegration = true;
+  enableNushellIntegration = true;
   enableTransience = true;
   settings = {
     "$schema" = "https://starship.rs/config-schema.json";

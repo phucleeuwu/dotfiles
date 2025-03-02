@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  enable = false;
+  enable = true;
   enableFishIntegration = true;
   enableZshIntegration = true;
   enableNushellIntegration = true;

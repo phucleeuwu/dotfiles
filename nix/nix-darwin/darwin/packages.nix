@@ -2,6 +2,7 @@
 
 {
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = [
     pkgs.raycast

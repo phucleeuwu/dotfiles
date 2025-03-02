@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  enable = true;
   config = {
     italic-text = "always";
     style = "full";
@@ -10,7 +11,7 @@
   };
 
   themes = {
-    "Catppuccin Mocha" = {
+    "catppuccin-mocha" = {
       src = pkgs.fetchFromGitHub {
         owner = "catppuccin";
         repo = "bat";

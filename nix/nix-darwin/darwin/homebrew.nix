@@ -3,8 +3,8 @@
 {
   homebrew = {
     enable = true;
-    brews = [ 
-      
+    brews = [
+
     ];
     casks = [
       "zed"
@@ -14,6 +14,7 @@
       "karabiner-elements"
       "messenger"
     ];
+    # Declarative nature of homebrew
     onActivation.cleanup = "zap";
   };
 }
