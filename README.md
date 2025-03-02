@@ -22,7 +22,7 @@ darwin-rebuild switch --flake ~/dotfiles/nix-darwin
 
 ### 😡 **For Nix haters**
 
-#### 🚀 Install everything with my [`Dotfiles Script`](https://github.com/phucleeuwu/dotflow)
+#### Install everything with my [`Dotfiles Script`](https://github.com/phucleeuwu/dotflow)
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
