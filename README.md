@@ -26,7 +26,7 @@ darwin-rebuild switch --flake ~/dotfiles/nix/nix-darwin
 
 #### Install everything with my [`Dotfiles Script`](https://github.com/phucleeuwu/dotflow)
 
-> The install script will link `raycast` and `github-copilot` from your `~/Documents/Personal/*`. I store these folders there for convenience since Finder backup them to ICloud.
+> This script will link `raycast` and `github-copilot` from `~/Documents/Personal/*` unless you choose delete unnecessary files. I store these folders there for convenience since Finder backup them to ICloud.
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
