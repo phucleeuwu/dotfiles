@@ -13,8 +13,9 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
   let
     system = "aarch64-darwin"; # Ensure this matches your system
-    username = "phuc"; #change to your username
-    hostname = "phuclees-MacBook-Air"; #change to your hostname
+    username = "phuc"; #change to your username `whoami`
+    hostname = "phuclees-MacBook-Air"; #change to your hostname `scutil --get LocalHostName`
+
     configuration = { pkgs, ... }: {
 
       users.users.${username} = {
@@ -48,7 +49,6 @@
         }
       ];
     };
-
     darwinPackages = self.darwinConfigurations.${hostname}.pkgs;
   };
 }
