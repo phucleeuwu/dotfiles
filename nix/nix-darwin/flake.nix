@@ -23,6 +23,7 @@
         name = "${username}";
       };
 
+      home-manager.backupFileExtension = "backup";
       nix.settings.experimental-features = "nix-command flakes";
       system.configurationRevision = self.rev or self.dirtyRev or null;
       system.stateVersion = 6;
@@ -42,6 +43,7 @@
             autoMigrate = true;
           };
         }
+
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
