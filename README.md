@@ -6,7 +6,7 @@
 
 #### Install everything (requires [`Lix` - `Nix fork`](https://github.com/lix-project/lix))
 
-> **Note:** Check [`flake.nix`](./nix/nix-darwin/flake.nix) username before install
+> **Note:** [`flake.nix`](./nix/nix-darwin/flake.nix) and [`home.nix`](./nix/nix-darwin/home.nix) changes username before installation
 
 ```bash
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/nix-darwin
