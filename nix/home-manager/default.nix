@@ -22,6 +22,7 @@
     zoxide.enable = lib.mkEnableOption "Enable Zoxide" // { default = true; };
 
     #guiPrograms
+    aerospace.enable = lib.mkEnableOption "Enable Aerospace" // { default = true; };
     ghostty.enable = lib.mkEnableOption "Enable Ghostty" // { default = true; };
   };
 
@@ -46,6 +47,7 @@
       zoxide = lib.mkIf config.zoxide.enable (import ./cliPrograms/zoxide.nix { inherit config pkgs; });
 
       #guiPrograms
+      aerospace = lib.mkIf config.aerospace.enable (import ./guiPrograms/aerospace.nix { inherit config pkgs; });
       ghostty = lib.mkIf config.ghostty.enable (import ./guiPrograms/ghostty.nix { inherit config pkgs; });
     };
   };
