@@ -14,6 +14,7 @@
     eza.enable = lib.mkEnableOption "Enable Eza" // { default = true; };
     fd.enable = lib.mkEnableOption "Enable Fd" // { default = true; };
     fzf.enable = lib.mkEnableOption "Enable Fzf" // { default = true; };
+    lazygit.enable = lib.mkEnableOption "Enable lazygit" // { default = true; };
     git.enable = lib.mkEnableOption "Enable Git" // { default = true; };
     oh-my-posh.enable = lib.mkEnableOption "Enable Oh My Posh" // { default = true; };
     ripgrep.enable = lib.mkEnableOption "Enable Ripgrep" // { default = true; };
@@ -39,6 +40,7 @@
       eza = lib.mkIf config.eza.enable (import ./cliPrograms/eza.nix { inherit config pkgs; });
       fd = lib.mkIf config.fd.enable (import ./cliPrograms/fd.nix { inherit config pkgs; });
       fzf = lib.mkIf config.fzf.enable (import ./cliPrograms/fzf.nix { inherit config pkgs; });
+      lazygit = lib.mkIf config.lazygit.enable (import ./cliPrograms/lazygit.nix { inherit config pkgs; });
       git = lib.mkIf config.git.enable (import ./cliPrograms/git.nix { inherit config pkgs; });
       oh-my-posh = lib.mkIf config.oh-my-posh.enable (import ./cliPrograms/oh-my-posh.nix { inherit config pkgs; });
       ripgrep = lib.mkIf config.ripgrep.enable (import ./cliPrograms/ripgrep.nix { inherit config pkgs; });
