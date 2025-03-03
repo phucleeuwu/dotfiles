@@ -1,4 +1,4 @@
-{ config, pkgs, ... };
+{ config, pkgs, ... }:
 
 {
   enable = true;
@@ -21,6 +21,8 @@
       indent-guides = {
         render = true;
       };
+    };
+
     keys.normal = {
       space.space = "file_picker";
       space.w = ":w";
@@ -28,4 +30,5 @@
       esc = [ "collapse_selection" "keep_primary_selection" ];
     };
   };
-};
+}
+
