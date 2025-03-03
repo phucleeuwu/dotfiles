@@ -5,5 +5,7 @@
   enableFishIntegration = true;
   enableNushellIntegration = true;
   enableZshIntegration = true;
-  options = ["--cmd j"];
+  options = [
+    "--cmd cd"
+  ];
 }

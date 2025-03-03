@@ -10,7 +10,12 @@
 
   imports = [
     ../home-manager/packages.nix    # Packages list
-    ../home-manager/dotfiles.nix    # Dotfile management
     ../home-manager/env.nix         # Session variables
+    ../home-manager/default.nix        # Module
   ];
+  # oh-my-posh.enable = false;
+  fish.enable = true;
+  zsh.enable = true;
+  starship.enable = false;
+  ghostty.enable = false;
 }

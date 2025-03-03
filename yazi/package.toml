@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "5186af7"
-hash = "ae9e1d0c6bfd68cdebc98cc684c22b45"
+rev = "3d0c7c6"
+hash = "9dce00232a0e0e2502565c7aa2b0ed4e"
 
 [[plugin.deps]]
 use = "KKV9/compress"
@@ -20,7 +20,7 @@ hash = "4f1a71eff1dd8f245ae2e3985e3e2f91"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "5186af7"
+rev = "3d0c7c6"
 hash = "771f18427fb75fb19990ce602bb322f4"
 
 [[plugin.deps]]

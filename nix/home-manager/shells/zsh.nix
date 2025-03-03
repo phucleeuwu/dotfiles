@@ -2,7 +2,7 @@
 
 {
   enable = true;
-  enableCompletion = true;
+  enableCompletion = false;
 
   initExtra = ''
     # 🔌 OhMyZsh + Aliases (with Zinit plugins manager)
@@ -19,16 +19,9 @@
       jeffreytse/zsh-vi-mode \
       aloxaf/fzf-tab \
       hlissner/zsh-autopair \
-      fdellwing/zsh-bat \
-      tarrasch/zsh-bd \
-      phucleeuwu/yazi-zoxide.zsh \
-      phucleeuwu/navi-plus-plus.zsh \
       phucleeuwu/om.zsh-aliases \
       OMZL::clipboard.zsh \
-      OMZP::brew \
       OMZP::sudo \
-      OMZP::eza \
-      OMZP::zoxide \
       OMZP::alias-finder \
       OMZP::fzf \
       OMZP::copypath \
