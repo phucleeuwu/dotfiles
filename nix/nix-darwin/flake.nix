@@ -35,7 +35,7 @@
     darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
-        ./darwin-extras/default.nix
+        ./default.nix
         nix-homebrew.darwinModules.nix-homebrew {
           nix-homebrew = {
             enable = true;
@@ -50,6 +50,10 @@
           home-manager.users.${username} = import ./home.nix;
         }
       ];
+    };
+    homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+      pkgs = import nixpkgs { system = "${system}"; };
+      modules = [ ./home.nix ];
     };
     darwinPackages = self.darwinConfigurations.${hostname}.pkgs;
   };
