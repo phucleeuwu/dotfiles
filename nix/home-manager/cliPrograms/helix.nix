@@ -5,7 +5,6 @@
   settings = {
     theme = "catppuccin_mocha";
     editor = {
-      evil = true;
       line-number = "relative";
       cursorline = true;
       color-modes = true;
