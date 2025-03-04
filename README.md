@@ -1,4 +1,4 @@
-# Aesthetic and efficient dotfiles 😻.
+# Aesthetic and efficient dotfiles 😻
 
 ## 📦 Install with `Nix` (or `Stow` for `.config` files only)
 
@@ -9,7 +9,7 @@
 > **Note:** Before installation, update your username in [`flake.nix`](./nix/nix-darwin/flake.nix) and [`home.nix`](./nix/nix-darwin/home.nix).
 
 ```bash
-nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/nix-darwin
+nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/darwin
 ```
 
 > **Note:** After installing my dotfiles with Nix, restart your Mac to apply system-wide changes properly.
@@ -19,13 +19,13 @@ nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/nix-da
 Update [`flake.lock`](./nix/nix-darwin/flake.lock):
 
 ```bash
-nix flake update --flake ~/dotfiles/nix/nix-darwin
+nix flake update --flake ~/dotfiles/nix/darwin
 ```
 
 Rebuild with updated configurations:
 
 ```bash
-darwin-rebuild switch --flake ~/dotfiles/nix/nix-darwin
+darwin-rebuild switch --flake ~/dotfiles/nix/darwin
 ```
 
 ---

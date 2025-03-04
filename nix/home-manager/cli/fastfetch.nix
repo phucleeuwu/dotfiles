@@ -12,7 +12,7 @@
       "break"
       {
         type = "kernel";
-        key = " Phuclee ";
+        key = " Phuc Lee   ";
         keyColor = "magenta";
       }
       {

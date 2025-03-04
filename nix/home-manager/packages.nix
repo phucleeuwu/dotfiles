@@ -3,6 +3,7 @@
 {
   home.packages = [
     pkgs.bun
+    pkgs.chatgpt
     pkgs.coreutils
     pkgs.curl
     pkgs.delta

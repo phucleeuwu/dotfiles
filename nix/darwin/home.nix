@@ -15,7 +15,7 @@
     ../home-manager/aliases.nix       # ShellAliases
   ];
 
-  # nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   # enable or disable programs
   aerospace.enable = true;

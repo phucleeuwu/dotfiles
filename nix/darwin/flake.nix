@@ -23,6 +23,7 @@
         name = "${username}";
       };
 
+      home-manager.backupFileExtension = "backup";
       nixpkgs.config.allowUnfree = true;
       nix.settings.experimental-features = "nix-command flakes";
       system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -51,10 +52,10 @@
         }
       ];
     };
-    homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs { system = "${system}"; };
-      modules = [ ./home.nix ];
-    };
+    # homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+    #   pkgs = import nixpkgs { system = "${system}"; };
+    #   modules = [ ./home.nix ];
+    # };
     darwinPackages = self.darwinConfigurations.${hostname}.pkgs;
   };
 }
