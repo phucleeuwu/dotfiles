@@ -2,6 +2,9 @@
 
 {
   home.packages = [
+    pkgs.arc-browser
+    pkgs.raycast
+    pkgs.iina
     pkgs.bun
     pkgs.chatgpt
     pkgs.coreutils
@@ -14,5 +17,6 @@
     pkgs.nodejs
     pkgs.onefetch
     pkgs.stow
+    pkgs.spotify
   ];
 }

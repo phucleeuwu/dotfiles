@@ -52,10 +52,10 @@
         }
       ];
     };
-    # homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-    #   pkgs = import nixpkgs { system = "${system}"; };
-    #   modules = [ ./home.nix ];
-    # };
+    homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+      pkgs = import nixpkgs { system = "${system}"; };
+      modules = [ ./home.nix ];
+    };
     darwinPackages = self.darwinConfigurations.${hostname}.pkgs;
   };
 }
