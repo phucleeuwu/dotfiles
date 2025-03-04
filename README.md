@@ -1,10 +1,12 @@
-# My Dotfiles with 🙀Catppuccin Mocha as default theme
+# 🎨 Dotfiles with 🙀 Catppuccin Mocha Theme
 
-## Install with Nix (or Stow for those who only need `.config` files)
+> Aesthetic and efficient dotfiles for a smooth development experience.
 
-### 😍 **Nix Lovers**
+## 📦 Install with Nix (or Stow for `.config` files only)
 
-#### Install everything (requires [`Lix` - `Nix fork`](https://github.com/lix-project/lix))
+#### 😍 **For Nix Lovers**
+
+##### 🔧 Install Everything (Requires [`Lix` - `Nix Fork`](https://github.com/lix-project/lix))
 
 > **Note:** Before installation, update your username in [`flake.nix`](./nix/nix-darwin/flake.nix) and [`home.nix`](./nix/nix-darwin/home.nix).
 
@@ -12,33 +14,33 @@
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/nix-darwin
 ```
 
-#### ⇅ Upgrade and apply changes
+> **Note:** After installing my dotfiles with Nix, restart your Mac to apply system-wide changes properly.
 
-> Update `flake.lock`:
+##### 🔄 Upgrade & Apply Changes
+
+Update [`flake.lock`](./nix/nix-darwin/flake.lock):
 
 ```bash
 nix flake update --flake ~/dotfiles/nix/nix-darwin
 ```
 
-> Rebuild with updated configurations:
+Rebuild with updated configurations:
 
 ```bash
 darwin-rebuild switch --flake ~/dotfiles/nix/nix-darwin
 ```
 
-> **Note:** After installing my dotfiles with Nix, restart your Mac to apply system-wide changes properly.
-
 ---
 
-### 😡 **Nix Haters**
+#### 😡 **For Nix Haters**
 
-#### Install everything with my [`Dotfiles Script`](https://github.com/phucleeuwu/dotflow)
+##### 🛠️ Install Everything with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
 ```
 
-#### ⇅ Upgrade everything (requires [`Topgrade`](https://github.com/topgrade-rs/topgrade))
+##### ⏫ Upgrade Everything (Requires [`Topgrade`](https://github.com/topgrade-rs/topgrade))
 
 ```bash
 topgrade
@@ -46,28 +48,32 @@ topgrade
 
 ---
 
-# Home Manager for Darwin Flake
+## 🏡 Home Manager for Darwin Flake
 
-## To locate the [`home-manager`](https://nix-community.github.io/home-manager/index.xhtml#ch-usage) binary run
+### 🔍 Locate the [`home-manager`](https://nix-community.github.io/home-manager/index.xhtml#ch-usage) Binary
 
 ```bash
 find /nix/store -name home-manager -type f | grep bin
 ```
 
-## To apply your Home Manager configuration, run
+### ⚙️ Apply Your Home Manager Configuration
 
 ```bash
 home-manager --flake ~/dotfiles/nix/nix-darwin/ switch
 ```
 
-## Managing Programs
+### 📂 Managing Programs
 
-Each program has its own `.nix` file. By default, all files inside this directories will be installed thanks to my [`script`](./nix/home-manager/default.nix):
+Each program has its own `.nix` file. By default, all files inside these directories will be installed automatically, thanks to my [`script`](./nix/home-manager/default.nix):
 
-- [`./nix/home-manager/gui`](./nix/home-manager/gui)
-- [`./nix/home-manager/cli`](./nix/home-manager/cli)
-- [`./nix/home-manager/shell`](./nix/home-manager/shell)
+- [`./nix/home-manager/gui`](./nix/home-manager/gui) 🖥️ GUI applications
+- [`./nix/home-manager/cli`](./nix/home-manager/cli) 🛠️ CLI tools
+- [`./nix/home-manager/shell`](./nix/home-manager/shell) 🐚 Shells
 
-### Disabling Specific Programs
+### ❌ Disabling Specific Programs
 
-To not install a specific programs, set the corresponding program’s `enable` option to `false` in [`./nix/nix-darwin/home.nix`](./nix/nix-darwin/home.nix)
+To prevent the installation of a specific program, set the corresponding program’s `enable` option to `false` in [`home.nix`](./nix/nix-darwin/home.nix).
+
+---
+
+🎉 **Enjoy your optimized system with a sleek Catppuccin Mocha theme!**
