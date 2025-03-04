@@ -8,7 +8,6 @@
     ];
     casks = [
       "zed"
-      "chatgpt"
       "arc"
       "ghostty"
       "karabiner-elements"

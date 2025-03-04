@@ -50,9 +50,15 @@
       # Application Shortcuts
       "alt-g" = "exec-and-forget open -a /Applications/Ghostty.app";
       "alt-a" = "exec-and-forget open -a /Applications/Arc.app";
-      "alt-z" = "exec-and-forget open -a /Applications/Zed.app";
+      # "alt-z" = "exec-and-forget open -a /Applications/Zed.app";
       "alt-m" = "exec-and-forget open -a /Applications/Messenger.app";
-      "alt-c" = "exec-and-forget open -a /Applications/ChatGPT.app";
+      # "alt-c" = "exec-and-forget open -a /Applications/ChatGPT.app";
+
+			# "alt-g" = "exec-and-forget ${pkgs.ghostty}/Applications/Ghostty.app";
+			# "alt-a" = "exec-and-forget ${pkgs.arc-browser}/Applications/Arc.app";
+			# "alt-z" = "exec-and-forget ${pkgs.zed}/Applications/Zed.app";
+			# "alt-m" = "exec-and-forget ${pkgs.messenger}/Applications/Messenger.app";
+			"alt-c" = "exec-and-forget open -a ${pkgs.chatgpt}/Applications/ChatGPT.app";
 
       # Layout Switching
       "alt-slash" = "layout tiles horizontal vertical";

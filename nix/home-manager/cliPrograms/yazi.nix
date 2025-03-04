@@ -7,20 +7,21 @@
   enableNushellIntegration = true;
   shellWrapperName = "y";
   flavors = {
-    catppuccin-mocha = ./flavors/catppuccin-mocha.yazi;
+    catppuccin-mocha = ../../../yazi/flavors/catppuccin-mocha.yazi;
   };
+
   plugins = {
-    compress = ./plugins/compress.yazi;
-    fg = ./plugins/fg.yazi;
-    full-border = ./plugins/full-border.yazi;
-    git = ./plugins/git.yazi;
-    searchjump = ./plugins/searchjump.yazi;
-    yatline-githead = ./plugins/yatline-githead.yazi;
-    yatline = ./plugins/yatline.yazi;
+    compress = ../../../yazi/plugins/compress.yazi;
+    fg = ../../../yazi/plugins/fg.yazi;
+    full-border = ../../../yazi/plugins/full-border.yazi;
+    git = ../../../yazi/plugins/git.yazi;
+    searchjump = ../../../yazi/plugins/searchjump.yazi;
+    yatline-githead = ../../../yazi/plugins/yatline-githead.yazi;
+    yatline = ../../../yazi/plugins/yatline.yazi;
   };
 
   #init.lua
-  initLua = ./init.lua;
+  initLua = ../../../yazi/init.lua;
 
   #theme.toml
   theme = {

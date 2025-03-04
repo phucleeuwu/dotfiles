@@ -47,7 +47,7 @@
       oh-my-posh = lib.mkIf config.oh-my-posh.enable (import ./cliPrograms/oh-my-posh.nix { inherit config pkgs; });
       ripgrep = lib.mkIf config.ripgrep.enable (import ./cliPrograms/ripgrep.nix { inherit config pkgs; });
       starship = lib.mkIf config.starship.enable (import ./cliPrograms/starship.nix { inherit config pkgs; });
-      yazi = lib.mkIf config.yazi.enable (import ./cliPrograms/yazi/yazi.nix { inherit config pkgs; });
+      yazi = lib.mkIf config.yazi.enable (import ./cliPrograms/yazi.nix { inherit config pkgs; });
       zoxide = lib.mkIf config.zoxide.enable (import ./cliPrograms/zoxide.nix { inherit config pkgs; });
 
       #guiPrograms

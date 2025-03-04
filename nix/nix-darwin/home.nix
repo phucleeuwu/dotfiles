@@ -4,9 +4,11 @@
   programs.home-manager.enable = true;
   home.stateVersion = "25.05"; # Don't change unless necessary.
 
-  home.username = "phuc";
-  home.homeDirectory = "/Users/phuc";
+  home.username = "phuc"; # Ensure this matches your username.
+  home.homeDirectory = "/Users/phuc"; # Ensure this matches your homeDirectory.
   xdg.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
 
   imports = [
     ../home-manager/packages.nix    # Packages list
