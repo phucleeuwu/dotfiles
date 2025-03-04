@@ -8,7 +8,6 @@
     ];
     casks = [
       "zed"
-      "arc"
       "ghostty"
       "karabiner-elements"
       "messenger"

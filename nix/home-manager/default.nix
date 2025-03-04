@@ -1,26 +1,31 @@
 { config, pkgs, lib, ... }:
 
 let
-  # 🔹 Categorized program definitions (easy to edit)
+  # 🔹 Function to import all `.nix` modules from a directory
+  importModules = dir:
+    let files = builtins.attrNames (builtins.readDir dir);
+    in map (file: { name = builtins.replaceStrings [".nix"] [""] file; path = dir + "/${file}"; }) 
+       (builtins.filter (file: builtins.match ".*\\.nix" file != null) files);
+
+  # 🔹 Categorized program imports
   programs = {
-    shell = [ "fish" "nushell" "zsh" ];
-    cli = [ "atuin" "bat" "eza" "fd" "fzf" "helix" "lazygit" "neovim" "git"
-            "oh-my-posh" "ripgrep" "starship" "yazi" "zoxide" ];
-    gui = [ "aerospace" "ghostty" ];
+    shell = importModules ./shell;
+    cli = importModules ./cli;
+    gui = importModules ./gui;
   };
 
-  # 🔹 Default enable settings (edit here to change behavior)
+  # 🔹 Default enable settings
   defaults = {
-    shell = false;   # Shell disabled by default
-    cli = true;       # CLI tools enabled by default
-    gui = true;       # GUI apps enabled by default
-    aerospace = false; # ❌ Aerospace is explicitly disabled
+    shell = false;
+    cli = true;
+    gui = true;
+    aerospace = false;
   };
 
   # 🔹 Function to determine category
   getCategory = name:
-    if builtins.elem name programs.shell then "shell"
-    else if builtins.elem name programs.cli then "cli"
+    if builtins.any (p: p.name == name) programs.shell then "shell"
+    else if builtins.any (p: p.name == name) programs.cli then "cli"
     else "gui";
 
   # 🔹 Function to determine if a program is enabled by default
@@ -29,14 +34,11 @@ let
     else defaults.${getCategory name};
 
   # 🔹 Generate program entries dynamically
-  mkProgram = name:
-    let category = getCategory name;
-    in {
-      inherit name;
-      default = getDefault name;
-      path = ./${category}/${name}.nix;
-      pkg = pkgs.${name};
-    };
+  mkProgram = p: {
+    inherit (p) name path;
+    default = getDefault p.name;
+    pkg = pkgs.${p.name};
+  };
 
   # 🔹 Build program list
   programsList = map mkProgram (programs.shell ++ programs.cli ++ programs.gui);
