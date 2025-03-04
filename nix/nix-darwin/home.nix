@@ -8,8 +8,6 @@
   home.homeDirectory = "/Users/phuc"; # Ensure this matches your homeDirectory.
   xdg.enable = true;
 
-  nixpkgs.config.allowUnfree = true;
-
   imports = [
     ../home-manager/packages.nix    # Packages list
     ../home-manager/env.nix         # Session variables
@@ -18,6 +16,7 @@
   ];
 
   # enable or disable programs
+  aerospace.enable = true;
   fish.enable = true;
   starship.enable = false;
   ghostty.enable = false;
