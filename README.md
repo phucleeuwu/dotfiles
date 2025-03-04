@@ -14,12 +14,13 @@ nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/nix-da
 
 #### ⇅ Upgrade everything
 
+> Update flake.lock `nix flake update --flake ~/dotfiles/nix/nix-darwin`
+
 ```bash
-nix flake update --flake ~/dotfiles/nix/nix-darwin
 darwin-rebuild switch --flake ~/dotfiles/nix/nix-darwin
 ```
 
-> **Note:** After installing your dotfiles with Nix, you should restart your Mac to apply system-wide changes properly.
+> **Note:** After installing my dotfiles with Nix, restart your Mac to apply system-wide changes properly.
 
 ---
 
