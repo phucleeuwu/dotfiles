@@ -6,7 +6,6 @@
     pkgs.coreutils
     pkgs.curl
     pkgs.delta
-    pkgs.fastfetch
     pkgs.gh
     pkgs.git
     pkgs.nchat

@@ -23,7 +23,6 @@
         name = "${username}";
       };
 
-      home-manager.backupFileExtension = "backup";
       nixpkgs.config.allowUnfree = true;
       nix.settings.experimental-features = "nix-command flakes";
       system.configurationRevision = self.rev or self.dirtyRev or null;
