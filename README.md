@@ -1,10 +1,8 @@
-# 🎨 Dotfiles with 🙀 Catppuccin Mocha Theme
+# Aesthetic and efficient dotfiles 😻.
 
-> Aesthetic and efficient dotfiles for a smooth development experience.
+## 📦 Install with `Nix` (or `Stow` for `.config` files only)
 
-## 📦 Install with Nix (or Stow for `.config` files only)
-
-#### 😍 **For Nix Lovers**
+#### 😍 **Nix Lovers**
 
 ##### 🔧 Install Everything (Requires [`Lix` - `Nix Fork`](https://github.com/lix-project/lix))
 
@@ -32,18 +30,12 @@ darwin-rebuild switch --flake ~/dotfiles/nix/nix-darwin
 
 ---
 
-#### 😡 **For Nix Haters**
+#### 👍 **Stow**
 
 ##### 🛠️ Install Everything with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
-```
-
-##### ⏫ Upgrade Everything (Requires [`Topgrade`](https://github.com/topgrade-rs/topgrade))
-
-```bash
-topgrade
 ```
 
 ---
