@@ -18,16 +18,16 @@ home-manager --flake ~/dotfiles/nix/nix-darwin/ switch
 
 ## Managing Installed Programs
 
-By default, all pkgs which is `.nix` files inside the following directories will be installed thank to my [`script`](./nix/home-manager/default.nix):
+Each program has its own `.nix` file. By default, all `.nix` files inside this directories will be installed thanks to my [`script`](./nix/home-manager/default.nix):
 
-Each program has its own `.nix` file within this directory:
-
-- `./nix/home-manager/gui`
-- `./nix/home-manager/cli`
-- `./nix/home-manager/shell`
-
+- [`./nix/home-manager/gui`](./nix/home-manager/gui)
+- [`./nix/home-manager/cli`](./nix/home-manager/cli)
+- [`./nix/home-manager/shell`](./nix/home-manager/shell)
 
 ### Disabling Specific Programs
 
-To disable specific programs, edit `./nix/nix-darwin/home.nix` and set the corresponding program’s `enable` option to `false`.
+To disable specific programs, edit [`./nix/nix-darwin/home.nix`](./nix/nix-darwin/home.nix) and set the corresponding program’s `enable` option to `false`.
 
+## Repository
+
+🔗 [GitHub Repository](https://github.com/phucleeuwu/dotfiles)
