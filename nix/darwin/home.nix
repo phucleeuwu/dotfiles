@@ -13,7 +13,6 @@
     ../home-manager/env.nix         # Session variables
     ../home-manager/default.nix        # Module
     ../home-manager/aliases.nix       # ShellAliases
-    # inputs.LazyVim.homeManagerModules.default
   ];
 
   # enable or disable programs
@@ -22,7 +21,4 @@
   starship.enable = false;
   ghostty.enable = false;
 
-  # programs.lazyvim = {
-  #   enable = true;
-  # };
 }

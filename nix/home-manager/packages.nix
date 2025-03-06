@@ -3,6 +3,7 @@
 {
   home.packages = [
     pkgs.arc-browser
+    pkgs.neovim
     pkgs.raycast
     pkgs.iina
     pkgs.bun
