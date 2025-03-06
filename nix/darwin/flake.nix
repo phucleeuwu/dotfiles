@@ -60,10 +60,10 @@
     };
     homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs { system = "${system}"; };
-	extraSpecialArgs = {
-          inherit inputs;
-};
-      modules = [ ./lazyvim.nix ];
+      extraSpecialArgs = {
+        inherit inputs;
+      };
+      modules = [ ./home.nix ];
     };
     darwinPackages = self.darwinConfigurations.${hostname}.pkgs;
   };
