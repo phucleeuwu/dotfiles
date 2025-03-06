@@ -57,7 +57,7 @@ let
 
   # 🔹 Generate package list dynamically (Neovim excluded)
   packagesList = map (p: p.pkg)
-    (builtins.filter (p: config.${p.name}.enable && p.name != "neovim") programsList);
+    (builtins.filter (p: config.${p.name}.enable) programsList);
 
 in {
   options = optionsList;

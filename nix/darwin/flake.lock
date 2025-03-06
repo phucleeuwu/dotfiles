@@ -1,5 +1,27 @@
 {
   "nodes": {
+    "LazyVim": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems",
+        "tailwindcss-colorizer-cmp-nvim": "tailwindcss-colorizer-cmp-nvim"
+      },
+      "locked": {
+        "lastModified": 1736201680,
+        "narHash": "sha256-qTaT8F6KJa1NkI4yW+HExKj488XheO6dSkC7tnoEQQw=",
+        "owner": "matadaniel",
+        "repo": "LazyVim-module",
+        "rev": "7f01fef105d999446e7af78f6c1242b32f6697e1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "matadaniel",
+        "repo": "LazyVim-module",
+        "type": "github"
+      }
+    },
     "brew-src": {
       "flake": false,
       "locked": {
@@ -143,10 +165,42 @@
     },
     "root": {
       "inputs": {
+        "LazyVim": "LazyVim",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_3"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1689347949,
+        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "tailwindcss-colorizer-cmp-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1711194583,
+        "narHash": "sha256-PIkfJzLt001TojAnE/rdRhgVEwSvCvUJm/vNPLSWjpY=",
+        "owner": "roobert",
+        "repo": "tailwindcss-colorizer-cmp.nvim",
+        "rev": "3d3cd95e4a4135c250faf83dd5ed61b8e5502b86",
+        "type": "github"
+      },
+      "original": {
+        "owner": "roobert",
+        "repo": "tailwindcss-colorizer-cmp.nvim",
+        "type": "github"
       }
     }
   },
