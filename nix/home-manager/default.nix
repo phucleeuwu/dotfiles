@@ -52,7 +52,7 @@ let
   # 🔹 Generate configs dynamically
   configList = builtins.listToAttrs (map (p: {
     name = p.name;
-    value = lib.mkIf config.${p.name}.enable (import p.path { inherit config pkgs; });
+    value = lib.mkIf config.${p.name}.enable (import p.path { inherit config pkgs lib; });
   }) programsList);
 
   # 🔹 Generate package list dynamically (Neovim excluded)
