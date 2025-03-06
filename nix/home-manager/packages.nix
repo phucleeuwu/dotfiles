@@ -18,5 +18,6 @@
     pkgs.onefetch
     pkgs.stow
     pkgs.spotify
+    pkgs.zed-editor
   ];
 }
