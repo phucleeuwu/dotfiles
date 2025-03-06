@@ -14,7 +14,7 @@
   let
     system = "aarch64-darwin"; # Ensure this matches your system
     username = "phuc"; #change to your username `whoami`
-    hostname = "phuclees-MacBook-Air"; #change to your hostname `scutil --get LocalHostName`
+    hostname = "ANHDUNGs-Mac-mini"; #change to your hostname `scutil --get LocalHostName`
 
     configuration = { config, pkgs, lib, ... }: {
 
