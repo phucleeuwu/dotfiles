@@ -52,5 +52,9 @@
       "com.apple.trackpad.scaling" = 3.0;
       "com.apple.swipescrolldirection" = false;
     };
+
+    services = {
+      karabiner-elements.enable = true;
+    };
   };
 }
