@@ -47,14 +47,14 @@
       NSAutomaticQuoteSubstitutionEnabled = false;
       NSAutomaticSpellingCorrectionEnabled = false;
       InitialKeyRepeat = 15;
+      AppleKeyboardUIMode = 3;
       KeyRepeat = 2;
       "com.apple.sound.beep.volume" = 0.6065307;
       "com.apple.trackpad.scaling" = 3.0;
       "com.apple.swipescrolldirection" = false;
     };
-
-    services = {
-      karabiner-elements.enable = true;
-    };
   };
+    # services = {
+    #   karabiner-elements.enable = true;
+    # };
 }
