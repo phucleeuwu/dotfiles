@@ -36,7 +36,7 @@
     darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
-        ./.
+        ./default.nix
         nix-homebrew.darwinModules.nix-homebrew {
           nix-homebrew = {
             enable = true;
