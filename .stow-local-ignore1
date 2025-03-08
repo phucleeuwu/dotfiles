@@ -1,3 +1,6 @@
+aerospace
+atuin
+brew
 .stowrc
 .DS_Store
 .git
@@ -9,4 +12,11 @@ nix
 git
 zsh
 brew
+fastfetch
+fish
+git
+helix
+lazygit
+topgrade
+starship.toml
 .stow-local-ignore1
