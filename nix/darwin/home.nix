@@ -19,7 +19,8 @@
   # enable or disable programs
   aerospace.enable = true;
   fish.enable = true;
-  starship.enable = false;
+  starship.enable = true;
+  oh-my-posh.enable = false;
   ghostty.enable = false;
 
   # programs.lazyvim = {
