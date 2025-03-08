@@ -7,7 +7,4 @@
     ".git/"
     "*.bak"
   ];
-  extraOptions = [
-    # "--smart-case"
-  ];
 }

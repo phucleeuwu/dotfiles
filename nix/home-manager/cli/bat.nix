@@ -9,7 +9,6 @@
     decorations = "always";
     paging = "never";
   };
-
   themes = {
     "Catppuccin Mocha" = {
       src = pkgs.fetchFromGitHub {

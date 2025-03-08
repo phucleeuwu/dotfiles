@@ -2,10 +2,7 @@
 
 {
   home.packages = [
-    pkgs.arc-browser
     pkgs.neovim
-    pkgs.raycast
-    pkgs.iina
     pkgs.bun
     pkgs.chatgpt
     pkgs.coreutils
@@ -19,6 +16,5 @@
     pkgs.onefetch
     pkgs.stow
     pkgs.spotify
-    pkgs.zed-editor
   ];
 }

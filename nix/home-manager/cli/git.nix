@@ -12,7 +12,6 @@
       }}/catppuccin.gitconfig";
     }
   ];
-
   extraConfig = {
     init = {
       defaultBranch = "main";
@@ -24,7 +23,6 @@
       hyperlinks = true;
       line-numbers = true;
     };
-
     credential.helper = "osxkeychain";  # macOS Keychain for credentials
   };
 }
