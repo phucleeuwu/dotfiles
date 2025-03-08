@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./homebrew.nix  #homebrew
+    ./homebrew.nix 
     ./system.nix  #macos-settings
   ];
 }
