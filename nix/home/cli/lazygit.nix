@@ -11,12 +11,12 @@
       expandFocusedSidePanel = true;
 
       theme = {
-        activeBorderColor = [ "#89b4fa" "bold" ];
+        activeBorderColor = [ "#94e2d5" "bold" ];
         inactiveBorderColor = [ "#a6adc8" ];
         optionsTextColor = [ "#89b4fa" ];
         selectedLineBgColor = [ "#313244" ];
         cherryPickedCommitBgColor = [ "#45475a" ];
-        cherryPickedCommitFgColor = [ "#89b4fa" ];
+        cherryPickedCommitFgColor = [ "#94e2d5" ];
         unstagedChangesColor = [ "#f38ba8" ];
         defaultFgColor = [ "#cdd6f4" ];
         searchingActiveBorderColor = [ "#f9e2af" ];
