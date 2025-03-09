@@ -5,5 +5,5 @@
   enableFishIntegration = true;
   enableNushellIntegration = true;
   enableZshIntegration = true;
-  useTheme = "pure";
+  useTheme = "kushal";
 }

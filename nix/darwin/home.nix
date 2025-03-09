@@ -17,8 +17,8 @@
   ];
 
   # enable or disable programs
-  starship.enable = true;
-  oh-my-posh.enable = false;
+  starship.enable = false;
+  oh-my-posh.enable = true;
 
   aerospace.enable = true;
   fish.enable = true;
