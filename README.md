@@ -2,25 +2,23 @@
 
 ## **Nix**
 
-### Install Everything (Requires [`Lix` - `Nix Fork`](https://github.com/lix-project/lix))
+### Install Everything (Recommend [`Lix` - `Nix Fork`](https://github.com/lix-project/lix))
 
-> **Note:** Before installation, update your username in [`flake.nix`](./nix/nix-darwin/flake.nix) and [`home.nix`](./nix/nix-darwin/home.nix).
+> **Note:** Update your username in [`flake.nix`](./nix/darwin/flake.nix) and [`home.nix`](./nix/darwin/home.nix).
 
 ```bash
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/darwin
 ```
 
-> **Note:** After installing my dotfiles with Nix, restart your Mac to properly apply system-wide changes.
-
 ### Upgrade & Apply Changes
 
-Update [`flake.lock`](./nix/nix-darwin/flake.lock):
+Update [`flake.lock`](./nix/darwin/flake.lock):
 
 ```bash
 nix flake update --flake ~/dotfiles/nix/darwin
 ```
 
-Rebuild with updated configurations:
+Rebuild configurations:
 
 ```bash
 darwin-rebuild switch --flake ~/dotfiles/nix/darwin
@@ -30,7 +28,7 @@ darwin-rebuild switch --flake ~/dotfiles/nix/darwin
 
 ## **Stow**
 
-### Install Everything with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
+### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
@@ -38,9 +36,9 @@ bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh
 
 ---
 
-## 🚫 Disabling Specific Programs
+## 🚫 Disabling Specific Nix Module
 
-To prevent the installation of a specific program, set the corresponding program’s `enable` option to `false` in [`home.nix`](./nix/nix-darwin/home.nix).
+To prevent the installation of a specific module, set the corresponding module’s `enable` option to `false` in [`home.nix`](./nix/darwin/home.nix).
 
 ---
 
