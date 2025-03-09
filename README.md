@@ -1,6 +1,4 @@
-# Aesthetic and efficient dotfiles 😻
-
-## 📦 Install with `Nix` (or `Stow` for `.config` files only)
+# 📦 Install with `Nix` (or `Stow`)
 
 #### 😍 **Nix Lovers**
 
