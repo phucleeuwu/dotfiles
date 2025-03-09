@@ -8,7 +8,6 @@
     pkgs.coreutils
     pkgs.curl
     pkgs.delta
-    pkgs.gh
     pkgs.git
     pkgs.nchat
     pkgs.nerd-fonts.hack
