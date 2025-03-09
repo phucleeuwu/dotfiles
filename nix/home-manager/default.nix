@@ -16,10 +16,11 @@ let
 
   # 🔹 Default enable settings
   defaults = {
-    shell = false;
     cli = true;
     gui = true;
+    shell = false;
     aerospace = false;
+    nh = false;
   };
 
   # 🔹 Function to determine category
