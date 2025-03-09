@@ -20,4 +20,4 @@ lazygit
 topgrade
 starship.toml
 yazi
-.stow-local-ignore-no-nix
+.stow-local-ignore-nonix
