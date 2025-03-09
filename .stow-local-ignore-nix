@@ -19,4 +19,5 @@ helix
 lazygit
 topgrade
 starship.toml
-.stow-local-ignore1
+yazi
+.stow-local-ignore-no-nix

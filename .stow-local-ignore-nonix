@@ -9,4 +9,4 @@ nix
 git
 zsh
 brew
-.stow-local-ignore1
+.stow-local-ignore-nix
