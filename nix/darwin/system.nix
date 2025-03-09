@@ -2,15 +2,24 @@
 
 {
   system.defaults = {
+    LaunchServices.LSQuarantine = false;
+    controlcenter.BatteryShowPercentage = true;
+
     trackpad = {
       Clicking = true;
       ActuationStrength = 0;
     };
 
-    LaunchServices.LSQuarantine = false;
-    spaces.spans-displays = false;
-    loginwindow.GuestEnabled = false;
-    controlcenter.BatteryShowPercentage = true;
+    loginwindow = {
+      GuestEnabled = false;
+      ShutDownDisabled = true;
+      SleepDisabled = true;
+      RestartDisabled = true;
+      ShutDownDisabledWhileLoggedIn = true;
+      PowerOffDisabledWhileLoggedIn = true;
+      RestartDisabledWhileLoggedIn = true;
+      DisableConsoleAccess = true;
+    };
 
     dock = {
       autohide = true;
