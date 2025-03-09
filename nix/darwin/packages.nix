@@ -6,6 +6,5 @@
     pkgs.raycast
     pkgs.iina
     pkgs.zed-editor
-    pkgs.ayugram-desktop
   ];
 }

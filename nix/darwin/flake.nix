@@ -12,7 +12,7 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, ... }:
   let
-    system = "aarch64-darwin"; # Ensure this matches your system
+    system = "aarch64-darwin";
     username = "phuc"; #change to your username `whoami`
     hostname = "ANHDUNGs-Mac-mini"; #change to your hostname `scutil --get LocalHostName`
 
@@ -45,19 +45,14 @@
           };
         }
         home-manager.darwinModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.${username} = import ./home.nix;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.${username} = import ./home.nix;
+          };
         }
       ];
     };
-    # homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-    #   pkgs = import nixpkgs { system = "${system}"; };
-    #   extraSpecialArgs = {
-    #     inherit inputs;
-    #   };
-    #   modules = [ ./home.nix ];
-    # };
     darwinPackages = self.darwinConfigurations.${hostname}.pkgs;
   };
 }

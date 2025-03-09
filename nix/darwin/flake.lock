@@ -9,11 +9,11 @@
         "tailwindcss-colorizer-cmp-nvim": "tailwindcss-colorizer-cmp-nvim"
       },
       "locked": {
-        "lastModified": 1736201680,
-        "narHash": "sha256-qTaT8F6KJa1NkI4yW+HExKj488XheO6dSkC7tnoEQQw=",
+        "lastModified": 1741456980,
+        "narHash": "sha256-3WrsYUywsbQmWinxI2BDuAx/ljyp83O6SPwx3Av35EU=",
         "owner": "matadaniel",
         "repo": "LazyVim-module",
-        "rev": "7f01fef105d999446e7af78f6c1242b32f6697e1",
+        "rev": "8ecf8283daf038c430e9e4bff10ab31cb8f9e79c",
         "type": "github"
       },
       "original": {
@@ -46,11 +46,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1741416850,
-        "narHash": "sha256-iqRxCsRxE/Q/3W1RHxQMthPKEda0hhY65uxEpE5TNk4=",
+        "lastModified": 1741502651,
+        "narHash": "sha256-7u8FF20WRvQsmfTuNuCerRzstuZ0XgkwWPkq+GoRfiA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "26f6b862645ff281f3bada5d406e8c20de8d837c",
+        "rev": "1fd39a105575ea997b32a043a0dd2c49294add5b",
         "type": "github"
       },
       "original": {
