@@ -61,6 +61,11 @@ let
     (builtins.filter (p: config.${p.name}.enable) programsList);
 
 in {
+  imports = [
+    ./packages.nix    # Packages list
+    ./env.nix         # Session variables
+    ./aliases.nix       # ShellAliases
+  ];
   options = optionsList;
   config = {
     programs = configList;

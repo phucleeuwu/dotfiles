@@ -9,10 +9,7 @@
   xdg.enable = true;
 
   imports = [
-    ../home-manager/packages.nix    # Packages list
-    ../home-manager/env.nix         # Session variables
-    ../home-manager/default.nix        # Module
-    ../home-manager/aliases.nix       # ShellAliases
+    ../home/default.nix
     # inputs.LazyVim.homeManagerModules.default
   ];
 
