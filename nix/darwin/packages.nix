@@ -6,7 +6,6 @@
     pkgs.zed-editor
     pkgs.raycast
     pkgs.iina
-    pkgs.upscayl
     pkgs.git-ignore
   ];
 }
