@@ -11,13 +11,13 @@
     # lazyvim = { url = "github:matadaniel/LazyVim-module"; inputs.nixpkgs.follows = "nixpkgs"; };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, catppuccin, ... }:
+  outputs = { self, nix-darwin, home-manager, nix-homebrew, catppuccin, ... }:
   let
     system = "aarch64-darwin";
     username = "phuc"; #change to your username `whoami`
     hostname = "phuclees-Mac-mini"; #change to your hostname `scutil --get LocalHostName`
 
-    configuration = { config, pkgs, lib, ... }: {
+    configuration = { ... }: {
 
       users.users.${username} = {
         home = "/Users/${username}";

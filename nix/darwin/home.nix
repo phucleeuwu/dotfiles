@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ ... }:
 
 {
   home.stateVersion = "25.05"; # Don't change unless necessary.
