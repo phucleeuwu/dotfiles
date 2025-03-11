@@ -1,11 +1,7 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  programs.home-manager.enable = true;
   home.stateVersion = "25.05"; # Don't change unless necessary.
-
-  # home.username = "phuc"; # Ensure this matches your username.
-  # home.homeDirectory = "/Users/phuc"; # Ensure this matches your homeDirectory.
   xdg.enable = true;
 
   imports = [
@@ -13,10 +9,15 @@
     # inputs.LazyVim.homeManagerModules.default
   ];
 
-  # enable or disable programs
-  starship.enable = false;
-  oh-my-posh.enable = true;
+  # system wide catppuccin
+  catppuccin.enable = true;
+  catppuccin.flavor = "mocha";
 
+  # enable or disable programs
+  starship.enable = true;
+  oh-my-posh.enable = false;
+
+  programs.git.delta.enable = true;
   aerospace.enable = true;
   fish.enable = true;
   ghostty.enable = false;

@@ -19,7 +19,10 @@ let
     cli = true;
     gui = true;
     shell = false;
+    starship = false;
+    oh-my-posh = false;
     aerospace = false;
+    delta = false;
     nh = false;
   };
 

@@ -3,25 +3,20 @@
 {
   enable = true;
   settings = {
-    theme = "catppuccin_mocha";
     editor = {
       line-number = "relative";
       cursorline = true;
       color-modes = true;
-
       lsp.display-messages = true;
-
       cursor-shape = {
         insert = "bar";
         normal = "block";
         select = "underline";
       };
-
       indent-guides = {
         render = true;
       };
     };
-
     keys.normal = {
       space.space = "file_picker";
       space.w = ":w";

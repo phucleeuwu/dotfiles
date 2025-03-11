@@ -6,10 +6,6 @@
   enableFishIntegration = true;
   enableNushellIntegration = true;
   shellWrapperName = "y";
-  flavors = {
-    catppuccin-mocha = ../../../yazi/flavors/catppuccin-mocha.yazi;
-  };
-
   plugins = {
     compress = ../../../yazi/plugins/compress.yazi;
     fg = ../../../yazi/plugins/fg.yazi;
@@ -20,20 +16,10 @@
     yatline = ../../../yazi/plugins/yatline.yazi;
   };
 
-  #init.lua
   initLua = ../../../yazi/init.lua;
-
-  #theme.toml
-  theme = {
-    flavor = {
-      light = "catppuccin-mocha";
-      dark = "catppuccin-mocha";
-    };
-  };
 
   #yazi.toml
   settings = {
-    "$schema" = "https://yazi-rs.github.io/schemas/yazi.json";
     manager = {
       ratio = [1 3 4];
       show_hidden = true;
