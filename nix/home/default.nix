@@ -49,13 +49,13 @@ let
 
   # 🔹 Generate options dynamically
   optionsList = builtins.listToAttrs (map (p: {
-    name = p.name;
-    value = { enable = lib.mkEnableOption "Enable ${p.name}" // { default = p.default; }; };
+    inherit (p) name;
+    value = { enable = lib.mkEnableOption "Enable ${p.name}" // { inherit (p) default; }; };
   }) programsList);
 
   # 🔹 Generate configs dynamically
   configList = builtins.listToAttrs (map (p: {
-    name = p.name;
+    inherit (p) name;
     value = lib.mkIf config.${p.name}.enable (import p.path { inherit config pkgs lib; });
   }) programsList);
 

@@ -17,7 +17,7 @@
     username = "phuc"; #change to your username `whoami`
     hostname = "phuclees-Mac-mini"; #change to your hostname `scutil --get LocalHostName`
 
-    configuration = { ... }: {
+    configuration = _: {
 
       users.users.${username} = {
         home = "/Users/${username}";
