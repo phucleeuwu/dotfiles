@@ -11,7 +11,7 @@
     # lazyvim = { url = "github:matadaniel/LazyVim-module"; inputs.nixpkgs.follows = "nixpkgs"; };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, catppuccin, ... }@inputs:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, catppuccin, ... }:
   let
     linux = "x86_64-linux";
     darwin = "aarch64-darwin";

@@ -1,4 +1,4 @@
-{ self, pkgs, config, lib, ... }:
+{ ... }:
 
 {
   system.stateVersion = 6;
