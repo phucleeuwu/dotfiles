@@ -1,4 +1,5 @@
 name: update-flake-lock
+
 on:
   workflow_dispatch:  # Allows manual triggering
   push:
@@ -11,15 +12,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
 
       - name: Update flake.lock
-        uses: DeterminateSystems/update-flake-lock@main
-        with:
-          pr-title: "Update flake.lock"
-          pr-labels: |
-            dependencies
-            automated
-          path-to-flake-dir: "nix"  # Change this to the correct path
+        run: |
+          nix flake update nix
+
+      - name: Commit and push changes
+        run: |
+          git add nix/flake.lock
+          git commit -m "Update flake.lock"
+          git push
