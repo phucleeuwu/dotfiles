@@ -1,6 +1,6 @@
 on: [push]
 
-name: Dead code analysis
+name: Dead and Statix
 
 jobs:
   deadnix:
@@ -13,3 +13,4 @@ jobs:
         with:
           name: deadnix
       - uses: astro/deadnix-action@main
+      - uses: jocelynthode/statix-action@master
