@@ -1,2 +1,22 @@
-- name: TruffleHog OSS
-  uses: trufflesecurity/trufflehog@v3.88.16
+name: TruffleHog OSS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  trufflehog:
+    name: Run TruffleHog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run TruffleHog OSS
+        uses: trufflesecurity/trufflehog@v3.88.16
+        with:
+          scanArguments: "--json --only-verified"
