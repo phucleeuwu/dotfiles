@@ -23,17 +23,5 @@ jobs:
             automated
           path-to-flake-dir: "nix/darwin"  # Change this to the correct path
 
-      - name: Commit and push changes
-        run: |
-          # Check if there are changes to flake.lock
-          if git diff --quiet flake.lock; then
-            echo "No changes to commit."
-            exit 0
-          fi
-
-          git add flake.lock
-          git commit -m "chore: update flake.lock"
-
-          # Ensure successful push
-          git pull --rebase origin main
-          git push
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v5.1.0
