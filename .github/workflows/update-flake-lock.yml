@@ -22,8 +22,3 @@ jobs:
             dependencies
             automated
           path-to-flake-dir: "nix/darwin"  # Change this to the correct path
-
-      - name: Git Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v5.1.0
-        with:
-          commit_message: "chore: update flake.lock"
