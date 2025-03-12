@@ -4,10 +4,10 @@
 
 ### Install Everything (Recommend [`Lix` - `Nix Fork`](https://github.com/lix-project/lix))
 
-> **Note:** Update your username in [`flake.nix`](./nix/darwin/flake.nix) and [`home.nix`](./nix/darwin/home.nix).
+> **Note:** Update your username in [`flake.nix`](./nix/flake.nix).
 
 ```bash
-nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/darwin
+nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix
 ```
 
 ### Upgrade & Apply Changes
@@ -15,13 +15,13 @@ nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix/darwin
 Update [`flake.lock`](./nix/darwin/flake.lock):
 
 ```bash
-nix flake update --flake ~/dotfiles/nix/darwin
+nix flake update --flake ~/dotfiles/nix
 ```
 
 Rebuild configurations:
 
 ```bash
-darwin-rebuild switch --flake ~/dotfiles/nix/darwin
+darwin-rebuild switch --flake ~/dotfiles/nix
 ```
 
 ---

@@ -13,33 +13,56 @@
 
   outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, catppuccin, ... }@inputs:
   let
-    sys-linux = "x86_64-linux";
-    sys-darwin = "aarch64-darwin";
+    linux = "x86_64-linux";
+    darwin = "aarch64-darwin";
     user-linux = "phuc";
     user-darwin = "phuc";
     host-linux = "phuclees-Mac-mini";
     host-darwin = "phuclees-Mac-mini"; # Change to your hostname (`scutil --get LocalHostName`)
+
+    configuration = {
+      home-manager = {
+        backupFileExtension = "backup";
+        useGlobalPkgs = true;
+        useUserPackages = true;
+      };
+
+      nixpkgs.config.allowUnfree = true;
+      nix.settings.experimental-features = [ "nix-command" "flakes" ];
+      system.configurationRevision = self.rev or self.dirtyRev or null;
+      security.pam.services.sudo_local.touchIdAuth = true;
+    };
   in
   {
     # --- NixOS Configuration ---
     nixosConfigurations."${host-linux}" = nixpkgs.lib.nixosSystem {
-      system = sys-linux;
+      system = linux;
       modules = [
+        configuration
         ./nixos/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.${user-linux} = import ./nixos/home.nix;
+        home-manager.nixosModules.home-manager {
+          home-manager.users.${user-linux} = {
+            import = [
+              ./nixos/home.nix
+            ];
+          };
         }
         catppuccin.nixosModules.catppuccin
+        {
+          users.users.${user-linux} = {
+            home = "/home/${user-linux}";
+            isNormalUser = true;
+            extraGroups = [ "wheel" ]; # Give sudo access
+          };
+        }
       ];
     };
 
     # --- macOS Configuration ---
     darwinConfigurations."${host-darwin}" = nix-darwin.lib.darwinSystem {
-      system = sys-darwin;
+      system = darwin;
       modules = [
+        configuration
         ./darwin/configuration.nix
         nix-homebrew.darwinModules.nix-homebrew {
           nix-homebrew = {
@@ -49,8 +72,6 @@
           };
         }
         home-manager.darwinModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
           home-manager.users.${user-darwin} = {
             imports = [
               ./darwin/home.nix
@@ -58,6 +79,13 @@
             ];
           };
         }
+        {
+          users.users.${user-darwin} = {
+            home = "/Users/${user-darwin}";
+            name = "${user-darwin}";
+          };
+        }
+        # stylix.darwinModules.stylix ./stylix.nix
       ];
     };
 

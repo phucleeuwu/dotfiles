@@ -21,4 +21,4 @@ jobs:
           pr-labels: |
             dependencies
             automated
-          path-to-flake-dir: "nix/darwin"  # Change this to the correct path
+          path-to-flake-dir: "nix"  # Change this to the correct path
