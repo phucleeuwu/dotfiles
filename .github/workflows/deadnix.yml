@@ -1,6 +1,6 @@
-on: [push]
-
 name: Dead code analysis
+
+on: [push]
 
 jobs:
   deadnix:
@@ -12,10 +12,6 @@ jobs:
       - uses: cachix/cachix-action@v14
         with:
           name: deadnix
-      - uses: astro/deadnix-action@main
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: your-username/deadnix-action@v1
         with:
-          commit_message: Deadnix code fix
-      - uses: EndBug/add-and-commit@v9
-        with:
-          default_author: github_actions
+          commit_message: "Automated dead code cleanup"

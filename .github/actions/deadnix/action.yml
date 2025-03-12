@@ -1,0 +1,42 @@
+name: 'deadnix-action'
+description: 'Find and remove unused Nix code, then commit and push the changes'
+inputs:
+  flags:
+    description: 'Command-line flags to deadnix'
+    required: false
+    default: '--edit'
+  author:
+    description: 'Author name and email in the format `Name <email@address.com>`'
+    required: false
+    default: '${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>'
+  committer:
+    description: 'Committer name and email'
+    required: false
+    default: 'GitHub <noreply@github.com>'
+  directory:
+    description: 'Directory to scan for dead Nix code'
+    required: false
+    default: '.'
+  commit_message:
+    description: 'Commit message'
+    required: false
+    default: 'Remove dead Nix code'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run deadnix
+      run: nix run nixpkgs#deadnix -- ${{ inputs.flags }} ${{ inputs.directory }}
+      shell: bash
+      id: deadnix
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "${{ inputs.author }}"
+        git config --global user.email "${{ inputs.author }}"
+        git add .
+        git commit -m "${{ inputs.commit_message }}" || echo "No changes to commit"
+        git push origin HEAD:${{ github.ref_name }}
+      shell: bash
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
