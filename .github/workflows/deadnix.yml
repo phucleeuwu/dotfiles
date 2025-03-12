@@ -12,6 +12,6 @@ jobs:
       - uses: cachix/cachix-action@v14
         with:
           name: deadnix
-      - uses: your-username/deadnix-action@v1
+      - uses: phucleeuwu/deadnix-action@v1
         with:
           commit_message: "Automated dead code cleanup"
