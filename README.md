@@ -41,9 +41,6 @@ bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh
 To prevent the installation of a specific module, set the corresponding module’s `enable` option to `false` in [`home.nix`](./nix/darwin/home.nix).
 
 ---
-
-### 🐍 Watch my contributions turn into a snake
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/phucleeuwu/dotfiles/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/phucleeuwu/dotfiles/output/github-contribution-grid-snake.svg">
