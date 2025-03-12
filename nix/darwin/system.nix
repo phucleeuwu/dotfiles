@@ -66,4 +66,6 @@ _:
   services = {
     # karabiner-elements.enable = true;
   };
+
+  programs.fish.enable = true;  #macOs default shell
 }
