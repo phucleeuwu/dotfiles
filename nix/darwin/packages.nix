@@ -5,6 +5,5 @@
     pkgs.arc-browser
     pkgs.raycast
     pkgs.iina
-    pkgs.git-ignore
   ];
 }

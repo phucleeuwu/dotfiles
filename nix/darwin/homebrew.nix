@@ -4,7 +4,7 @@ _:
   homebrew = {
     enable = true;
     brews = [
-
+      "statix"
     ];
     casks = [
       "ghostty"
