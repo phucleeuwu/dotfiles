@@ -25,3 +25,5 @@ jobs:
 
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v5.1.0
+        with:
+          commit_message: "chore: update flake.lock"
