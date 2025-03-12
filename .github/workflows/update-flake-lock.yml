@@ -20,7 +20,7 @@ jobs:
 
       - name: Update flake.lock
         run: |
-          nix flake update nix
+          nix flake update --flake ./nix
 
       - name: Commit and push changes
         run: |
