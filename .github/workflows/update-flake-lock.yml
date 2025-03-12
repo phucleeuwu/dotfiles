@@ -21,3 +21,4 @@ jobs:
           pr-labels: |
             dependencies
             automated
+          working-directory: "nix/darwin"  # Change this to the correct subdirectory
