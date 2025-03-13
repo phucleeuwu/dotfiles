@@ -27,6 +27,7 @@
         useUserPackages = true;
       };
 
+      environment.shells = [ pkgs.fish ];
       nix.settings.experimental-features = [ "nix-command" "flakes" ];
       nixpkgs.config.allowUnfree = true;
       system.configurationRevision = self.rev or self.dirtyRev or null;
