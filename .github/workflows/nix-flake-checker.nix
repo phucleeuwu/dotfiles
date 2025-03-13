@@ -15,5 +15,7 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@v3
       - name: Build default package
         run: nix build
-        with:
-          flake-lock-path: ./nix/flake.lock
+- name: Check Nix flake inputs
+  uses: DeterminateSystems/flake-checker-action@v2
+  with:
+    flake-lock-path: ./nix/flake.lock
