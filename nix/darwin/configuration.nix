@@ -1,13 +1,31 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  nix.enable = false;
   system.stateVersion = 6;
   security.pam.services.sudo_local.touchIdAuth = true;
-  nix.enable = false;
+  environment.shells = [ pkgs.fish ];
 
   imports = [
-    ./homebrew.nix 
     ./system.nix  #macos-settings
-    ./packages.nix
   ];
+
+  environment.systemPackages = [
+    pkgs.arc-browser
+    pkgs.raycast
+    pkgs.iina
+  ];
+
+  homebrew = {
+    enable = true;
+    brews = [
+    ];
+    casks = [
+      "karabiner-elements"
+      "ghostty"
+      "messenger"
+    ];
+    # Declarative nature of homebrew
+    onActivation.cleanup = "zap";
+  };
 }
