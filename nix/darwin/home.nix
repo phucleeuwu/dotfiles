@@ -13,7 +13,7 @@
   catppuccin = {
     enable = true;
     flavor = "mocha";
-    accent = "teal";
+    accent = "maroon";
   };
 
   # enable or disable programs
