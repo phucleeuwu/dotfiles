@@ -18,7 +18,7 @@
     user-linux = "phuc";
     user-darwin = "phuc";
     host-linux = "phuclees-Mac-mini";
-    host-darwin = "phuclees-Mac-mini"; # Change to your hostname (`scutil --get LocalHostName`)
+    host-darwin = "Mac-mini-cua-phuclee"; # Change to your hostname (`scutil --get LocalHostName`)
 
     configuration = {
       home-manager = {
@@ -27,12 +27,7 @@
         useUserPackages = true;
       };
 
-      nix = {
-        settings.experimental-features = [ "nix-command" "flakes" ];
-        optimise.automatic = true;
-        gc.automatic = true;
-      };
-
+      nix.settings.experimental-features = [ "nix-command" "flakes" ];
       nixpkgs.config.allowUnfree = true;
       system.configurationRevision = self.rev or self.dirtyRev or null;
     };
