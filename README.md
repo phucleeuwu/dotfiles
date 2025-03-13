@@ -1,8 +1,7 @@
-# 📦 Install with `Nix` (or `Stow`)
 
 ## **Nix**
 
-### Install Everything (Recommend [`Lix` - `Nix Fork`](https://github.com/lix-project/lix))
+### Install Everything (Recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix))
 
 > **Note:** Update your username in [`flake.nix`](./nix/flake.nix).
 
