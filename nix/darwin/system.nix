@@ -67,6 +67,5 @@ _:
 
   services = {
     # karabiner-elements.enable = true;
-    # aerospace.enable = true;
   };
 }

@@ -6,6 +6,7 @@ _:
     brews = [
     ];
     casks = [
+      "karabiner-elements"
       "ghostty"
       "messenger"
     ];
