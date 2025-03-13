@@ -10,13 +10,14 @@
   ];
 
   # system wide catppuccin
-  catppuccin.enable = true;
-  catppuccin.flavor = "mocha";
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "teal";
+  };
 
   # enable or disable programs
   starship.enable = true;
-  oh-my-posh.enable = false;
-
   programs.git.delta.enable = true;
   aerospace.enable = true;
   fish.enable = true;
