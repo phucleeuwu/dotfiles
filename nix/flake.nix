@@ -30,7 +30,6 @@
       nixpkgs.config.allowUnfree = true;
       nix.settings.experimental-features = [ "nix-command" "flakes" ];
       system.configurationRevision = self.rev or self.dirtyRev or null;
-      security.pam.services.sudo_local.touchIdAuth = true;
     };
   in
   {
