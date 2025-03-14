@@ -3,15 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    # lazyvim-nixvim.url = "github:azuwis/lazyvim-nixvim";
     # stylix.url = "github:danth/stylix";
     catppuccin.url = "github:catppuccin/nix";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     nix-darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
     home-manager = { url = "github:nix-community/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
-    # lazyvim = { url = "github:matadaniel/LazyVim-module"; inputs.nixpkgs.follows = "nixpkgs"; };
+    lazyvim = { url = "github:matadaniel/LazyVim-module"; inputs.nixpkgs.follows = "nixpkgs"; };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, catppuccin, ... }:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, catppuccin, ... }@inputs:
   let
     linux = "x86_64-linux";
     darwin = "aarch64-darwin";
@@ -70,6 +71,7 @@
           };
         }
         home-manager.darwinModules.home-manager {
+          home-manager.extraSpecialArgs = { inherit inputs; };
           home-manager.users.${user-darwin} = {
             imports = [
               ./darwin/home.nix

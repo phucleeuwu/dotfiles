@@ -2,7 +2,6 @@
 
 {
   home.packages = [
-    pkgs.neovim
     pkgs.bun
     pkgs.chatgpt
     pkgs.coreutils
