@@ -1,6 +1,5 @@
 {
   description = "phuclee's macOS & NixOS + Home Manager configuration";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     # stylix.url = "github:danth/stylix";
@@ -41,15 +40,14 @@
       };
       host = {
         linux = "phuclees-Mac-mini";
-        darwin = "Mac-mini-cua-phuclee"; # Change to your hostname (`scutil --get LocalHostName`)
+        darwin = "Mac-mini-cua-phuclee"; #(`scutil --get LocalHostName`)
       };
+      # --- Configuration For All System ---
       configuration = {
         home-manager = {
           backupFileExtension = "backup";
           useGlobalPkgs = true;
-          useUserPackages = true;
         };
-
         nix.settings.experimental-features = [
           "nix-command"
           "flakes"
@@ -65,6 +63,13 @@
         modules = [
           configuration
           ./nixos/configuration.nix
+          {
+            users.users.${user.linux} = {
+              home = "/home/${user.linux}";
+              isNormalUser = true;
+              extraGroups = [ "wheel" ]; # Give sudo access
+            };
+          }
           home-manager.nixosModules.home-manager
           {
             home-manager.users.${user.linux} = {
@@ -74,13 +79,6 @@
             };
           }
           catppuccin.nixosModules.catppuccin
-          {
-            users.users.${user.linux} = {
-              home = "/home/${user.linux}";
-              isNormalUser = true;
-              extraGroups = [ "wheel" ]; # Give sudo access
-            };
-          }
         ];
       };
       # --- macOS Configuration ---
@@ -89,6 +87,12 @@
         modules = [
           configuration
           ./darwin/configuration.nix
+          {
+            users.users.${user.darwin} = {
+              home = "/Users/${user.darwin}";
+              name = "${user.darwin}";
+            };
+          }
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
@@ -106,12 +110,6 @@
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixvim.homeManagerModules.nixvim
               ];
-            };
-          }
-          {
-            users.users.${user.darwin} = {
-              home = "/Users/${user.darwin}";
-              name = "${user.darwin}";
             };
           }
           # stylix.darwinModules.stylix ./stylix.nix
