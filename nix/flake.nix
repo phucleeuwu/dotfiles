@@ -43,7 +43,6 @@
         linux = "phuclees-Mac-mini";
         darwin = "Mac-mini-cua-phuclee"; # Change to your hostname (`scutil --get LocalHostName`)
       };
-
       configuration = {
         home-manager = {
           backupFileExtension = "backup";
@@ -83,7 +82,6 @@
           }
         ];
       };
-
       # --- macOS Configuration ---
       darwinConfigurations."${host.darwin}" = nix-darwin.lib.darwinSystem {
         system = system.darwin;
@@ -117,7 +115,6 @@
           # stylix.darwinModules.stylix ./stylix.nix
         ];
       };
-
       # --- Expose Packages ---
       nixosPackages = self.nixosConfigurations.${host.linux}.pkgs;
       darwinPackages = self.darwinConfigurations.${host.darwin}.pkgs;
