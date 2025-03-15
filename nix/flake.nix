@@ -14,8 +14,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lazyvim = {
-      url = "github:matadaniel/LazyVim-module";
+    nixvim = {
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -47,6 +47,7 @@
         home-manager = {
           backupFileExtension = "backup";
           useGlobalPkgs = true;
+          useUserPackages = true;
         };
 
         nix.settings.experimental-features = [
@@ -103,6 +104,7 @@
               imports = [
                 ./darwin/home.nix
                 catppuccin.homeManagerModules.catppuccin
+                inputs.nixvim.homeManagerModules.nixvim
               ];
             };
           }

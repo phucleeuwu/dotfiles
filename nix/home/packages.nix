@@ -6,7 +6,6 @@
     pkgs.chatgpt
     pkgs.coreutils
     pkgs.curl
-    pkgs.delta
     pkgs.git
     pkgs.nchat
     pkgs.nerd-fonts.hack

@@ -82,8 +82,14 @@ let
   );
 
   # 🔹 Generate package list dynamically (Neovim excluded)
+  excludedPrograms = [
+    "lazyvim"
+    "nixvim"
+  ]; # List of programs to exclude
   packagesList = map (p: p.pkg) (
-    builtins.filter (p: config.${p.name}.enable && p.name != "lazyvim") programsList
+    builtins.filter (
+      p: config.${p.name}.enable && !(builtins.elem p.name excludedPrograms)
+    ) programsList
   );
 
 in

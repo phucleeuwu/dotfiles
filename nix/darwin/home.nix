@@ -6,7 +6,6 @@
 
   imports = [
     ../home/default.nix
-    inputs.lazyvim.homeManagerModules.default
   ];
 
   # system wide catppuccin
