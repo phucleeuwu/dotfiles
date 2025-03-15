@@ -3,7 +3,7 @@
 
 ### Install Everything (Recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix))
 
-> **Note:** Update your username in [`flake.nix`](./nix/flake.nix).
+> **Note:** Update your `username` and `hostname` in [`flake.nix`](./nix/flake.nix).
 
 ```bash
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix
