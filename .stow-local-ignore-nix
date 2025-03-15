@@ -21,4 +21,5 @@ topgrade
 starship.toml
 yazi
 .stow-local-ignore-nonix
+nvim
 zed
