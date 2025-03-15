@@ -34,6 +34,7 @@ let
     aerospace = false;
     delta = false;
     nh = false;
+    lsd = false;
   };
 
   # 🔹 Function to determine category
