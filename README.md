@@ -23,6 +23,7 @@ Rebuild configurations:
 darwin-rebuild switch --flake ~/dotfiles/nix
 ```
 
+> **Disabling Specific Nix Module**: set the corresponding module’s `enable` option to `false` in [`home.nix`](./nix/darwin/home.nix)
 ---
 
 ## **Stow**
@@ -33,8 +34,6 @@ darwin-rebuild switch --flake ~/dotfiles/nix
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
 ```
 
----
 
-## 🚫 Disabling Specific Nix Module
 
-To prevent the installation of a specific module, set the corresponding module’s `enable` option to `false` in [`home.nix`](./nix/darwin/home.nix).
+
