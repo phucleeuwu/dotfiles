@@ -9,21 +9,14 @@
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix
 ```
 
-### Upgrade & Apply Changes
-
-Update [`flake.lock`](./nix/darwin/flake.lock):
-
-```bash
-nix flake update --flake ~/dotfiles/nix
-```
-
-Rebuild configurations:
+### Rebuild & Apply Changes
 
 ```bash
 darwin-rebuild switch --flake ~/dotfiles/nix
 ```
 
 > **Disabling Specific Nix Module**: set the corresponding module’s `enable` option to `false` in [`home.nix`](./nix/darwin/home.nix)
+
 ---
 
 ## **Stow**
