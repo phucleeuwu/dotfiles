@@ -2,6 +2,7 @@
 
 {
   enable = true;
+  #replace for mason.nvim
   extraPackages = with pkgs; [
     nil
     lua-language-server
