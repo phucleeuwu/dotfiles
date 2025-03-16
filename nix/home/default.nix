@@ -87,6 +87,7 @@ let
   excludedPrograms = [
     "lazyvim"
     "nixvim"
+    "neovim"
   ]; # List of programs to exclude
   packagesList = map (p: p.pkg) (
     builtins.filter (

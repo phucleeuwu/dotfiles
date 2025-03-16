@@ -6,6 +6,7 @@
     pkgs.chatgpt
     pkgs.curl
     pkgs.git
+    pkgs.nil
     pkgs.nchat
     pkgs.nerd-fonts.hack
     pkgs.nodejs

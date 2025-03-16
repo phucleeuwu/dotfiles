@@ -13,10 +13,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -46,6 +42,7 @@
       configuration = {
         home-manager = {
           backupFileExtension = "backup";
+          useUserPackages = true;
           useGlobalPkgs = true;
         };
         nix.settings.experimental-features = [
@@ -108,7 +105,6 @@
               imports = [
                 ./darwin/home.nix
                 catppuccin.homeManagerModules.catppuccin
-                inputs.nixvim.homeManagerModules.nixvim
               ];
             };
           }
