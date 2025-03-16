@@ -4,7 +4,6 @@
   home.packages = [
     pkgs.bun
     pkgs.chatgpt
-    pkgs.coreutils
     pkgs.curl
     pkgs.git
     pkgs.nchat
@@ -14,5 +13,6 @@
     pkgs.stow
     pkgs.spotify
     pkgs.git-ignore
+    pkgs.uutils-coreutils-noprefix
   ];
 }
