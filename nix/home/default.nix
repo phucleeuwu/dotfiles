@@ -35,6 +35,8 @@ let
     delta = false;
     nh = false;
     lsd = false;
+    tmux = false;
+    zellij = false;
   };
 
   # 🔹 Function to determine category
