@@ -14,5 +14,6 @@
     pkgs.spotify
     pkgs.git-ignore
     pkgs.uutils-coreutils-noprefix
+    pkgs.imagemagick
   ];
 }
