@@ -3,9 +3,9 @@
 {
 	enable = true;
     extraPackages = with pkgs; [
+      nil
       lua-language-server
       stylua
-      ripgrep
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -13,19 +13,6 @@
     ];
 
     extraLuaConfig =
-      let
-        plugins = with pkgs.vimPlugins; [
-          LazyVim
-          snacks-nvim
-          nvim-treesitter
-        ];
-        mkEntryFromDrv = drv:
-          if lib.isDerivation drv then
-            { name = "${lib.getName drv}"; path = drv; }
-          else
-            drv;
-        lazyPath = pkgs.linkFarm "lazy-plugins" (builtins.map mkEntryFromDrv plugins);
-      in
       ''
       require("lazy").setup({
         defaults = {
@@ -33,7 +20,6 @@
         },
         dev = {
           -- reuse files from pkgs.vimPlugins.*
-          path = "${lazyPath}",
           patterns = { "" },
           -- fallback to download
           fallback = true,
