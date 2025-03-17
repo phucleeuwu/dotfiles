@@ -2,7 +2,6 @@
   description = "phuclee's macOS & NixOS + Home Manager configuration";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    # stylix.url = "github:danth/stylix";
     catppuccin.url = "github:catppuccin/nix";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     nix-darwin = {
@@ -108,7 +107,6 @@
               ];
             };
           }
-          # stylix.darwinModules.stylix ./stylix.nix
         ];
       };
       # --- Expose Packages ---
