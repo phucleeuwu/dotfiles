@@ -20,5 +20,4 @@
   starship.enable = true;
   programs.git.delta.enable = true;
   aerospace.enable = true;
-  ghostty.enable = false;
 }

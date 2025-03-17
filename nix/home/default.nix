@@ -27,14 +27,12 @@ let
   # 🔹 Default enable settings
   defaults = {
     cli = true;
-    gui = true;
+    gui = false;
     shell = false;
     starship = false;
     oh-my-posh = false;
-    aerospace = false;
-    delta = false;
-    nh = false;
     lsd = false;
+    nh = false;
     tmux = false;
     zellij = false;
   };
