@@ -23,7 +23,7 @@
       nix-homebrew,
       catppuccin,
       ...
-    }@inputs:
+    }:
     let
       system = {
         linux = "x86_64-linux";
