@@ -99,7 +99,6 @@
           }
           home-manager.darwinModules.home-manager
           {
-            home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.${user.darwin} = {
               imports = [
                 ./darwin/home.nix

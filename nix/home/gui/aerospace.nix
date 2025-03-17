@@ -70,7 +70,7 @@
       "alt-g" = "exec-and-forget open -a /Applications/Ghostty.app";
       "alt-m" = "exec-and-forget open -a /Applications/Messenger.app";
       "alt-a" = "exec-and-forget open -a ${pkgs.arc-browser}/Applications/Arc.app";
-      "alt-z" = "exec-and-forget open -a ${pkgs.zed-editor}/Applications/Zed.app";
+      # "alt-z" = "exec-and-forget open -a ${pkgs.zed-editor}/Applications/Zed.app";
       "alt-c" = "exec-and-forget open -a ${pkgs.chatgpt}/Applications/ChatGPT.app";
     };
 
@@ -99,7 +99,7 @@
       { "if".app-id = "com.mitchellh.ghostty"; run = "move-node-to-workspace G"; }
       { "if".app-id = "company.thebrowser.Browser"; run = "move-node-to-workspace A"; }
       { "if".app-id = "com.spotify.client"; run = "move-node-to-workspace 4"; }
-      { "if".app-id = "dev.zed.Zed"; run = "move-node-to-workspace Z"; }
+      { "if".app-id = "dev.zed.Zed"; run = "move-node-to-workspace 3"; }
       { "if".app-id = "com.facebook.archon.developerID"; run = "move-node-to-workspace M"; }
       { "if".app-id = "com.apple.finder"; run = "move-node-to-workspace 1"; }
       { "if".app-id = "com.apple.mail"; run = "move-node-to-workspace 2"; }

@@ -6,7 +6,6 @@
   security.pam.services.sudo_local.touchIdAuth = true;
 
   programs.fish.enable = true; # macOs default shell
-
   environment.shells = [ pkgs.fish ];
 
   imports = [
@@ -21,8 +20,6 @@
 
   homebrew = {
     enable = true;
-    brews = [
-    ];
     casks = [
       "karabiner-elements"
       "ghostty"

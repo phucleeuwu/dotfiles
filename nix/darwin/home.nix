@@ -19,5 +19,4 @@
   fish.enable = true;
   starship.enable = true;
   programs.git.delta.enable = true;
-  aerospace.enable = true;
 }
