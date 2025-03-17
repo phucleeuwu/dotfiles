@@ -17,6 +17,7 @@
 
   # enable or disable programs
   fish.enable = true;
+  aerospace.enable = true;
   starship.enable = true;
   programs.git.delta.enable = true;
 }

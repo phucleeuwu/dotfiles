@@ -39,7 +39,6 @@ alt-equal = 'resize smart +50'
 # Application Shortcuts
 alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-a = 'exec-and-forget open -a /Applications/Arc.app'
-alt-z = 'exec-and-forget open -a /Applications/Zed.app'
 alt-m = 'exec-and-forget open -a /Applications/Messenger.app'
 alt-c = 'exec-and-forget open -a /Applications/ChatGPT.app'
 
@@ -114,7 +113,7 @@ run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
-run = 'move-node-to-workspace Z'
+run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.facebook.archon.developerID'
