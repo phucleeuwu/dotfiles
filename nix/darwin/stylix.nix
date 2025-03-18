@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   stylix.enable = true;
   stylix.enableReleaseChecks = false;
   stylix.image = pkgs.fetchurl {

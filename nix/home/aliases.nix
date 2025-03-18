@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   home.shellAliases = {
     lg = "lazygit";
     "..." = "cd ../..";

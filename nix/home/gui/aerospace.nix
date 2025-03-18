@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   enable = true;
   userSettings = {
     start-at-login = true;
@@ -16,8 +14,8 @@
 
     key-mapping.preset = "qwerty";
 
-    on-focused-monitor-changed = [ "move-mouse monitor-lazy-center" ];
-    on-focus-changed = [ "move-mouse window-lazy-center" ];
+    on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
+    on-focus-changed = ["move-mouse window-lazy-center"];
 
     automatically-unhide-macos-hidden-apps = false;
 
@@ -85,24 +83,45 @@
     };
 
     mode.service.binding = {
-      "esc" = [ "reload-config" "mode main" ];
-      "r" = [ "flatten-workspace-tree" "mode main" ];
-      "backspace" = [ "close-all-windows-but-current" "mode main" ];
-      "alt-shift-h" = [ "join-with left" "mode main" ];
-      "alt-shift-j" = [ "join-with down" "mode main" ];
-      "alt-shift-k" = [ "join-with up" "mode main" ];
-      "alt-shift-l" = [ "join-with right" "mode main" ];
+      "esc" = ["reload-config" "mode main"];
+      "r" = ["flatten-workspace-tree" "mode main"];
+      "backspace" = ["close-all-windows-but-current" "mode main"];
+      "alt-shift-h" = ["join-with left" "mode main"];
+      "alt-shift-j" = ["join-with down" "mode main"];
+      "alt-shift-k" = ["join-with up" "mode main"];
+      "alt-shift-l" = ["join-with right" "mode main"];
     };
 
     # Automatic Window Assignment
     on-window-detected = [
-      { "if".app-id = "com.mitchellh.ghostty"; run = "move-node-to-workspace G"; }
-      { "if".app-id = "company.thebrowser.Browser"; run = "move-node-to-workspace A"; }
-      { "if".app-id = "com.spotify.client"; run = "move-node-to-workspace 4"; }
-      { "if".app-id = "dev.zed.Zed"; run = "move-node-to-workspace 3"; }
-      { "if".app-id = "com.facebook.archon.developerID"; run = "move-node-to-workspace M"; }
-      { "if".app-id = "com.apple.finder"; run = "move-node-to-workspace 1"; }
-      { "if".app-id = "com.apple.mail"; run = "move-node-to-workspace 2"; }
+      {
+        "if".app-id = "com.mitchellh.ghostty";
+        run = "move-node-to-workspace G";
+      }
+      {
+        "if".app-id = "company.thebrowser.Browser";
+        run = "move-node-to-workspace A";
+      }
+      {
+        "if".app-id = "com.spotify.client";
+        run = "move-node-to-workspace 4";
+      }
+      {
+        "if".app-id = "dev.zed.Zed";
+        run = "move-node-to-workspace 3";
+      }
+      {
+        "if".app-id = "com.facebook.archon.developerID";
+        run = "move-node-to-workspace M";
+      }
+      {
+        "if".app-id = "com.apple.finder";
+        run = "move-node-to-workspace 1";
+      }
+      {
+        "if".app-id = "com.apple.mail";
+        run = "move-node-to-workspace 2";
+      }
     ];
   };
 }

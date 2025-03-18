@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   system.defaults = {
     LaunchServices.LSQuarantine = false;
     controlcenter.BatteryShowPercentage = true;

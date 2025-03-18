@@ -1,8 +1,7 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   # across system packages
   home.packages = [
+    pkgs.alejandra
     pkgs.bun
     pkgs.chatgpt
     pkgs.curl

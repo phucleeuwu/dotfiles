@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   enable = true;
   userSettings = {
     vim_mode = true;

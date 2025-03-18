@@ -3,17 +3,13 @@
   pkgs,
   lib,
   ...
-}:
-
-let
+}: let
   # 🔹 Function to import all `.nix` modules from a directory
-  importModules =
-    dir:
-    let
-      files = builtins.attrNames (builtins.readDir dir);
-    in
+  importModules = dir: let
+    files = builtins.attrNames (builtins.readDir dir);
+  in
     map (file: {
-      name = builtins.replaceStrings [ ".nix" ] [ "" ] file;
+      name = builtins.replaceStrings [".nix"] [""] file;
       path = dir + "/${file}";
     }) (builtins.filter (file: builtins.match ".*\\.nix" file != null) files);
 
@@ -38,18 +34,18 @@ let
   };
 
   # 🔹 Function to determine category
-  getCategory =
-    name:
-    if builtins.any (p: p.name == name) programs.shell then
-      "shell"
-    else if builtins.any (p: p.name == name) programs.cli then
-      "cli"
-    else
-      "gui";
+  getCategory = name:
+    if builtins.any (p: p.name == name) programs.shell
+    then "shell"
+    else if builtins.any (p: p.name == name) programs.cli
+    then "cli"
+    else "gui";
 
   # 🔹 Function to determine if a program is enabled by default
-  getDefault =
-    name: if builtins.hasAttr name defaults then defaults.${name} else defaults.${getCategory name};
+  getDefault = name:
+    if builtins.hasAttr name defaults
+    then defaults.${name}
+    else defaults.${getCategory name};
 
   # 🔹 Generate program entries dynamically
   mkProgram = p: {
@@ -66,19 +62,23 @@ let
     map (p: {
       inherit (p) name;
       value = {
-        enable = lib.mkEnableOption "Enable ${p.name}" // {
-          inherit (p) default;
-        };
+        enable =
+          lib.mkEnableOption "Enable ${p.name}"
+          // {
+            inherit (p) default;
+          };
       };
-    }) programsList
+    })
+    programsList
   );
 
   # 🔹 Generate configs dynamically
   configList = builtins.listToAttrs (
     map (p: {
       inherit (p) name;
-      value = lib.mkIf config.${p.name}.enable (import p.path { inherit config pkgs lib; });
-    }) programsList
+      value = lib.mkIf config.${p.name}.enable (import p.path {inherit config pkgs lib;});
+    })
+    programsList
   );
 
   # 🔹 Generate package list dynamically (Neovim excluded)
@@ -90,11 +90,10 @@ let
   packagesList = map (p: p.pkg) (
     builtins.filter (
       p: config.${p.name}.enable && !(builtins.elem p.name excludedPrograms)
-    ) programsList
+    )
+    programsList
   );
-
-in
-{
+in {
   imports = [
     ./packages.nix # Packages list
     ./env.nix # Session variables

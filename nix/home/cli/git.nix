@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   enable = true;
   extraConfig = {
     init = {
@@ -12,6 +10,6 @@ _:
       hyperlinks = true;
       line-numbers = true;
     };
-    credential.helper = "osxkeychain";  # macOS Keychain for credentials
+    credential.helper = "osxkeychain"; # macOS Keychain for credentials
   };
 }

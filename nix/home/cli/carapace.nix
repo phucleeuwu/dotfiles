@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   enable = true;
   enableZshIntegration = true;
   enableFishIntegration = true;

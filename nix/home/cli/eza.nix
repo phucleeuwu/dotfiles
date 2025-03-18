@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   enable = true;
   enableZshIntegration = true;
   enableFishIntegration = true;
@@ -8,5 +6,5 @@ _:
   git = true;
   icons = "always";
   colors = "always";
-  extraOptions = [ "--group-directories-first" ];
+  extraOptions = ["--group-directories-first"];
 }

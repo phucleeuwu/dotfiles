@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.stateVersion = "25.05"; # Don't change unless necessary.
   xdg.enable = true;
 

@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   enable = true;
   settings = {
     editor = {
@@ -21,8 +19,7 @@ _:
       space.space = "file_picker";
       space.w = ":w";
       space.q = ":q";
-      esc = [ "collapse_selection" "keep_primary_selection" ];
+      esc = ["collapse_selection" "keep_primary_selection"];
     };
   };
 }
-

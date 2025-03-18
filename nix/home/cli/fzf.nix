@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   enable = true;
   enableFishIntegration = true;
   # enableNushellIntegration = true;

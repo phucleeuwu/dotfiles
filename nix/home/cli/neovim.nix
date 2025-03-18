@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   enable = true;
   #replace for mason.nvim
   extraPackages = with pkgs; [
@@ -13,8 +11,7 @@
     lazy-nvim
   ];
 
-  extraLuaConfig =
-    ''
+  extraLuaConfig = ''
     require("lazy").setup({
       defaults = {
         lazy = true,
@@ -37,5 +34,5 @@
         { "nvim-treesitter/nvim-treesitter", opts = function(_, opts) opts.ensure_installed = {} end },
       },
     })
-    '';
+  '';
 }
