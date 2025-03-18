@@ -36,7 +36,7 @@ jobs:
 
       - name: Format changes
         run: |
-          find nix -name '*.nix' -print0 | xargs -0 nix fmt
+          find nix -name '*.nix' -print0 | xargs -0 nix fmt --no-flake
 
       - name: Commit changes
         run: |
