@@ -2,11 +2,10 @@ name: Format
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - "**.nix"
       - "**.lock"
-
       - ".github/workflows/format.yml"
   workflow_dispatch:
 
@@ -29,7 +28,7 @@ jobs:
 
       - name: Get short revision
         id: rev
-        run:
+        run: |
           echo "rev=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Install Nix
@@ -37,11 +36,11 @@ jobs:
 
       - name: Format changes
         run: |
-          nix fmt nix/**/*.nix
+          find nix -name '*.nix' -print0 | xargs -0 nix fmt
 
       - name: Commit changes
         run: |
-          if ! git diff --color=always --exit-code; then
+          if ! git diff --quiet; then
             git commit -am "style: format ${{ steps.rev.outputs.rev }}"
             git push
           fi
