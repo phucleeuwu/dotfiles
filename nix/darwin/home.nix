@@ -1,8 +1,15 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   home.stateVersion = "25.05"; # Don't change unless necessary.
   xdg.enable = true;
+
+  # macOs only packages
+  home.packages = [
+    pkgs.arc-browser
+    pkgs.raycast
+    pkgs.iina
+  ];
 
   imports = [
     ../home/default.nix

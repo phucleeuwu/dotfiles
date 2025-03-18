@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  # across system packages
   home.packages = [
     pkgs.bun
     pkgs.chatgpt

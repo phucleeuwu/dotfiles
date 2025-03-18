@@ -12,12 +12,6 @@
     ./system.nix # macos-settings
   ];
 
-  environment.systemPackages = [
-    pkgs.arc-browser
-    pkgs.raycast
-    pkgs.iina
-  ];
-
   homebrew = {
     enable = true;
     casks = [
