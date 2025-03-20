@@ -7,7 +7,6 @@
     pkgs.curl
     pkgs.git
     pkgs.nchat
-    pkgs.nerd-fonts.hack
     pkgs.nodejs
     pkgs.onefetch
     pkgs.stow
