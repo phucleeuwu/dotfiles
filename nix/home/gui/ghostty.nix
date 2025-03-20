@@ -6,7 +6,7 @@ _: {
   installBatSyntax = true;
   settings = {
     theme = "catppuccin-mocha";
-    font-family = "Hack Nerd Font Mono";
+    font-family = "Maple Mono";
     font-size = 19;
     mouse-hide-while-typing = true;
     macos-option-as-alt = true;

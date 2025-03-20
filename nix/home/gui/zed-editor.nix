@@ -25,7 +25,7 @@ _: {
     };
     terminal = {
       dock = "bottom";
-      font_family = "Hack Nerd Font Mono";
+      font_family = "Maple Mono";
     };
   };
 
