@@ -66,7 +66,6 @@
 
       # Application Shortcuts
       "alt-g" = "exec-and-forget open -a /Applications/Ghostty.app";
-      "alt-m" = "exec-and-forget open -a /Applications/Messenger.app";
       "alt-a" = "exec-and-forget open -a ${pkgs.arc-browser}/Applications/Arc.app";
       # "alt-z" = "exec-and-forget open -a ${pkgs.zed-editor}/Applications/Zed.app";
       "alt-c" = "exec-and-forget open -a ${pkgs.chatgpt}/Applications/ChatGPT.app";
@@ -109,10 +108,6 @@
       {
         "if".app-id = "dev.zed.Zed";
         run = "move-node-to-workspace 3";
-      }
-      {
-        "if".app-id = "com.facebook.archon.developerID";
-        run = "move-node-to-workspace M";
       }
       {
         "if".app-id = "com.apple.finder";
