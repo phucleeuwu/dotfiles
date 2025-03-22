@@ -105,7 +105,8 @@
             ];
           };
         }
-        stylix.darwinModules.stylix ./darwin/stylix.nix
+        stylix.darwinModules.stylix
+        ./darwin/stylix.nix
       ];
     };
     # --- Expose Packages ---

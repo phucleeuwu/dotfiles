@@ -1,4 +1,8 @@
-{config,pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   stylix = {
     enable = true;
     fonts = {
