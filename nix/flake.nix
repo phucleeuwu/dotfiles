@@ -102,11 +102,10 @@
             imports = [
               ./darwin/home.nix
               catppuccin.homeManagerModules.catppuccin
+              stylix.homeManagerModules.stylix ./darwin/stylix.nix
             ];
           };
         }
-        stylix.darwinModules.stylix
-        ./darwin/stylix.nix
       ];
     };
     # --- Expose Packages ---
