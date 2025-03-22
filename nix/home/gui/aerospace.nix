@@ -103,19 +103,15 @@
       }
       {
         "if".app-id = "com.spotify.client";
-        run = "move-node-to-workspace 4";
+        run = "move-node-to-workspace 3";
       }
       {
         "if".app-id = "dev.zed.Zed";
-        run = "move-node-to-workspace 3";
+        run = "move-node-to-workspace 2";
       }
       {
         "if".app-id = "com.apple.finder";
         run = "move-node-to-workspace 1";
-      }
-      {
-        "if".app-id = "com.apple.mail";
-        run = "move-node-to-workspace 2";
       }
     ];
   };
