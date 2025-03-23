@@ -1,9 +1,9 @@
 {...}: {
-  home.stateVersion = "25.05"; # Don't change unless necessary.
-  xdg.enable = true;
   imports = [
     ./home/default.nix
   ];
+  home.stateVersion = "25.05"; # Don't change unless necessary.
+  xdg.enable = true;
   # system wide catppuccin
   catppuccin = {
     enable = true;

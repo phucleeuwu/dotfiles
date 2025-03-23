@@ -1,14 +1,13 @@
 {pkgs, ...}: {
-  nix.enable = false;
+  imports = [
+    ./system.nix # macos-settings
+  ];
+  nix.enable = false; # for determinate nix
   system.stateVersion = 6;
   security.pam.services.sudo_local.touchIdAuth = true;
 
   programs.fish.enable = true; # macOs default shell
   environment.shells = [pkgs.fish];
-
-  imports = [
-    ./system.nix # macos-settings
-  ];
 
   homebrew = {
     enable = true;
