@@ -5,7 +5,7 @@ _: {
   enableZshIntegration = true;
   installBatSyntax = true;
   settings = {
-    font-family = "Maple Mono";
+    font-family = "Maple Mono NF";
     font-size = 19;
     mouse-hide-while-typing = true;
     macos-option-as-alt = true;

@@ -3,7 +3,7 @@
     pkgs.alejandra
     pkgs.bun
     pkgs.chatgpt
-    # pkgs.maple-mono
+    pkgs.maple-mono.NF
     pkgs.curl
     pkgs.git
     pkgs.nchat
