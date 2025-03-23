@@ -8,6 +8,5 @@
     pkgs.raycast
     pkgs.iina
   ];
-
   aerospace.enable = true;
 }
