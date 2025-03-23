@@ -2,11 +2,10 @@
 .git
 .gitignore
 README.md
-.stow-local-ignore-for-nix
 .stowrc
 brew
 browser😻
 git
 nix
-spicetify-config
+spicetify
 zsh

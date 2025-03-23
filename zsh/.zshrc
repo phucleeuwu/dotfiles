@@ -1,4 +1,4 @@
-# ✨ Some settings with `#` are disabled. You can remove `#` to enable them, except for the line with emoji
+# ✨ Super complicated Zsh config
 
 # touch ~/.hushlogin && echo " $(date '+%Y-%m-%d  %H:%M')" | lolcat 
 
