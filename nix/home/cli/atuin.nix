@@ -5,7 +5,7 @@ _: {
   enableNushellIntegration = true;
   enableZshIntegration = true;
   flags = [
-  "--disable-up-arrow"
+    "--disable-up-arrow"
   ];
   settings = {
     auto_sync = true;
