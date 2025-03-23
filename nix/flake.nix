@@ -21,7 +21,6 @@
     home-manager,
     nix-homebrew,
     catppuccin,
-    stylix,
     ...
   }: let
     system = {
