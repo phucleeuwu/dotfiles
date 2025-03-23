@@ -2,7 +2,7 @@
 .github
 .git
 .gitignore
-.stow-local-ignore-nonix
+.stow-local-ignore1
 .stowrc
 README.md
 atuin

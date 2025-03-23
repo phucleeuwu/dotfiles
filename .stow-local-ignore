@@ -2,7 +2,7 @@
 .git
 .gitignore
 README.md
-.stow-local-ignore-nix
+.stow-local-ignore-for-nix
 .stowrc
 brew
 browser😻
