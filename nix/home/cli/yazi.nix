@@ -4,6 +4,7 @@
   enableFishIntegration = true;
   enableNushellIntegration = true;
   shellWrapperName = "y";
+  initLua = ../../../yazi/init.lua;
   plugins = {
     compress = ../../../yazi/plugins/compress.yazi;
     fg = ../../../yazi/plugins/fg.yazi;
@@ -13,8 +14,6 @@
     yatline-githead = ../../../yazi/plugins/yatline-githead.yazi;
     yatline = ../../../yazi/plugins/yatline.yazi;
   };
-
-  initLua = ../../../yazi/init.lua;
 
   #yazi.toml
   settings = {

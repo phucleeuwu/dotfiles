@@ -1,6 +1,5 @@
 _: {
   enable = true;
-
   settings = {
     gui = {
       scrollHeight = 10; # how many lines you scroll by
@@ -18,7 +17,6 @@ _: {
       border = "rounded"; # one of 'single' | 'double' | 'rounded' | 'hidden'
       statusPanelView = "dashboard";
     };
-
     git = {
       paging = {
         colorArg = "always";

@@ -1,16 +1,13 @@
 {pkgs, ...}: {
   enable = true;
-  #replace for mason.nvim
-  extraPackages = with pkgs; [
+  extraPackages = with pkgs; [ #replace for mason.nvim
     nil
     lua-language-server
     stylua
   ];
-
   plugins = with pkgs.vimPlugins; [
     lazy-nvim
   ];
-
   extraLuaConfig = ''
     require("lazy").setup({
       defaults = {

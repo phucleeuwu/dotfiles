@@ -7,7 +7,6 @@ _: {
   settings = {
     add_newline = false;
     format = "$directory$character";
-    # palette = "catppuccin_mocha";
     right_format = "$cmd_duration$git_status$all";
     command_timeout = 1000;
 

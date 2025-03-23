@@ -16,7 +16,6 @@
       "karabiner-elements"
       "ghostty"
     ];
-    # Declarative nature of homebrew
-    onActivation.cleanup = "zap";
+    onActivation.cleanup = "zap"; # Declarative nature of homebrew
   };
 }
