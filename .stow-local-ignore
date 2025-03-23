@@ -1,0 +1,12 @@
+.DS_Store
+.git
+.gitignore
+README.md
+.stow-local-ignore-nix
+.stowrc
+brew
+browser😻
+git
+nix
+spicetify-config
+zsh
