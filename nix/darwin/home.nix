@@ -7,6 +7,7 @@
     pkgs.arc-browser
     pkgs.raycast
     pkgs.iina
+    pkgs.monitorcontrol
   ];
   aerospace.enable = true;
 }
