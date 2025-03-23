@@ -27,6 +27,7 @@
     shell = false;
     starship = false;
     oh-my-posh = false;
+    gh-dash = false;
     lsd = false;
     nh = false;
     tmux = false;
