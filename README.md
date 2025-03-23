@@ -1,5 +1,5 @@
 
-## **Nix**
+## **❄️Nix**
 
 ### Install Everything (Recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix))
 
@@ -15,7 +15,7 @@ nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix
 darwin-rebuild switch --flake ~/dotfiles/nix
 ```
 
-> **Disabling Specific Nix Module**: set the corresponding module’s `enable` option to `false` in [`home.nix`](./nix/darwin/home.nix)
+> **Disabling Specific Nix Module**: set the corresponding module’s `enable` option to `false` in [`home.nix`](./nix/home.nix)
 
 ## **Stow**
 
