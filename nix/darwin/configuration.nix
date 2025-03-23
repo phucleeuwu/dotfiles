@@ -17,9 +17,4 @@
     ];
     onActivation.cleanup = "zap"; # Declarative nature of homebrew
   };
-
-  services.jankyborders = {
-    enable = true;
-    order = "above";
-  };
 }
