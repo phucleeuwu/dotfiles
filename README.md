@@ -1,5 +1,5 @@
 
-## **❄️Nix**
+## **❄Nix ❄️**
 
 ### Install Everything (Recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix))
 
