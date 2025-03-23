@@ -5,7 +5,6 @@ _: {
   enableZshIntegration = true;
   installBatSyntax = true;
   settings = {
-    theme = "catppuccin-mocha";
     font-family = "Maple Mono";
     font-size = 19;
     mouse-hide-while-typing = true;
