@@ -21,10 +21,16 @@ darwin-rebuild switch --flake ~/dotfiles/nix
 
 ## **Stow 🏠**
 
-### Install manually or using [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
+### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/i.sh)
+```
+
+### Manually install
+
+```bash
+stow .
 ```
 
 
