@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   enable = true;
-  extraPackages = with pkgs; [ #replace for mason.nvim
+  extraPackages = with pkgs; [
+    #replace for mason.nvim
     nil
     lua-language-server
     stylua
