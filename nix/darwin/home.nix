@@ -11,4 +11,3 @@
 
   aerospace.enable = true;
 }
-
