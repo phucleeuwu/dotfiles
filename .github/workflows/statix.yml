@@ -1,6 +1,8 @@
 name: Statix Linter
 
-on: [push, pull_request]
+on:
+  workflow_dispatch:  # Allows manual triggering
+  push:
 
 jobs:
   statix:
