@@ -17,7 +17,9 @@ darwin-rebuild switch --flake ~/dotfiles/nix
 
 > **Disabling Specific Nix Module**: set the corresponding module’s `enable` option to `false` in [`home.nix`](./nix/home.nix)
 
-## **Stow**
+---
+
+## **Stow 🏠**
 
 ### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
