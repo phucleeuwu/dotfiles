@@ -8,7 +8,7 @@
         "contrast": 100,
         "grayscale": 0,
         "sepia": 0,
-        "useFont": true,
+        "useFont": false,
         "fontFamily": "Maple Mono NF",
         "textStroke": 0,
         "engine": "dynamicTheme",
@@ -227,7 +227,8 @@
         "github.com",
         "youtube.com",
         "facebook.com",
-        "reddit.com"
+        "reddit.com",
+        "google.com"
     ],
     "changeBrowserTheme": false,
     "syncSettings": true,
