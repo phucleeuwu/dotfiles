@@ -5,6 +5,5 @@ _: {
     style = "full";
     color = "always";
     decorations = "always";
-    paging = "never";
   };
 }

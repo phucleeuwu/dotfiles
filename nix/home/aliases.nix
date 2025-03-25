@@ -3,5 +3,6 @@ _: {
     lg = "lazygit";
     "..." = "cd ../..";
     ff = "fastfetch";
+    cat = "bat";
   };
 }
