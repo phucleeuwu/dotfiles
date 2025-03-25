@@ -228,7 +228,8 @@
         "youtube.com",
         "facebook.com",
         "reddit.com",
-        "google.com"
+        "google.com",
+        "mynixos.com"
     ],
     "changeBrowserTheme": false,
     "syncSettings": true,
