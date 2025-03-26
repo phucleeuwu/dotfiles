@@ -13,6 +13,6 @@
   # enable or disable programs
   fish.enable = true;
   starship.enable = true;
-  tmux.enable = true;
+  zellij.enable = true;
   programs.git.delta.enable = true;
 }
