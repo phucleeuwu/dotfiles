@@ -1,4 +1,5 @@
 .DS_Store
+.github
 .git
 .gitignore
 README.md
