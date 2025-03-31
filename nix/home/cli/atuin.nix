@@ -1,6 +1,5 @@
 _: {
   enable = true;
-  daemon.enable = true;
   enableFishIntegration = true;
   enableNushellIntegration = true;
   enableZshIntegration = true;

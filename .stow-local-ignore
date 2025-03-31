@@ -1,11 +1,11 @@
 .DS_Store
+.github
 .git
 .gitignore
 README.md
 .stowrc
 brew
 browser😻
-git
 nix
 spicetify
 zsh

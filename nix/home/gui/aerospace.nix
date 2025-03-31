@@ -32,7 +32,7 @@
 
     mode.main.binding = {
       "alt-shift-space" = "layout floating tiling";
-      "alt-f" = "fullscreen";
+      "alt-shift-f" = "fullscreen";
 
       "alt-minus" = "resize smart -50";
       "alt-equal" = "resize smart +50";

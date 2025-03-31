@@ -1,6 +1,5 @@
 [include]
-	path = ~/dotfiles/git/themes/catppuccin.gitconfig
-
+  path = ./themes/catppuccin.gitconfig
 [delta]
   features = catppuccin-mocha
   side-by-side = false
@@ -8,4 +7,4 @@
   hyperlinks = true
   line-numbers = true
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
