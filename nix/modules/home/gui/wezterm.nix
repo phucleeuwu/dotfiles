@@ -6,7 +6,6 @@ _: {
     # enableNushellIntegration = true;
     extraConfig = ''
       local wezterm = require 'wezterm'
-      local config = {}
       config.font = wezterm.font 'Maple Mono NF'
       config.font_size = 19
       config.window_decorations = "RESIZE"
