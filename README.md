@@ -10,7 +10,7 @@
 nix run
 ```
 
-For more details, check out [nixos-unified](https://github.com/juspay/nixos-unified-template).
+For more details, check out [my nixos-config](https://github.com/phucleeuwu/nixos-config) and [nixos-unified](https://github.com/juspay/nixos-unified-template)
 
 ---
 
