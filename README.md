@@ -9,7 +9,7 @@
 nix run
 ```
 
-> **For more detail**: see [nixos-unified](https://github.com/juspay/nixos-unified-template)
+#### For more detail**: see [nixos-unified](https://github.com/juspay/nixos-unified-template)
 
 ---
 
