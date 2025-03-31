@@ -1,15 +1,16 @@
+# **Dotfiles Setup**
 
 ## **Nix ❄️**
 
 ### Install Everything
 
-> **Note:** I Recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix) for non nixos
+> **Note:** For non-NixOS systems, I recommend using [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix).
 
 ```bash
 nix run
 ```
 
-#### **For more detail**: see [nixos-unified](https://github.com/juspay/nixos-unified-template)
+For more details, check out [nixos-unified](https://github.com/juspay/nixos-unified-template).
 
 ---
 
@@ -21,12 +22,9 @@ nix run
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/stow.sh)"
 ```
 
-### Manually install
+### Manual Installation
 
 ```bash
 stow .
 ```
-
-
-
 
