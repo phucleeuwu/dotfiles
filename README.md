@@ -4,10 +4,10 @@
 
 ### Install Everything
 
-> **Note:** For non-NixOS systems, I recommend using [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix).
+**Note:** For non-NixOS systems, I recommend using [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix).
 
 ```bash
-nix run
+nix run ~/dotfiles/nix
 ```
 
 For more details, check out [my nixos-config](https://github.com/phucleeuwu/nixos-config) and [nixos-unified](https://github.com/juspay/nixos-unified-template)
