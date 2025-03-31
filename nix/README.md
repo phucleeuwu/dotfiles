@@ -2,7 +2,7 @@
 [![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://nixos.zulipchat.com/#narrow/stream/413948-nixos)
 [![Naiveté Compass of Mood](https://img.shields.io/badge/naïve-FF10F0)](https://compass.naivete.me/ "This project follows the 'Naiveté Compass of Mood'")
 
-This repository contains the Nix / NixOS configuration for all of my systems. See [nixos-unified](https://nixos-unified.org)—specifically [nixos-unified-template](https://github.com/juspay/nixos-unified-template)—if you wish to create your own configuration from scratch.
+[My Nix configuration](https://github.com/phucleeuwu/nixos-config) for all of my systems. See [nixos-unified](https://nixos-unified.org)—specifically [nixos-unified-template](https://github.com/juspay/nixos-unified-template)—if you wish to create your own configuration from scratch.
 
 ## Setup
 
