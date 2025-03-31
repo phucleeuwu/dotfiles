@@ -2,9 +2,9 @@
 
 ## **Nix ❄️**
 
-### Install Everything
+### Install & Apply
 
-**Note:** For non-NixOS systems, I recommend using [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix).
+> **Note:** For non-NixOS systems, I recommend using [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix).
 
 ```bash
 nix run ~/dotfiles/nix
