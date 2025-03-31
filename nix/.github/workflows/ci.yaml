@@ -1,0 +1,23 @@
+name: "CI"
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  nix:
+    runs-on: ${{ matrix.system }}
+    strategy:
+      matrix:
+        system: [x86_64-linux, aarch64-darwin]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v23
+
+      - name: Run CI
+        run: om ci run --systems "${{ matrix.system }}"
