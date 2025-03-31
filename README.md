@@ -1,21 +1,15 @@
 
 ## **Nix ❄️**
 
-### Install Everything (Recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix))
+### Install Everything
 
-> **Note:** Update your `username` and `hostname` in [`flake.nix`](./nix/flake.nix).
-
-```bash
-nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/nix
-```
-
-### Rebuild & Apply Changes
+> **Note:** I Recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#install-nix) for non nixos
 
 ```bash
-darwin-rebuild switch --flake ~/dotfiles/nix
+nix run
 ```
 
-> **Disabling Specific Nix Module**: set the corresponding module’s `enable` option to `false` in [`home.nix`](./nix/home.nix)
+> **For more detail**: see [nixos-unified](https://github.com/juspay/nixos-unified-template)
 
 ---
 
