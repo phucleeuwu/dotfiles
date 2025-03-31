@@ -10,28 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout your repository
+      - name: Checkout target repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
-
-      - name: Set up Git
-        run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "github-actions@users.noreply.github.com"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Clone source repository
         run: |
-          git clone --depth 1 https://github.com/phucleeuwu/nixos-config.git upstream_repo
+          git clone --depth 1 https://github.com/phucleeuwu/nixos-config temp_nix
+          rm -rf nix
+          mv temp_nix nix
+          rm -rf nix/.git
 
-      - name: Sync changes
+      - name: Commit and push changes
         run: |
-          rsync -av --delete upstream_repo/ ./
-          rm -rf upstream_repo
-          git add .
-          if ! git diff --cached --quiet; then
-            git commit -m "Sync updates from phucleeuwu/nixos-config"
-            git push "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main
-          else
-            echo "No changes to commit."
-          fi
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add nix
+          git diff --staged --quiet || git commit -m "Sync nixos-config from phucleeuwu"
+          git push
