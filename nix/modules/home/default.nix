@@ -31,6 +31,7 @@
   home.stateVersion = "25.05";
   xdg.enable = true;
   catppuccin = {
+    wezterm.apply = true; #until https://github.com/catppuccin/nix/issues/527
     enable = true;
     flavor = "mocha";
     accent = "peach";
