@@ -1,0 +1,37 @@
+name: Sync nixos-config
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "github-actions@users.noreply.github.com"
+
+      - name: Clone source repository
+        run: |
+          git clone --depth 1 https://github.com/phucleeuwu/nixos-config.git upstream_repo
+
+      - name: Sync changes
+        run: |
+          rsync -av --delete upstream_repo/ ./
+          rm -rf upstream_repo
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync updates from phucleeuwu/nixos-config"
+            git push "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main
+          else
+            echo "No changes to commit."
+          fi
