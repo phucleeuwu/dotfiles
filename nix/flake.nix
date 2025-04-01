@@ -1,6 +1,5 @@
 {
   description = "Auto Wire nixos config";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -13,7 +12,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     # Software inputs
     catppuccin.url = "github:catppuccin/nix";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
@@ -22,7 +20,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-
   outputs = inputs:
     inputs.nixos-unified.lib.mkFlake {
       inherit inputs;
