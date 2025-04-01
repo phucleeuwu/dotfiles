@@ -8,6 +8,9 @@ _: {
       lang = {
         nix.enable = true;
       };
+      ai = {
+        copilot-chat.enable = true;
+      };
     };
   };
 }
