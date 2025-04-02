@@ -7,6 +7,7 @@
     trackpad = {
       Clicking = true;
       ActuationStrength = 0;
+      TrackpadThreeFingerDrag = true;
     };
 
     loginwindow = {
