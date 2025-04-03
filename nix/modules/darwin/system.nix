@@ -22,6 +22,7 @@
     };
 
     dock = {
+      expose-group-apps = true;
       tilesize = 40;
       autohide-delay = 0.0;
       autohide-time-modifier = 0.0;

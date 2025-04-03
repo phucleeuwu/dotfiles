@@ -9,6 +9,9 @@
     casks = [
       "karabiner-elements"
     ];
-    onActivation.cleanup = "zap"; # Declarative nature of homebrew
+    onActivation = {
+      cleanup = "zap"; # Declarative nature of homebrew
+      upgrade = true;
+    };
   };
 }

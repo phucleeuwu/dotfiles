@@ -3,8 +3,11 @@
     enable = true;
     userSettings = {
       start-at-login = true;
-      after-login-command = [];
-      after-startup-command = [];
+      exec-on-workspace-change = [
+        "/bin/bash"
+        "-c"
+        "sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
+      ];
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
       accordion-padding = 80;
@@ -12,23 +15,22 @@
       default-root-container-orientation = "auto";
       key-mapping.preset = "qwerty";
       on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
-      on-focus-changed = ["move-mouse window-lazy-center"];
+      on-focus-changed = [
+        "exec-and-forget sketchybar --trigger aerospace_focus_change"
+        "move-mouse window-lazy-center"
+      ];
       automatically-unhide-macos-hidden-apps = false;
       gaps = {
-        inner.horizontal = 8;
-        inner.vertical = 8;
-        outer = {
-          left = 8;
-          bottom = 8;
-          top = 8;
-          right = 8;
-        };
+        inner.horizontal = 10;
+        inner.vertical = 10;
+        outer.left = 5;
+        outer.bottom = 45;
+        outer.top = 5;
+        outer.right = 5;
       };
       mode.main.binding = {
         "alt-shift-space" = "layout floating tiling";
-        "alt-shift-f" = "fullscreen";
-        "alt-minus" = "resize smart -50";
-        "alt-equal" = "resize smart +50";
+        "alt-f" = "fullscreen";
         "alt-slash" = "layout tiles horizontal vertical";
         "alt-comma" = "layout accordion horizontal vertical";
         "alt-h" = "focus left";
@@ -49,7 +51,7 @@
         "alt-shift-4" = "move-node-to-workspace 4";
         "alt-tab" = "workspace-back-and-forth";
         "alt-shift-tab" = "move-workspace-to-monitor --wrap-around next";
-        "alt-shift-r" = "mode resize";
+        "alt-r" = "mode resize";
         "alt-shift-semicolon" = "mode service";
         # Application Shortcuts
         "alt-w" = "exec-and-forget open -a ${pkgs.wezterm}/Applications/Wezterm.app";
@@ -97,23 +99,19 @@
       # Automatic Window Assignment
       on-window-detected = [
         {
-          "if".app-id = "com.github.wez.wezterm";
+          "if".app-name-regex-substring = "wezterm";
           run = "move-node-to-workspace W";
         }
         {
-          "if".app-id = "company.thebrowser.Browser";
+          "if".app-name-regex-substring = "arc";
           run = "move-node-to-workspace A";
         }
         {
-          "if".app-id = "com.spotify.client";
+          "if".app-name-regex-substring = "spotify";
           run = "move-node-to-workspace 3";
         }
         {
-          "if".app-id = "dev.zed.Zed";
-          run = "move-node-to-workspace 2";
-        }
-        {
-          "if".app-id = "com.apple.finder";
+          "if".app-name-regex-substring = "finder";
           run = "move-node-to-workspace 1";
         }
       ];
