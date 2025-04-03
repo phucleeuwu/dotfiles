@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   nixpkgs.overlays = [
-    (final: prev: {
+    (_final: prev: {
       aerospace-fork = prev.callPackage ./aerospace-fork.nix {};
     })
   ];
