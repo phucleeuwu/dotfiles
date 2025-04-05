@@ -3,13 +3,11 @@
     LaunchServices.LSQuarantine = false;
     controlcenter.BatteryShowPercentage = true;
     ".GlobalPreferences"."com.apple.mouse.scaling" = 3.0;
-
     trackpad = {
       Clicking = true;
       ActuationStrength = 0;
       TrackpadThreeFingerDrag = true;
     };
-
     loginwindow = {
       GuestEnabled = false;
       ShutDownDisabled = true;
@@ -20,7 +18,6 @@
       RestartDisabledWhileLoggedIn = true;
       DisableConsoleAccess = true;
     };
-
     dock = {
       expose-group-apps = true;
       tilesize = 40;
@@ -34,7 +31,6 @@
       autohide = true;
       static-only = true;
     };
-
     finder = {
       FXPreferredViewStyle = "clmv";
       FXDefaultSearchScope = "SCcf";
@@ -44,7 +40,6 @@
       ShowPathbar = true;
       FXRemoveOldTrashItems = true;
     };
-
     NSGlobalDomain = {
       AppleInterfaceStyle = "Dark";
       InitialKeyRepeat = 15;

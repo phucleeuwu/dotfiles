@@ -23,18 +23,18 @@
     # ./cli/oh-my-posh.nix
     # ./cli/tmux.nix
     # ./cli/zellij.nix
-    ./gui/wezterm.nix
-    # ./gui/kitty.nix
+    ./gui/kitty.nix
+    # ./gui/qutebrowser.nix
+    # ./gui/wezterm.nix
     # ./gui/ghostty.nix
     # ./gui/zed-editor.nix
   ];
   home.stateVersion = "25.05";
   xdg.enable = true;
   catppuccin = {
-    wezterm.apply = true; #until https://github.com/catppuccin/nix/issues/527
     enable = true;
     flavor = "mocha";
-    accent = "peach";
+    accent = "blue";
   };
   home.packages = with pkgs; [
     maple-mono.NF
