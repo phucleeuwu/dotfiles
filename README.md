@@ -4,7 +4,7 @@
 
 ### Install & Apply
 
-> **Note:** For non-NixOS systems, I recommend using [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#installation).
+> **Note:** For non-NixOS systems, I recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#installation).
 
 ```bash
 nix run ~/dotfiles/nix
