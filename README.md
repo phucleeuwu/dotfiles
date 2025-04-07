@@ -4,11 +4,10 @@
 
 ### Install & Apply
 
-> **Note:** For non-NixOS systems, I recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#installation).
-
 ```bash
 nix run github:phucleeuwu/nixos-config
 ```
+> **Note:** For non-NixOS systems, I recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#installation).
 
 More details: check out [my nixos-config](https://github.com/phucleeuwu/nixos-config) and [nixos-unified](https://nixos-unified.org/).
 
