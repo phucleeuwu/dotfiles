@@ -7,7 +7,7 @@
 > **Note:** For non-NixOS systems, I recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#installation).
 
 ```bash
-nix run ~/dotfiles/nix
+nix run github:phucleeuwu/nixos-config
 ```
 
 More details: check out [my nixos-config](https://github.com/phucleeuwu/nixos-config) and [nixos-unified](https://nixos-unified.org/).
