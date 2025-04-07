@@ -10,7 +10,7 @@
 nix run ~/dotfiles/nix
 ```
 
-For more details, check out [my nixos-config](https://github.com/phucleeuwu/nixos-config) and [nixos-unified](https://nixos-unified.org/).
+More details: check out [my nixos-config](https://github.com/phucleeuwu/nixos-config) and [nixos-unified](https://nixos-unified.org/).
 
 ---
 
