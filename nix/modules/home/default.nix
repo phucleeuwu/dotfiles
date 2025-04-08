@@ -34,7 +34,7 @@
   catppuccin = {
     enable = true;
     flavor = "mocha";
-    accent = "blue";
+    accent = "mauve";
   };
   home.packages = with pkgs; [
     maple-mono.NF

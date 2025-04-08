@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   system.defaults = {
+    CustomUserPreferences."com.apple.AdLib".allowApplePersonalizedAdvertising = false;
     LaunchServices.LSQuarantine = false;
     controlcenter.BatteryShowPercentage = true;
     ".GlobalPreferences"."com.apple.mouse.scaling" = 3.0;

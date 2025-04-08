@@ -4,5 +4,7 @@ _: {
     "..." = "cd ../..";
     ff = "fastfetch";
     cat = "bat";
+    man = "batman";
+    rg = "batgrep";
   };
 }
