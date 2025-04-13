@@ -1,11 +1,8 @@
-# Commands to run after login (requires 'start-at-login' to be true)
+start-at-login = true
 after-login-command = []
 after-startup-command = []
 
-# Start AeroSpace at login
-start-at-login = true
-
-# Normalizations
+# Don't change unless you know what you doing
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
@@ -16,7 +13,6 @@ default-root-container-orientation = 'auto'
 key-mapping.preset = 'qwerty'
 
 # Auto-move mouse to focused monitor/window
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
 # macOS Hidden Apps
@@ -24,9 +20,8 @@ automatically-unhide-macos-hidden-apps = false
 
 # Gaps Configuration
 [gaps]
-inner.horizontal = 8
-inner.vertical = 8
-outer = { left = 8, bottom = 8, top = 8, right = 8 }
+inner = { horizontal = 10, vertical = 10 }
+outer = { left = 5, bottom = 5, top = 5, right = 5 }
 
 # Main Bindings
 [mode.main.binding]
@@ -52,10 +47,12 @@ alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 # Workspaces
+alt-e = 'workspace E'
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
+alt-shift-e = 'move-node-to-workspace E'
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
@@ -66,16 +63,14 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 alt-r = 'mode resize'
 alt-shift-semicolon = 'mode service'
 
-# Resize Mode
 [mode.resize.binding]
+esc = 'mode main'
 h = 'resize width -50'
 j = 'resize height +50'
 k = 'resize height -50'
 l = 'resize width +50'
-b = 'balance-sizes'
-esc = 'mode main'
+b = ['balance-sizes', 'mode main']
 
-# Service Mode
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main']
@@ -87,7 +82,7 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # Automatic Window Assignment
 [[on-window-detected]]
-if.app-name-regex-substring = 'ghostty'
+if.app-name-regex-substring = 'wezterm|kitty|ghostty'
 run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
@@ -100,4 +95,4 @@ run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'finder'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace E'
