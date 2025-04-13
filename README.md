@@ -20,10 +20,3 @@ More details: check out [my nixos-config](https://github.com/phucleeuwu/nixos-co
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/stow.sh)"
 ```
-
-### Manual Installation
-
-```bash
-stow .
-```
-
