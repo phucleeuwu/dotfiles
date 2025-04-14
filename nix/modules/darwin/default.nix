@@ -18,8 +18,8 @@ in {
       ];
     }
     inputs.nix-homebrew.darwinModules.nix-homebrew
+    self.darwinModules.configuration
     self.nixosModules.common
-    self.darwinModules.system
     self.darwinModules.homebrew
     ./sketchybar/config.nix
     ./aerospace-fork/config.nix

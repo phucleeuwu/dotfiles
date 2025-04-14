@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  # essential macOs configuration
   system.defaults = {
     CustomUserPreferences."com.apple.AdLib".allowApplePersonalizedAdvertising = false;
     LaunchServices.LSQuarantine = false;
@@ -42,6 +43,7 @@
       FXRemoveOldTrashItems = true;
     };
     NSGlobalDomain = {
+      NSWindowShouldDragOnGesture = true;
       AppleInterfaceStyle = "Dark";
       InitialKeyRepeat = 15;
       AppleKeyboardUIMode = 3;

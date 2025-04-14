@@ -1,15 +1,13 @@
 {pkgs, ...}: {
   programs.zsh = {
     enable = true;
-    enableCompletion = false;
     autocd = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    # OhMyZsh plugins
     initExtra = ''
-      # 🔌 OhMyZsh + Aliases (with Zinit plugins manager)
       source ${pkgs.zinit}/share/zinit/zinit.zsh
       zinit depth"1" wait lucid nocd light-mode for \
-        zsh-users/zsh-syntax-highlighting \
-        atload"_zsh_autosuggest_start" \
-        zsh-users/zsh-autosuggestions \
         jeffreytse/zsh-vi-mode \
         aloxaf/fzf-tab \
         hlissner/zsh-autopair \

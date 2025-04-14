@@ -30,12 +30,16 @@ in {
       ];
       accordion-padding = 40;
       gaps = {
-        inner.horizontal = 10;
-        inner.vertical = 10;
-        outer.left = 5;
-        outer.bottom = 45;
-        outer.top = 5;
-        outer.right = 5;
+        inner = {
+          horizontal = 10;
+          vertical = 10;
+        };
+        outer = {
+          bottom = 45;
+          top = 5;
+          left = 5;
+          right = 5;
+        };
       };
       mode.main.binding =
         {
@@ -95,7 +99,7 @@ in {
       # Automatic Window Assignment
       on-window-detected = [
         {
-          "if".app-name-regex-substring = "wezterm|kitty|ghosty";
+          "if".app-name-regex-substring = "wezterm|kitty|ghostty";
           run = "move-node-to-workspace W";
         }
         {
