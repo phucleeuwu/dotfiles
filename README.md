@@ -5,7 +5,7 @@
 ### Install & Apply
 
 ```bash
-nix run github:phucleeuwu/nixos-config
+nix run ./nix
 ```
 > **Note:** For non-NixOS systems, I recommend [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#installation).
 
