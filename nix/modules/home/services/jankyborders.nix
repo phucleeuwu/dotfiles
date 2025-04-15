@@ -3,9 +3,9 @@ _: {
     enable = true;
     settings = {
       order = "above";
-      active_color = "0xffeba0ac";
+      active_color = "0xffcba6f7";
       inactive_color = "0xff1e1e2e";
-      width = 5;
+      width = 7.5;
     };
   };
 }
