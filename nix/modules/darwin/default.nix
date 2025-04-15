@@ -8,14 +8,16 @@ in {
       users.users.${config.me.username} = {
         home = "/Users/${config.me.username}";
       };
-      home-manager.users.${config.me.username} = {};
-      home-manager.sharedModules = [
-        self.homeModules.default
-        self.homeModules.darwin-only
-        inputs.catppuccin.homeModules.catppuccin
-        inputs.lazyvim.homeManagerModules.lazyvim
-        ./sketchybar/home.nix
-      ];
+      home-manager = {
+        users.${config.me.username} = {};
+        sharedModules = [
+          self.homeModules.default
+          self.homeModules.darwin-only
+          inputs.catppuccin.homeModules.catppuccin
+          inputs.lazyvim.homeManagerModules.lazyvim
+          ./sketchybar/home.nix
+        ];
+      };
     }
     inputs.nix-homebrew.darwinModules.nix-homebrew
     self.darwinModules.configuration

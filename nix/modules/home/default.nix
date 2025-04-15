@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  flake,
+  pkgs,
+  ...
+}: {
   imports = [
     ./aliases.nix
     ./shell/fish.nix
@@ -29,16 +33,20 @@
     # ./gui/ghostty.nix
     # ./gui/zed-editor.nix
   ];
-  home.stateVersion = "25.05";
   xdg.enable = true;
+  home = {
+    stateVersion = "25.05";
+    inherit (flake.config.me) username;
+    packages = with pkgs; [
+      maple-mono.NF
+      spotify
+      chatgpt
+    ];
+  };
+  # let catppuccin take care all the themes
   catppuccin = {
     enable = true;
     flavor = "mocha";
     accent = "mauve";
   };
-  home.packages = with pkgs; [
-    maple-mono.NF
-    spotify
-    chatgpt
-  ];
 }

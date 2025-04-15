@@ -1,6 +1,7 @@
 {
   description = "Auto Wire nixos config";
   inputs = {
+    # System-related inputs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixos-unified.url = "github:srid/nixos-unified";
@@ -12,7 +13,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Software inputs
+    # Software-related inputs
     catppuccin.url = "github:catppuccin/nix";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     lazyvim = {
