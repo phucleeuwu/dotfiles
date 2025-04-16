@@ -1,8 +1,12 @@
 # **Dotfiles Setup**
 
+![screenshot](https://github.com/user-attachments/assets/f18f5f01-6473-4a32-840a-774ee6e827cb)
+
+---
+
 ## **Nix ❄️**
 
-### Install & Apply
+### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/nix.sh)"
