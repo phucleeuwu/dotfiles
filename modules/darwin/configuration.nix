@@ -50,7 +50,8 @@
       _HIHideMenuBar = true;
       AppleShowAllFiles = true;
       AppleShowAllExtensions = true;
-      "com.apple.sound.beep.volume" = 0.6065307;
+      "com.apple.sound.beep.volume" = 0.7788008;
+      "com.apple.sound.beep.sound" = "funky";
       "com.apple.trackpad.scaling" = 3.0;
       "com.apple.swipescrolldirection" = false;
     };
