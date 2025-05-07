@@ -4,7 +4,7 @@
 
 ---
 
-## **Nix ❄️**
+## **Nix ❄️ (RECOMMEND)**
 
 ### Install [My nix-config](https://github.com/phucleeuwu/nixos-config) with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
