@@ -33,6 +33,7 @@
     ./cli-tui/television.nix
     ./cli-tui/nh.nix
     ./cli-tui/jujutsu.nix
+    ./cli-tui/btop.nix
     # ./cli-tui/lsd.nix
     # ./cli-tui/gh-dash.nix
     # ./cli-tui/helix.nix
