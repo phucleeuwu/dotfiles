@@ -1,4 +1,4 @@
-{config, ...}: {
+{ ...}: {
   programs.nh = {
     enable = true;
     flake = builtins.toString ../../..;
