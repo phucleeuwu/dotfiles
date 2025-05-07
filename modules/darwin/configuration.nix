@@ -12,9 +12,6 @@
     };
     loginwindow = {
       GuestEnabled = false;
-      ShutDownDisabledWhileLoggedIn = true;
-      PowerOffDisabledWhileLoggedIn = true;
-      RestartDisabledWhileLoggedIn = true;
       DisableConsoleAccess = true;
     };
     dock = {
