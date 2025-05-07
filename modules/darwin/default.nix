@@ -12,6 +12,7 @@ in {
         users.${config.me.username} = {};
         sharedModules = [
           self.homeModules.default
+          self.homeModules.darwin-only
           inputs.catppuccin.homeModules.catppuccin
           inputs.lazyvim.homeManagerModules.lazyvim
         ];
