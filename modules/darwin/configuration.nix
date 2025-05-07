@@ -70,11 +70,9 @@
       "2606:4700:4700::1001"
     ];
   };
-
   services = {
     # karabiner-elements.enable = true;
   };
-  # set default shell
   programs.fish.enable = true;
   environment.shells = [pkgs.fish pkgs.nushell];
 }
