@@ -15,7 +15,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/
 ```
 > **Note:** For non-NixOS systems, my script will install [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#installation).
 
-> **More details:** check out [nixos-unified](https://nixos-unified.org/).
+> **More details:** check out [nixos-unified](https://nixos-unified.org/) and [nixos-unified-template](https://github.com/juspay/nixos-unified-template)
 
 ---
 
