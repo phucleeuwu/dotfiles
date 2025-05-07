@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./gui/hyprlock.nix
-    ./cli/nh.nix
+    ./windowManager/linux/default.nix
   ];
 }

@@ -1,7 +1,7 @@
 {config, ...}: {
   programs.nh = {
     enable = true;
-    flake = "${config.home.homeDirectory}/nixos-config";
+    flake = builtins.toString ../../..;
     clean = {
       enable = true;
     };
