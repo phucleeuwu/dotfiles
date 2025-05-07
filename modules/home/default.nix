@@ -1,6 +1,7 @@
 {
   flake,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -43,6 +44,12 @@
     # ./gui/wezterm.nix
     # ./gui/ghostty.nix
     # ./gui/zed-editor.nix
+  ]
+  ++ lib.optionals pkgs.stdenv.isDarwin [
+    ./darwin-only.nix
+  ]
+  ++ lib.optionals pkgs.stdenv.isLinux [
+    ./linux-only.nix
   ];
   xdg.enable = true;
   home = {
