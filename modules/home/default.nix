@@ -59,7 +59,6 @@
       onefetch
     ];
   };
-  # let catppuccin take care all the themes
   catppuccin = {
     mako.enable = false;
     enable = true;
