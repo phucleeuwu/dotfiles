@@ -46,8 +46,8 @@
       # ./gui/ghostty.nix
       # ./gui/zed-editor.nix
     ]
-++ lib.optional pkgs.stdenv.isDarwin ./darwin-only.nix
-++ lib.optional pkgs.stdenv.isLinux ./linux-only.nix;
+    ++ lib.optional pkgs.stdenv.isDarwin ./darwin-only.nix
+    ++ lib.optional pkgs.stdenv.isLinux ./linux-only.nix;
   xdg.enable = true;
   home = {
     stateVersion = "25.05";
