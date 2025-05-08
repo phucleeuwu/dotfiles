@@ -57,7 +57,6 @@
     ];
   };
   catppuccin = {
-    mako.enable = false;
     enable = true;
     flavor = "mocha";
     accent = "mauve";
