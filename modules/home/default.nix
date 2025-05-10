@@ -13,6 +13,7 @@
     # ./shell/tmux.nix
     # ./shell/zellij.nix
 
+    ./cli-tui/yazi/default.nix
     ./cli-tui/atuin.nix
     ./cli-tui/bat.nix
     ./cli-tui/carapace.nix
@@ -26,7 +27,6 @@
     ./cli-tui/neovim.nix
     ./cli-tui/pay-respects.nix
     ./cli-tui/ripgrep.nix
-    ./cli-tui/yazi/default.nix
     ./cli-tui/zoxide.nix
     ./cli-tui/navi.nix
     ./cli-tui/tealdeer.nix
