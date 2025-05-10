@@ -26,7 +26,7 @@
     ./cli-tui/neovim.nix
     ./cli-tui/pay-respects.nix
     ./cli-tui/ripgrep.nix
-    ./cli-tui/yazi.nix
+    ./cli-tui/yazi/default.nix
     ./cli-tui/zoxide.nix
     ./cli-tui/navi.nix
     ./cli-tui/tealdeer.nix
