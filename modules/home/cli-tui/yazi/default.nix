@@ -49,13 +49,17 @@
           run = "plugin smart-filter";
         }
         {
+          on = "h";
+          run = "plugin bypass reverse";
+        }
+        {
           on = "l";
-          run = "plugin smart-enter";
+          run = "plugin bypass smart-enter";
         }
       ];
     };
     plugins = with pkgs.yaziPlugins; {
-      inherit toggle-pane full-border yatline yatline-catppuccin git smart-enter smart-filter;
+      inherit bypass toggle-pane full-border yatline yatline-catppuccin git smart-enter smart-filter;
     };
   };
 }
