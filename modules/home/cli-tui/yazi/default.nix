@@ -28,11 +28,11 @@
       manager.prepend_keymap = [
         {
           run = "plugin smart-filter";
-          on = ["F"];
+          on = "F";
         }
         {
           run = "plugin smart-enter";
-          on = ["l"];
+          on = "l";
         }
       ];
     };
