@@ -8,6 +8,8 @@
 
 ## ⚠️ Backup your `~/.config` if you already have existing configurations.
 
+---
+
 ## **Nix ❄️ (RECOMMEND — clones 1:1 setup)**
 
 ### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
