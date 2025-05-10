@@ -50,8 +50,8 @@
         }
       ];
     };
-plugins = with pkgs.yaziPlugins; {
-  inherit full-border yatline yatline-catppuccin git smart-enter smart-filter;
-};
+    plugins = with pkgs.yaziPlugins; {
+      inherit full-border yatline yatline-catppuccin git smart-enter smart-filter;
+    };
   };
 }
