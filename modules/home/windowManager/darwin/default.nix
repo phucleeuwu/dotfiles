@@ -2,6 +2,6 @@ _: {
   imports = [
     ./aerospace.nix
     ./jankyborders.nix
-    ./sketchybar.nix
+    ./sketchybar/default.nix
   ];
 }

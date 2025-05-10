@@ -50,6 +50,7 @@
     stateVersion = "25.05";
     inherit (flake.config.me) username;
     packages = with pkgs; [
+      sketchybar-app-font
       maple-mono.NF
       spotify
       chatgpt
