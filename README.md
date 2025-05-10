@@ -6,7 +6,7 @@
 
 ---
 
-## **Nix ❄️ (RECOMMEND)**
+## **Nix ❄️ (RECOMMEND — clones 1:1 setup)**
 
 ### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
