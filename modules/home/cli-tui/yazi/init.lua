@@ -1,8 +1,7 @@
-local catppuccin_theme = require("yatline-catppuccin"):setup("mocha") -- or "latte" | "frappe" | "macchiato"
 require("full-border"):setup()
 require("git"):setup()
 require("yatline"):setup({
-	theme = catppuccin_theme,
+	theme = require("yatline-catppuccin"):setup("mocha"), -- or "latte" | "frappe" | "macchiato"
 	show_background = false,
 	header_line = {
 		left = {
