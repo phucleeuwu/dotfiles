@@ -1,4 +1,4 @@
-# **Dotfiles Setup**
+# **Dotfiles Screenshot**
 
 ![screenshot](https://github.com/user-attachments/assets/f18f5f01-6473-4a32-840a-774ee6e827cb)
 
