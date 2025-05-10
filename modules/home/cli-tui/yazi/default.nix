@@ -37,12 +37,12 @@
       ];
     };
     plugins = {
-      full-border = pkgs.yaziPlugins.full-border;
-      yatline = pkgs.yaziPlugins.yatline;
-      yatline-catppuccin = pkgs.yaziPlugins.yatline-catppuccin;
-      git = pkgs.yaziPlugins.git;
-      smart-enter = pkgs.yaziPlugins.smart-enter;
-      smart-filter = pkgs.yaziPlugins.smart-filter;
+      inherit (pkgs.yaziPlugins) full-border;
+      inherit (pkgs.yaziPlugins) yatline;
+      inherit (pkgs.yaziPlugins) yatline-catppuccin;
+      inherit (pkgs.yaziPlugins) git;
+      inherit (pkgs.yaziPlugins) smart-enter;
+      inherit (pkgs.yaziPlugins) smart-filter;
     };
   };
 }
