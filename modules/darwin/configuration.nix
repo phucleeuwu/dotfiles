@@ -71,5 +71,5 @@
     # karabiner-elements.enable = true;
   };
   programs.fish.enable = true;
-  environment.shells = [pkgs.fish pkgs.nushell];
+  environment.shells = [pkgs.fish];
 }
