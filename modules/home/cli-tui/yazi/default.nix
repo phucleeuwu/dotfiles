@@ -23,6 +23,20 @@
           }
         ];
       };
+      plugin = {
+        prepend_fetchers = [
+          {
+            id = "git";
+            name = "*";
+            run = "git";
+          }
+          {
+            id = "git";
+            name = "*/";
+            run = "git";
+          }
+        ];
+      };
     };
     keymap = {
       manager.prepend_keymap = [
@@ -36,13 +50,8 @@
         }
       ];
     };
-    plugins = {
-      inherit (pkgs.yaziPlugins) full-border;
-      inherit (pkgs.yaziPlugins) yatline;
-      inherit (pkgs.yaziPlugins) yatline-catppuccin;
-      inherit (pkgs.yaziPlugins) git;
-      inherit (pkgs.yaziPlugins) smart-enter;
-      inherit (pkgs.yaziPlugins) smart-filter;
-    };
+plugins = with pkgs.yaziPlugins; {
+  inherit full-border yatline yatline-catppuccin git smart-enter smart-filter;
+};
   };
 }
