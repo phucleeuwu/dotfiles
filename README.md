@@ -6,8 +6,6 @@
 
 # **Install**
 
-### ⚠️ Backup your `~/.config` if you already have existing configurations.
-
 ## **Nix ❄️ (RECOMMEND — clones 1:1 setup)**
 
 ### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
@@ -28,3 +26,5 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/stow.sh)"
 ```
 > **Repo:** [phucleeuwu/dotfiles-stow](https://github.com/phucleeuwu/dotfiles-stow)
+
+## ⚠️ Backup your `~/.config` if you already have existing configurations.
