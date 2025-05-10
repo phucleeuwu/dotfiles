@@ -1,16 +1,9 @@
 local catppuccin_theme = require("yatline-catppuccin"):setup("mocha") -- or "latte" | "frappe" | "macchiato"
-
-require("full-border"):setup({
-	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
-	type = ui.Border.ROUNDED,
-})
-
+require("full-border"):setup()
 require("git"):setup()
-
 require("yatline"):setup({
 	theme = catppuccin_theme,
 	show_background = false,
-
 	header_line = {
 		left = {
 			section_a = {
@@ -29,7 +22,6 @@ require("yatline"):setup({
 			section_c = {},
 		},
 	},
-
 	status_line = {
 		left = {
 			section_a = {

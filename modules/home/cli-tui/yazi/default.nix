@@ -8,12 +8,12 @@
     initLua = ./init.lua;
     settings = {
       manager = {
-        ratio = [1 3 4];
         show_hidden = true;
       };
       preview = {
-        max_width = 1200;
-        max_height = 1000;
+        wrap = "yes";
+        max_width = 1500;
+        max_height = 1500;
       };
       opener = {
         edit = [
@@ -41,17 +41,21 @@
     keymap = {
       manager.prepend_keymap = [
         {
-          run = "plugin smart-filter";
-          on = "F";
+          on = "T";
+          run = "plugin toggle-pane max-preview";
         }
         {
-          run = "plugin smart-enter";
+          on = "F";
+          run = "plugin smart-filter";
+        }
+        {
           on = "l";
+          run = "plugin smart-enter";
         }
       ];
     };
     plugins = with pkgs.yaziPlugins; {
-      inherit full-border yatline yatline-catppuccin git smart-enter smart-filter;
+      inherit toggle-pane full-border yatline yatline-catppuccin git smart-enter smart-filter;
     };
   };
 }
