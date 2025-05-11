@@ -13,7 +13,10 @@
       default-root-container-orientation = "auto";
       automatically-unhide-macos-hidden-apps = true;
       exec-on-workspace-change = ["/bin/bash" "-c" "${lib.getExe pkgs.sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"];
-      on-focus-changed = ["move-mouse window-lazy-center"];
+      on-focus-changed = [
+        "exec-and-forget ${lib.getExe pkgs.sketchybar} --trigger aerospace_focus_change"
+        "move-mouse window-lazy-center"
+      ];
       accordion-padding = 40;
       gaps = {
         inner = {
