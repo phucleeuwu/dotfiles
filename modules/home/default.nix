@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+./cli/default.nix
     ./shell/aliases.nix
     # ./shell/zsh.nix
     ./shell/fish.nix
@@ -12,31 +13,6 @@
     # ./shell/oh-my-posh.nix
     # ./shell/tmux.nix
     # ./shell/zellij.nix
-
-    ./cli-tui/yazi/default.nix
-    ./cli-tui/atuin.nix
-    ./cli-tui/bat.nix
-    ./cli-tui/carapace.nix
-    ./cli-tui/clock-rs.nix
-    ./cli-tui/eza.nix
-    ./cli-tui/fastfetch.nix
-    ./cli-tui/fd.nix
-    ./cli-tui/fzf.nix
-    ./cli-tui/git.nix
-    ./cli-tui/lazygit.nix
-    ./cli-tui/neovim.nix
-    ./cli-tui/pay-respects.nix
-    ./cli-tui/ripgrep.nix
-    ./cli-tui/zoxide.nix
-    ./cli-tui/navi.nix
-    ./cli-tui/tealdeer.nix
-    ./cli-tui/television.nix
-    ./cli-tui/nh.nix
-    ./cli-tui/jujutsu.nix
-    ./cli-tui/btop.nix
-    # ./cli-tui/lsd.nix
-    # ./cli-tui/gh-dash.nix
-    # ./cli-tui/helix.nix
 
     ./gui/kitty.nix
     # ./gui/obs-studio.nix
@@ -61,5 +37,30 @@
     enable = true;
     flavor = "mocha";
     accent = "mauve";
+  };
+  ${flake.config.me.namespace} = {
+    cli = {
+      yazi.enable = true;
+      atuin.enable = true;
+      bat.enable = true;
+      carapace.enable = true;
+      clock-rs.enable = true;
+      eza.enable = true;
+      fastfetch.enable = true;
+      fd.enable = true;
+      fzf.enable = true;
+      git.enable = true;
+      lazygit.enable = true;
+      neovim.lazyvim.enable = true;
+      pay-respects.enable = true;
+      ripgrep.enable = true;
+      zoxide.enable = true;
+      tealdeer.enable = true;
+      nh.enable = true;
+      jujutsu.enable = false;
+      btop.enable = false;
+      helix.enable = false;
+      navi.enable = false;
+    };
   };
 }

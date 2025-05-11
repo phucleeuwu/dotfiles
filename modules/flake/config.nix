@@ -19,6 +19,9 @@
           SSH public key
         '';
       };
+      namespace = lib.mkOption {
+        type = lib.types.str;
+      };
     };
   };
 in {
