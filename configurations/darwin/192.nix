@@ -1,4 +1,8 @@
-{config, flake, ...}: let
+{
+  config,
+  flake,
+  ...
+}: let
   inherit (flake) inputs;
   inherit (inputs) self;
 in {
