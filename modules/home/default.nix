@@ -7,7 +7,7 @@
     ./cli/default.nix
     # ./gui/default.nix
     # ./windowManager/default.nix
-    
+
     ./shell/aliases.nix
     # ./shell/zsh.nix
     ./shell/fish.nix
