@@ -22,5 +22,6 @@
     ./btop/default.nix
     ./helix/default.nix
     ./navi/default.nix
+    ./gh-dash/default.nix
   ];
 }

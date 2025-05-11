@@ -60,6 +60,7 @@
       zoxide.enable = true;
       tealdeer.enable = true;
       nh.enable = true;
+      gh-dash.enable = true;
       jujutsu.enable = false;
       btop.enable = false;
       helix.enable = false;
