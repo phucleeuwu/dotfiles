@@ -1,4 +1,9 @@
-{ config, lib, flake, ... }: {
+{
+  config,
+  lib,
+  flake,
+  ...
+}: {
   options.${flake.config.me.namespace}.cli.neovim = {
     lazyvim.enable = lib.mkEnableOption "neovim.lazyvim";
     nvchad.enable = lib.mkEnableOption "neovim.nvchad";
@@ -8,18 +13,18 @@
       programs.lazyvim = {
         enable = true;
         extras = {
-        coding = {
-          yanky.enable = true;
-        };
-        lang = {
-          nix.enable = true;
-        };
-        ai = {
-          copilot-chat.enable = true;
-        };
-        editor = {
-          leap.enable = true;
-        };
+          coding = {
+            yanky.enable = true;
+          };
+          lang = {
+            nix.enable = true;
+          };
+          ai = {
+            copilot-chat.enable = true;
+          };
+          editor = {
+            leap.enable = true;
+          };
         };
       };
     })

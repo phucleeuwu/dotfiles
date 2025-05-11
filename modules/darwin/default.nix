@@ -16,7 +16,6 @@ in {
           inputs.catppuccin.homeModules.catppuccin
           inputs.lazyvim.homeManagerModules.lazyvim
           inputs.nix4nvchad.homeManagerModules.default
-
         ];
       };
     }
