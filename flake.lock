@@ -53,6 +53,24 @@
         "type": "github"
       }
     },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems_2"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -152,6 +170,28 @@
         "type": "github"
       }
     },
+    "nix4nvchad": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nvchad-starter": "nvchad-starter"
+      },
+      "locked": {
+        "lastModified": 1746861069,
+        "narHash": "sha256-VdcqSc1Uuovxy2c7+tXIGi+c/RwqW65mvzdvhC58Q6I=",
+        "owner": "nix-community",
+        "repo": "nix4nvchad",
+        "rev": "c3429b8560dcc35914b2e03878a83ac4127aa24f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix4nvchad",
+        "type": "github"
+      }
+    },
     "nixos-unified": {
       "locked": {
         "lastModified": 1745965553,
@@ -243,6 +283,23 @@
         "type": "github"
       }
     },
+    "nvchad-starter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1746346803,
+        "narHash": "sha256-+z0LG/N+dCQY0vFCKEeBSifvzOB7+KFKtAZGJMKQpT0=",
+        "owner": "NvChad",
+        "repo": "starter",
+        "rev": "2b4293a4c10a29cb52eefc430d3d77582c1a24fd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NvChad",
+        "ref": "main",
+        "repo": "starter",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
@@ -251,6 +308,7 @@
         "lazyvim": "lazyvim",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
+        "nix4nvchad": "nix4nvchad",
         "nixos-unified": "nixos-unified",
         "nixpkgs": "nixpkgs_4"
       }
@@ -267,6 +325,21 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "systems_2": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
         "type": "github"
       }
     }

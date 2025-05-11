@@ -20,6 +20,10 @@
       url = "github:matadaniel/LazyVim-module";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix4nvchad = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs:
     inputs.nixos-unified.lib.mkFlake {

@@ -15,6 +15,8 @@ in {
           self.homeModules.darwin-only
           inputs.catppuccin.homeModules.catppuccin
           inputs.lazyvim.homeManagerModules.lazyvim
+          inputs.nix4nvchad.homeManagerModules.default
+
         ];
       };
     }

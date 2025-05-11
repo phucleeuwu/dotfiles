@@ -54,7 +54,10 @@
       fzf.enable = true;
       git.enable = true;
       lazygit.enable = true;
-      neovim.lazyvim.enable = true;
+      neovim = {
+        lazyvim.enable = true;
+        nvchad.enable = false;
+      };
       pay-respects.enable = true;
       ripgrep.enable = true;
       zoxide.enable = true;
