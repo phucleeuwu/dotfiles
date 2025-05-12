@@ -1,8 +1,6 @@
 # **Dotfiles Screenshot**
 
-![screenshot](https://github.com/user-attachments/assets/f18f5f01-6473-4a32-840a-774ee6e827cb)
-
----
+<img width="2560" alt="Screenshot 2025-05-12 at 11 49 53" src="https://github.com/user-attachments/assets/2914c54d-a80f-4915-8bed-61b1370321da" />
 
 # **Install**
 
