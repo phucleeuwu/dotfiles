@@ -1,4 +1,6 @@
-# **Dotfiles Screenshot**
+# **Dotfiles**
+
+## MacOs Screenshot:
 
 <img width="2560" alt="Screenshot 2025-05-12 at 11 49 53" src="https://github.com/user-attachments/assets/2914c54d-a80f-4915-8bed-61b1370321da" />
 
@@ -6,7 +8,7 @@
 
 ## ❗ Backup your `~/.config` if you already have existing configurations.
 
-## **Nix ❄️ (RECOMMEND — clones 1:1 setup)**
+## Nix ❄️ (RECOMMEND — clones 1:1 setup)
 
 ### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
@@ -18,7 +20,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/
 
 ---
 
-## **Stow 🏠 (FASTER)**
+## Stow 🏠 (FASTER)
 
 ### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
 
