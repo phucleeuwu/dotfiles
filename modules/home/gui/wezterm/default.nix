@@ -1,4 +1,6 @@
-_: {
+{config,pkgs,lib,flake,...}: {
+  options.${flake.config.me.namespace}.gui.terminal.wezterm.enable = lib.mkEnableOption "wezterm";
+  config = lib.mkIf config.${flake.config.me.namespace}.gui.terminal.wezterm.enable {
   programs.wezterm = {
     enable = true;
     enableZshIntegration = true;
@@ -15,4 +17,5 @@ _: {
       return config
     '';
   };
+};
 }

@@ -1,4 +1,6 @@
-_: {
+{config,pkgs,lib,flake,...}: {
+  options.${flake.config.me.namespace}.gui.terminal.kitty.enable = lib.mkEnableOption "kitty";
+  config = lib.mkIf config.${flake.config.me.namespace}.gui.terminal.kitty.enable {
   programs.kitty = {
     enable = true;
     shellIntegration = {
@@ -16,4 +18,5 @@ _: {
       cursor_trail = 3;
     };
   };
+};
 }

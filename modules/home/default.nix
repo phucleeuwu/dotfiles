@@ -17,7 +17,10 @@
     # ./shell/tmux.nix
     # ./shell/zellij.nix
 
-    ./gui/kitty.nix
+    ./gui/kitty/default.nix
+    ./gui/ghostty/default.nix
+    ./gui/wezterm/default.nix
+    ./gui/obs-studio/default.nix
     # ./gui/obs-studio.nix
     # ./gui/qutebrowser.nix
     # ./gui/wezterm.nix
@@ -68,6 +71,14 @@
       btop.enable = false;
       helix.enable = false;
       navi.enable = false;
+    };
+    gui = {
+      terminal = {
+      wezterm.enable = false;
+      kitty.enable = true;
+      ghostty.enable = false;
+    };
+      obs-studio.enable = false;
     };
   };
 }
