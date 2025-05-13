@@ -4,7 +4,7 @@
   flake,
   ...
 }: {
-  options.${flake.config.me.namespace}.gui.terminal.wezterm.enable = lib.mkEnableOption "wezterm";
+  options.${flake.config.me.namespace}.gui.terminal.wezterm.enable = lib.mkEnableOption "terminal.wezterm";
   config = lib.mkIf config.${flake.config.me.namespace}.gui.terminal.wezterm.enable {
     programs.wezterm = {
       enable = true;
