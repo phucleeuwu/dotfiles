@@ -74,10 +74,10 @@
     };
     gui = {
       terminal = {
-      wezterm.enable = false;
-      kitty.enable = true;
-      ghostty.enable = false;
-    };
+        wezterm.enable = false;
+        kitty.enable = true;
+        ghostty.enable = false;
+      };
       obs-studio.enable = false;
     };
   };
