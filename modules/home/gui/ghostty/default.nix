@@ -4,7 +4,7 @@
   flake,
   ...
 }: {
-  options.${flake.config.me.namespace}.gui.terminal.ghostty.enable = lib.mkEnableOption "ghostty";
+  options.${flake.config.me.namespace}.gui.terminal.ghostty.enable = lib.mkEnableOption "terminal.ghostty";
   config = lib.mkIf config.${flake.config.me.namespace}.gui.terminal.ghostty.enable {
     programs.ghostty = {
       enable = true;

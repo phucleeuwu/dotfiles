@@ -21,11 +21,8 @@
     ./gui/ghostty/default.nix
     ./gui/wezterm/default.nix
     ./gui/obs-studio/default.nix
-    # ./gui/obs-studio.nix
-    # ./gui/qutebrowser.nix
-    # ./gui/wezterm.nix
-    # ./gui/ghostty.nix
-    # ./gui/zed-editor.nix
+    ./gui/zed-editor/default.nix
+    ./gui/qutebrowser/default.nix
   ];
   xdg.enable = true;
   home = {
@@ -78,7 +75,11 @@
         kitty.enable = true;
         ghostty.enable = false;
       };
+      editor = {
+        zed-editor.enable = false;
+      };
       obs-studio.enable = false;
+      qutebrowser.enable = false;
     };
   };
 }
