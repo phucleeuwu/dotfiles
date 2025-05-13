@@ -13,15 +13,15 @@
       # enableFishIntegration = true;
       # enableNushellIntegration = true;
       extraConfig = ''
-local wezterm = require 'wezterm'
-local config = {
-  font = wezterm.font 'Maple Mono NF',
-  font_size = 19.0,
-  window_decorations = "RESIZE",
-  enable_tab_bar = false,
-  window_close_confirmation = 'NeverPrompt',
-}
-return config
+        local wezterm = require 'wezterm'
+        local config = {
+          font = wezterm.font 'Maple Mono NF',
+          font_size = 19.0,
+          window_decorations = "RESIZE",
+          enable_tab_bar = false,
+          window_close_confirmation = 'NeverPrompt',
+        }
+        return config
       '';
     };
   };
