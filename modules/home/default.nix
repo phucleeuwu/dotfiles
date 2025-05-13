@@ -74,7 +74,7 @@
     };
     gui = {
       terminal = {
-        wezterm.enable = false;
+        wezterm.enable = true;
         kitty.enable = true;
         ghostty.enable = false;
       };
