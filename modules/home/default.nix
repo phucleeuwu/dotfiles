@@ -17,9 +17,6 @@
     # ./shell/tmux.nix
     # ./shell/zellij.nix
 
-    # ./gui/kitty/default.nix
-    # ./gui/ghostty/default.nix
-    # ./gui/wezterm/default.nix
     ./gui/terminal/default.nix
     ./gui/obs-studio/default.nix
     ./gui/zed-editor/default.nix
