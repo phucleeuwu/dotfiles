@@ -20,6 +20,7 @@
             nix.enable = true;
           };
           ai = {
+            copilot.enable = true;
             copilot-chat.enable = true;
           };
           editor = {
