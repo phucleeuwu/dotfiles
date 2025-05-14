@@ -1,4 +1,10 @@
-{config,pkgs,lib,flake,...}:{
+{
+  config,
+  pkgs,
+  lib,
+  flake,
+  ...
+}: {
   options.${flake.config.me.namespace}.terminal = {
     wezterm.enable = lib.mkEnableOption "terminal.wezterm";
     ghostty.enable = lib.mkEnableOption "terminal.ghostty";
