@@ -41,6 +41,10 @@
   };
   ${flake.config.me.namespace} = {
     cli = {
+      git = {
+        enable = true;
+        delta.enable = true;
+      };
       yazi.enable = true;
       atuin.enable = true;
       bat.enable = true;
@@ -50,7 +54,6 @@
       fastfetch.enable = true;
       fd.enable = true;
       fzf.enable = true;
-      git.enable = true;
       lazygit.enable = true;
       pay-respects.enable = true;
       ripgrep.enable = true;
