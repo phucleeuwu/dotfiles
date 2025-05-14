@@ -62,7 +62,7 @@
           }
           {
             on = "l";
-            run = "plugin bypass smart_enter";
+            run = "plugin bypass smart-enter";
           }
         ];
       };
