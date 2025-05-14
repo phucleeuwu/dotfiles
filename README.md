@@ -2,7 +2,7 @@
 
 ## MacOs Screenshot
 
-![Image](https://github.com/user-attachments/assets/2914c54d-a80f-4915-8bed-61b1370321da)
+![MacOs Image](https://github.com/user-attachments/assets/2914c54d-a80f-4915-8bed-61b1370321da)
 
 ## Install
 
@@ -10,7 +10,7 @@
 
 ### Nix ❄️ (RECOMMEND — clones 1:1 setup)
 
-#### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
+#### Install with [`Dotflow`](https://github.com/phucleeuwu/dotflow)
 
 > **Note:** For non-NixOS systems, my script will install [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#installation).
 
