@@ -1,10 +1,10 @@
-# **Dotfiles**
+# Dotfiles
 
 ## MacOs Screenshot
 
-<img width="2560" alt="Screenshot 2025-05-12 at 11 49 53" src="https://github.com/user-attachments/assets/2914c54d-a80f-4915-8bed-61b1370321da" />
+![Image](https://github.com/user-attachments/assets/2914c54d-a80f-4915-8bed-61b1370321da)
 
-## **Install**
+## Install
 
 ## ❗ Backup your `~/.config` if you already have existing configurations
 
