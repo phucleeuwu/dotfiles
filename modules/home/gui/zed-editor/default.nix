@@ -4,8 +4,8 @@
   flake,
   ...
 }: {
-  options.${flake.config.me.namespace}.gui.editor.zed-editor.enable = lib.mkEnableOption "editor.zed-editor";
-  config = lib.mkIf config.${flake.config.me.namespace}.gui.editor.zed-editor.enable {
+  options.${flake.config.me.namespace}.editor.zed-editor.enable = lib.mkEnableOption "editor.zed-editor";
+  config = lib.mkIf config.${flake.config.me.namespace}.editor.zed-editor.enable {
     programs.zed-editor = {
       enable = true;
       userSettings = {

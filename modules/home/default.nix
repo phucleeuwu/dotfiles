@@ -17,9 +17,10 @@
     # ./shell/tmux.nix
     # ./shell/zellij.nix
 
-    ./gui/kitty/default.nix
-    ./gui/ghostty/default.nix
-    ./gui/wezterm/default.nix
+    # ./gui/kitty/default.nix
+    # ./gui/ghostty/default.nix
+    # ./gui/wezterm/default.nix
+    ./gui/terminal/default.nix
     ./gui/obs-studio/default.nix
     ./gui/zed-editor/default.nix
     ./gui/qutebrowser/default.nix
@@ -54,10 +55,6 @@
       fzf.enable = true;
       git.enable = true;
       lazygit.enable = true;
-      neovim = {
-        lazyvim.enable = true;
-        nvchad.enable = false;
-      };
       pay-respects.enable = true;
       ripgrep.enable = true;
       zoxide.enable = true;
@@ -69,15 +66,19 @@
       helix.enable = false;
       navi.enable = false;
     };
+    terminal = {
+      wezterm.enable = true;
+      kitty.enable = true;
+      ghostty.enable = false;
+    };
+    editor = {
+      zed-editor.enable = false;
+      neovim = {
+        lazyvim.enable = true;
+        nvchad.enable = false;
+      };
+    };
     gui = {
-      terminal = {
-        wezterm.enable = false;
-        kitty.enable = true;
-        ghostty.enable = false;
-      };
-      editor = {
-        zed-editor.enable = false;
-      };
       obs-studio.enable = false;
       qutebrowser.enable = false;
     };
