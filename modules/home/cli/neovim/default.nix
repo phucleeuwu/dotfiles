@@ -18,6 +18,7 @@
           };
           lang = {
             nix.enable = true;
+            markdown.enable = true;
           };
           ai = {
             # copilot.enable = true;

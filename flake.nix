@@ -3,6 +3,7 @@
   inputs = {
     # System
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    systems.url = "github:nix-systems/default";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixos-unified.url = "github:srid/nixos-unified";
     nix-darwin = {
@@ -19,6 +20,7 @@
     lazyvim = {
       url = "github:matadaniel/LazyVim-module";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
     };
     nix4nvchad = {
       url = "github:nix-community/nix4nvchad";
