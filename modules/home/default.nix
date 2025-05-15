@@ -53,8 +53,9 @@
       eza.enable = true;
       fastfetch = {
         xero.enable = false;
-        lierb.enable = false;
-        hyde.enable = true;
+        jakoolit.enable = true;
+        hyde.enable = false;
+        ml4w.enable = false;
       };
       fd.enable = true;
       fzf.enable = true;
