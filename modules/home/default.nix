@@ -51,7 +51,11 @@
       carapace.enable = true;
       clock-rs.enable = true;
       eza.enable = true;
-      fastfetch.enable = true;
+      fastfetch = {
+        xero.enable = false;
+        lierb.enable = false;
+        hyde.enable = true;
+      };
       fd.enable = true;
       fzf.enable = true;
       lazygit.enable = true;
