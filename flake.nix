@@ -1,5 +1,5 @@
 {
-  description = "World best structure nix config";
+  description = "Worst nix config";
   inputs = {
     # System
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
