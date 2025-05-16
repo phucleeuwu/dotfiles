@@ -2,7 +2,7 @@
 
 ## MacOs Screenshot
 
-![MacOs Image](https://github.com/user-attachments/assets/2914c54d-a80f-4915-8bed-61b1370321da)
+![image](https://github.com/user-attachments/assets/0e0d42a7-38ed-4d3a-8699-8165e733bfb5)
 
 ## Install
 
