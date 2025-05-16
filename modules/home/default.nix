@@ -71,7 +71,7 @@
       navi.enable = false;
     };
     terminal = {
-      wezterm.enable = true;
+      wezterm.enable = false;
       kitty.enable = true;
       ghostty.enable = false;
     };
