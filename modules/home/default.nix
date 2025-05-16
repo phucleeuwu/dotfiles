@@ -52,7 +52,6 @@
       clock-rs.enable = true;
       eza.enable = true;
       fastfetch = {
-        xero.enable = false;
         jakoolit.enable = true;
         hyde.enable = false;
         ml4w.enable = false;
