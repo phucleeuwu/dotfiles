@@ -17,6 +17,7 @@
     # ./shell/tmux.nix
     # ./shell/zellij.nix
 
+    ./gui/kodi/default.nix
     ./gui/terminal/default.nix
     ./gui/obs-studio/default.nix
     ./gui/zed-editor/default.nix
@@ -85,6 +86,7 @@
     gui = {
       obs-studio.enable = false;
       qutebrowser.enable = false;
+      kodi.enable = false;
     };
   };
 }
