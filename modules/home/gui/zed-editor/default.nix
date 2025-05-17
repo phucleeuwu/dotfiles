@@ -37,10 +37,10 @@
         };
       };
       extensions = [
-        "html"
         "git-firefly"
         "lua"
         "toml"
+        "nix"
       ];
     };
   };
