@@ -65,7 +65,7 @@
                   value = "move-node-to-workspace ${letter}";
                 }
               ]
-            ) (lib.strings.stringToCharacters "1234AWE")
+            ) (lib.strings.stringToCharacters "1234AEBT")
           )
         );
       mode.resize.binding = {
@@ -87,24 +87,20 @@
       };
       on-window-detected = [
         {
-          "if".app-name-regex-substring = "wezterm|kitty|ghostty";
-          run = "move-node-to-workspace W";
-        }
-        {
-          "if".app-name-regex-substring = "arc";
-          run = "move-node-to-workspace A";
-        }
-        {
-          "if".app-name-regex-substring = "spotify";
-          run = "move-node-to-workspace 2";
-        }
-        {
           "if".app-name-regex-substring = "finder";
           run = "move-node-to-workspace E";
         }
         {
-          "if".app-name-regex-substring = "zen";
+          "if".app-name-regex-substring = "wezterm|kitty|ghostty";
+          run = "move-node-to-workspace T";
+        }
+        {
+          "if".app-name-regex-substring = "zen|arc";
           run = "move-node-to-workspace B";
+        }
+        {
+          "if".app-name-regex-substring = "spotify";
+          run = "move-node-to-workspace 2";
         }
       ];
     };
