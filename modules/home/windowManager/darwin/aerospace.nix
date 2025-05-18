@@ -102,6 +102,10 @@
           "if".app-name-regex-substring = "finder";
           run = "move-node-to-workspace E";
         }
+        {
+          "if".app-name-regex-substring = "zen";
+          run = "move-node-to-workspace B";
+        }
       ];
     };
   };
