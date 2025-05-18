@@ -12,7 +12,7 @@
     userEmail = flake.config.me.email;
     extraConfig = {
       init.defaultBranch = "main";
-      credential.helper = "osxkeychain"; # macOS Keychain for credentials
+      credential.helper = "osxkeychain"; # macOS `Keychain Access`
     };
   };
 }
