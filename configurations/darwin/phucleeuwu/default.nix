@@ -7,7 +7,7 @@ in {
   ];
   nixpkgs.overlays = [
     (final: _prev: {
-      generated = (import ../../_sources/generated.nix) {
+      generated = (import ../../../_sources/generated.nix) {
         inherit
           (final)
           fetchurl
@@ -18,7 +18,7 @@ in {
       };
     })
   ];
-  networking.hostName = "192";
+  networking.hostName = "phucleeuwu";
   nix.enable = false;
   nixos-unified.sshTarget = "myuser@myhost";
   nixpkgs.hostPlatform = "aarch64-darwin";
