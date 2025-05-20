@@ -8,8 +8,8 @@
     enable = true;
     casks = [
       "karabiner-elements"
-      "lookaway"
       "zen"
+      "ghostty"
     ];
     onActivation = {
       cleanup = "zap"; # Declarative nature of homebrew
