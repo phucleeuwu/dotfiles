@@ -66,7 +66,7 @@
       tealdeer.enable = true;
       nh.enable = true;
       gh-dash.enable = true;
-      jujutsu.enable = false;
+      jujutsu.enable = true;
       btop.enable = false;
       helix.enable = false;
       navi.enable = false;
