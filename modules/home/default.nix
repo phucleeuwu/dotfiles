@@ -76,7 +76,7 @@
     };
     terminal = {
       wezterm.enable = false;
-      kitty.enable = true;
+      kitty.enable = false;
       ghostty.enable = false;
     };
     editor = {
