@@ -65,7 +65,7 @@
                   value = "move-node-to-workspace ${letter}";
                 }
               ]
-            ) (lib.strings.stringToCharacters "1234AEBT")
+            ) (lib.strings.stringToCharacters "1234EBT")
           )
         );
       mode.resize.binding = {
