@@ -71,10 +71,8 @@
       mode.resize.binding = {
         "esc" = "mode main";
         "b" = ["balance-sizes" "mode main"];
-        "h" = "resize width -50";
-        "j" = "resize height +50";
-        "k" = "resize height -50";
-        "l" = "resize width +50";
+        "minus" = "resize smart -50";
+        "equal" = "resize smart +50";
       };
       mode.service.binding = {
         "esc" = ["reload-config" "mode main"];
@@ -100,7 +98,7 @@
         }
         {
           "if".app-name-regex-substring = "spotify";
-          run = "move-node-to-workspace 2";
+          run = "move-node-to-workspace 4";
         }
       ];
     };
