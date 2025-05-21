@@ -27,9 +27,6 @@
   home = {
     stateVersion = "25.05";
     inherit (flake.config.me) username;
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
     packages = with pkgs; [
       maple-mono.NF
       sketchybar-app-font
