@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: cachix/install-nix-action@main
-      - uses: cachix/cachix-action@main
+      - uses: cachix/install-nix-action@v31
         with:
           name: deadnix
       - uses: phucleeuwu/deadnix-action@main

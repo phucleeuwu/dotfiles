@@ -24,7 +24,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Install Nix
-        uses: cachix/install-nix-action@main
+        uses: cachix/install-nix-action@v31
 
       - name: Install Alejandra
         run: |
