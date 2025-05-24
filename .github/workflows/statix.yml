@@ -15,5 +15,3 @@ jobs:
         with:
           name: statix
       - uses: phucleeuwu/statix-action@main
-        with:
-          open_pr: true
