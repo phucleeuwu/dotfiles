@@ -70,13 +70,13 @@
       #   inherit bypass toggle-pane full-border yatline yatline-catppuccin git smart-filter;
       # };
       plugins = {
-        bypass = pkgs.yaziPlugins.bypass;
-        toggle-pane = pkgs.yaziPlugins.toggle-pane;
-        full-border = pkgs.yaziPlugins.full-border;
-        yatline = pkgs.yaziPlugins.yatline;
-        yatline-catppuccin = pkgs.yaziPlugins.yatline-catppuccin;
-        git = pkgs.yaziPlugins.git;
-        smart-filter = pkgs.yaziPlugins.smart-filter;
+        inherit (pkgs.yaziPlugins) bypass;
+        inherit (pkgs.yaziPlugins) toggle-pane;
+        inherit (pkgs.yaziPlugins) full-border;
+        inherit (pkgs.yaziPlugins) yatline;
+        inherit (pkgs.yaziPlugins) yatline-catppuccin;
+        inherit (pkgs.yaziPlugins) git;
+        inherit (pkgs.yaziPlugins) smart-filter;
       };
     };
   };
