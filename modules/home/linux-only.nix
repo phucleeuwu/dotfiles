@@ -1,5 +1,5 @@
 _: {
   imports = [
-    ./windowManager/linux/default.nix
+    ./WMs/linux/default.nix
   ];
 }
