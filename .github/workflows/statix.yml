@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - uses: cachix/install-nix-action@v31
+      - uses: cachix/cachix-action@main
         with:
           name: statix
       - uses: phucleeuwu/statix-action@main
