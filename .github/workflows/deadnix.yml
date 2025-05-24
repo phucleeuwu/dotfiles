@@ -14,6 +14,6 @@ jobs:
       - uses: cachix/cachix-action@v14
         with:
           name: deadnix
-      - uses: phucleeuwu/deadnix-action@v2
+      - uses: phucleeuwu/deadnix-action@main
         with:
-          commit_message: "Chore: Automated dead code cleanup"
+          open_pr: true

@@ -2,6 +2,7 @@
   config,
   lib,
   flake,
+  pkgs,
   ...
 }: {
   programs.fastfetch = {
