@@ -14,10 +14,7 @@
   xdg.configFile."sketchybar/sketchybarrc" = {
     text = ''
       #!/usr/bin/env ${lib.getExe pkgs.lua54Packages.lua}
-
-      package.cpath = package.cpath .. ";${pkgs.sbarlua}/lib/?.so"
-
-      -- Load the sketchybar-package and prepare the helper binaries
+      package.cpath = package.cpath .. ";${pkgs.lua54Packages.getLuaCPath pkgs.sbarlua}"
       require("helpers")
       require("init")
     '';
