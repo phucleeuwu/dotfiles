@@ -3,6 +3,9 @@
   lib,
   ...
 }: {
+  home.packages = with pkgs; [
+    sketchybar-app-font
+  ];
   xdg.configFile."sketchybar" = {
     source = ./.;
     recursive = true;
