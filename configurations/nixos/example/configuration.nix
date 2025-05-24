@@ -12,5 +12,5 @@
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.11";
 }
