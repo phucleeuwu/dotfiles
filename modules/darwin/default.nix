@@ -24,6 +24,6 @@ in {
     self.darwinModules.configuration
     self.nixosModules.common
     self.darwinModules.homebrew
-    ./sketchybar/config.nix
+    self.darwinModules.sketchybar
   ];
 }
