@@ -7,7 +7,6 @@
   homebrew = {
     enable = true;
     casks = [
-      "karabiner-elements"
       "zen"
       "ghostty"
     ];
