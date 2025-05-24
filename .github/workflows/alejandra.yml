@@ -24,7 +24,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Install Nix
-      - uses: DeterminateSystems/nix-installer-action@main
+        uses: DeterminateSystems/nix-installer-action@main
 
       - name: Install Alejandra
         run: |
