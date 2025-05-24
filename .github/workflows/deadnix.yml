@@ -1,7 +1,7 @@
 name: Dead code analysis
 
 on:
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch:
   push:
 
 jobs:
@@ -16,4 +16,4 @@ jobs:
           name: deadnix
       - uses: phucleeuwu/deadnix-action@v4
         with:
-          commit_message: "Automated dead code cleanup"
+          commit_message: "Chore: Automated dead code cleanup"

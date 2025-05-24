@@ -1,7 +1,7 @@
 name: Statix Linter
 
 on:
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch:
   push:
 
 jobs:
@@ -15,3 +15,5 @@ jobs:
         with:
           name: statix
       - uses: phucleeuwu/statix-action@v1
+        with:
+          commit_message: "Chore: Lint nix code with statix"

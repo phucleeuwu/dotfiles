@@ -33,6 +33,6 @@ jobs:
       - name: Commit changes
         run: |
           if ! git diff --quiet; then
-            git commit -am "style: format nix files with Alejandra"
+            git commit -am "Style: Format nix files with Alejandra"
             git push
           fi

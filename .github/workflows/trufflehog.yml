@@ -15,5 +15,5 @@ jobs:
       - name: Run TruffleHog OSS
         uses: trufflesecurity/trufflehog@v3.88.16
         with:
-          path: "."  # Scans the entire repository
+          path: "."
           extra_args: "--json --only-verified"
