@@ -17,4 +17,4 @@ jobs:
         with:
           commit_message: "Chore: Lint nix code with statix"
           with:
-            open_pr: true;
+            open_pr: true
