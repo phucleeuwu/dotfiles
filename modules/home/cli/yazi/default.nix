@@ -66,17 +66,8 @@
           }
         ];
       };
-      # plugins = with pkgs.yaziPlugins; {
-      #   inherit bypass toggle-pane full-border yatline yatline-catppuccin git smart-filter;
-      # };
-      plugins = {
-        inherit (pkgs.yaziPlugins) bypass;
-        inherit (pkgs.yaziPlugins) toggle-pane;
-        inherit (pkgs.yaziPlugins) full-border;
-        inherit (pkgs.yaziPlugins) yatline;
-        inherit (pkgs.yaziPlugins) yatline-catppuccin;
-        inherit (pkgs.yaziPlugins) git;
-        inherit (pkgs.yaziPlugins) smart-filter;
+      plugins = with pkgs.yaziPlugins; {
+        inherit bypass toggle-pane full-border yatline yatline-catppuccin git smart-filter;
       };
     };
   };
