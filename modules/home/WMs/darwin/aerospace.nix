@@ -12,7 +12,9 @@
       default-root-container-layout = "tiles";
       default-root-container-orientation = "auto";
       automatically-unhide-macos-hidden-apps = true;
-      exec-on-workspace-change = ["/bin/bash" "-c" 
+      exec-on-workspace-change = [
+        "/bin/bash"
+        "-c"
         "${lib.getExe pkgs.sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
       ];
       on-focus-changed = [
@@ -51,11 +53,13 @@
           "alt-shift-semicolon" = "mode service";
         }
         # Dynamically generated workspace bindings
-        // lib.lists.foldl' (acc: letter:
-          acc // {
-            "alt-${lib.strings.toLower letter}" = "workspace ${letter}";
-            "alt-shift-${lib.strings.toLower letter}" = "move-node-to-workspace ${letter}";
-          }
+        // lib.lists.foldl' (
+          acc: letter:
+            acc
+            // {
+              "alt-${lib.strings.toLower letter}" = "workspace ${letter}";
+              "alt-shift-${lib.strings.toLower letter}" = "move-node-to-workspace ${letter}";
+            }
         ) {} (lib.strings.stringToCharacters "1234EBT");
       mode.resize.binding = {
         "esc" = "mode main";
