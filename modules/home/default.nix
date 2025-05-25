@@ -9,13 +9,9 @@
     # ./windowManager/default.nix
 
     ./shell/aliases.nix
-    # ./shell/zsh.nix
-    ./shell/fish.nix
-    # ./shell/nushell.nix
-    ./shell/starship.nix
-    # ./shell/oh-my-posh.nix
-    # ./shell/tmux.nix
-    # ./shell/zellij.nix
+    # ./shell/multiplexers.nix
+    ./shell/shells.nix
+    ./shell/prompts.nix
 
     ./gui/kodi/default.nix
     ./gui/terminal/default.nix

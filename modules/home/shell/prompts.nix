@@ -1,5 +1,6 @@
 _: {
-  programs.starship = {
+  programs = {
+    starship = {
     enable = true;
     enableZshIntegration = true;
     enableFishIntegration = true;
@@ -22,5 +23,13 @@ _: {
         disabled = false;
       };
     };
+  };
+  oh-my-posh = {
+    enable = false;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+    enableNushellIntegration = true;
+    useTheme = "pure";
+  };
   };
 }
