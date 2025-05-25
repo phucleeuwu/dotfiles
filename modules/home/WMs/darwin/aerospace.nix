@@ -12,7 +12,9 @@
       default-root-container-layout = "tiles";
       default-root-container-orientation = "auto";
       automatically-unhide-macos-hidden-apps = true;
-      exec-on-workspace-change = ["/bin/bash" "-c" "${lib.getExe pkgs.sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"];
+      exec-on-workspace-change = ["/bin/bash" "-c" 
+        "${lib.getExe pkgs.sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
+      ];
       on-focus-changed = [
         "exec-and-forget ${lib.getExe pkgs.sketchybar} --trigger aerospace_focus_change"
         "move-mouse window-lazy-center"
@@ -49,24 +51,12 @@
           "alt-shift-semicolon" = "mode service";
         }
         # Dynamically generated workspace bindings
-        // builtins.listToAttrs (
-          builtins.concatLists (
-            map (
-              letter: let
-                lower = lib.strings.toLower letter;
-              in [
-                {
-                  name = "alt-${lower}";
-                  value = "workspace ${letter}";
-                }
-                {
-                  name = "alt-shift-${lower}";
-                  value = "move-node-to-workspace ${letter}";
-                }
-              ]
-            ) (lib.strings.stringToCharacters "1234EBT")
-          )
-        );
+        // lib.lists.foldl' (acc: letter:
+          acc // {
+            "alt-${lib.strings.toLower letter}" = "workspace ${letter}";
+            "alt-shift-${lib.strings.toLower letter}" = "move-node-to-workspace ${letter}";
+          }
+        ) {} (lib.strings.stringToCharacters "1234EBT");
       mode.resize.binding = {
         "esc" = "mode main";
         "b" = ["balance-sizes" "mode main"];
