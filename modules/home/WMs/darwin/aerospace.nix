@@ -42,7 +42,6 @@
           "alt-shift-l" = "move right";
           "alt-tab" = "workspace-back-and-forth";
           "alt-shift-tab" = "move-workspace-to-monitor --wrap-around next";
-          "alt-shift-space" = "layout floating tiling";
           "alt-f" = "fullscreen";
           "alt-slash" = "layout tiles horizontal vertical";
           "alt-comma" = "layout accordion horizontal vertical";
@@ -77,7 +76,11 @@
       mode.service.binding = {
         "esc" = ["reload-config" "mode main"];
         "r" = ["flatten-workspace-tree" "mode main"];
+        "f" = ["layout floating tiling" "mode main"];
         "backspace" = ["close-all-windows-but-current" "mode main"];
+        "down" = "volume down";
+        "up" = "volume up";
+        "shift-down" = ["volume set 0" "mode main"];
         "alt-shift-h" = ["join-with left" "mode main"];
         "alt-shift-j" = ["join-with down" "mode main"];
         "alt-shift-k" = ["join-with up" "mode main"];
