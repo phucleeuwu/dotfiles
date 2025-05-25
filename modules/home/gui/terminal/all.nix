@@ -3,7 +3,8 @@
   flake,
   ...
 }: {
-  programs.wezterm = {
+  programs = {
+    wezterm = {
     inherit (config.${flake.config.me.namespace}.terminal.wezterm) enable;
     enableZshIntegration = true;
     # enableFishIntegration = true;
@@ -20,7 +21,7 @@
       return config
     '';
   };
-  programs.kitty = {
+  kitty = {
     inherit (config.${flake.config.me.namespace}.terminal.kitty) enable;
     shellIntegration = {
       enableZshIntegration = true;
@@ -37,7 +38,7 @@
       cursor_trail = 3;
     };
   };
-  programs.ghostty = {
+  ghostty = {
     inherit (config.${flake.config.me.namespace}.terminal.ghostty) enable;
     enableZshIntegration = true;
     enableFishIntegration = true;
@@ -50,4 +51,5 @@
       window-decoration = false;
     };
   };
+};
 }
