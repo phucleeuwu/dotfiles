@@ -53,21 +53,22 @@
           "alt-shift-semicolon" = "mode service";
         }
         # Dynamically generated workspace bindings
-// builtins.listToAttrs (
-  builtins.concatMap (letter:
-    let lower = lib.strings.toLower letter;
-    in [
-      {
-        name = "alt-${lower}";
-        value = "workspace ${letter}";
-      }
-      {
-        name = "alt-shift-${lower}";
-        value = "move-node-to-workspace ${letter}";
-      }
-    ]
-  ) (lib.strings.stringToCharacters "1234EBT")
-);
+        // builtins.listToAttrs (
+          builtins.concatMap (
+            letter: let
+              lower = lib.strings.toLower letter;
+            in [
+              {
+                name = "alt-${lower}";
+                value = "workspace ${letter}";
+              }
+              {
+                name = "alt-shift-${lower}";
+                value = "move-node-to-workspace ${letter}";
+              }
+            ]
+          ) (lib.strings.stringToCharacters "1234EBT")
+        );
       mode.resize.binding = {
         "esc" = "mode main";
         "b" = ["balance-sizes" "mode main"];
