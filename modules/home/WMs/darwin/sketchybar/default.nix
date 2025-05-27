@@ -1,8 +1,11 @@
 {
+config,
   pkgs,
   lib,
+flake,
   ...
 }: {
+  config = lib.mkIf config.${flake.config.me.namespace}.WMs.darwin.enable {
   home.packages = [pkgs.sketchybar-app-font];
   xdg.configFile = {
     "sketchybar" = {
@@ -22,5 +25,6 @@
         require("init")
       '';
     };
+  };
   };
 }

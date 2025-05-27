@@ -1,10 +1,12 @@
 {
+  config,
   pkgs,
   lib,
+  flake,
   ...
 }: {
   programs.aerospace = {
-    enable = true;
+    inherit (config.${flake.config.me.namespace}.WMs.darwin) enable;
     userSettings = {
       start-at-login = true;
       enable-normalization-flatten-containers = true;

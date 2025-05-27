@@ -5,19 +5,9 @@
 }: {
   imports = [
     ./cli/default.nix
-    # ./gui/default.nix
-    # ./windowManager/default.nix
-
-    ./shell/aliases.nix
-    # ./shell/multiplexers.nix
-    ./shell/shells.nix
-    ./shell/prompts.nix
-
-    ./gui/kodi/default.nix
-    ./gui/terminal/default.nix
-    ./gui/obs-studio/default.nix
-    ./gui/zed-editor/default.nix
-    ./gui/qutebrowser/default.nix
+    ./WMs/default.nix
+    ./gui/default.nix
+    ./shell/default.nix
   ];
   xdg.enable = true;
   home = {
@@ -25,8 +15,6 @@
     inherit (flake.config.me) username;
     packages = with pkgs; [
       maple-mono.NF
-      spotify
-      chatgpt
       onefetch
     ];
   };
@@ -36,6 +24,10 @@
     accent = "mauve";
   };
   ${flake.config.me.namespace} = {
+    WMs = {
+      darwin.enable = true;
+      linux.enable = false;
+    };
     cli = {
       git = {
         enable = true;

@@ -1,6 +1,6 @@
-_: {
+{config,lib,flake,...}: {
   services.jankyborders = {
-    enable = true;
+    inherit (config.${flake.config.me.namespace}.WMs.darwin) enable;
     settings = {
       order = "below";
       active_color = "0xffcba6f7";

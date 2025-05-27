@@ -1,14 +1,14 @@
 _: {
   programs = {
     tmux = {
-      enable = true;
+      enable = false;
       mouse = true;
       prefix = "C-a";
       tmuxinator.enable = true;
       keyMode = "vi";
     };
     zellij = {
-      enable = true;
+      enable = false;
       enableZshIntegration = true;
       enableFishIntegration = true;
       # enableNushellIntegration = true;
