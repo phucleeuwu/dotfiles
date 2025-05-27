@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+{...}: {
   imports = [
     ./kodi/default.nix
     ./terminal/default.nix
