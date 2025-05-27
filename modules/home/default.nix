@@ -16,6 +16,7 @@
     packages = with pkgs; [
       maple-mono.NF
       onefetch
+      uutils-coreutils-noprefix
     ];
   };
   catppuccin = {
