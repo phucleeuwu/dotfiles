@@ -1,4 +1,9 @@
-{config,lib,flake,...}: {
+{
+  config,
+  lib,
+  flake,
+  ...
+}: {
   services.jankyborders = {
     inherit (config.${flake.config.me.namespace}.WMs.darwin) enable;
     settings = {
