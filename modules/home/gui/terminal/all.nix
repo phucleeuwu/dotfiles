@@ -46,9 +46,9 @@
       settings = {
         font-family = "Maple Mono NF";
         font-size = 19;
+        window-decoration = false;
         mouse-hide-while-typing = true;
         macos-option-as-alt = "left";
-        window-decoration = false;
       };
     };
   };
