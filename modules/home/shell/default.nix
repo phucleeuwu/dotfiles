@@ -10,7 +10,7 @@
     ./multiplexer/default.nix
     ./alias/default.nix
   ];
-  options.${flake.config.me.namespace}.shell= {
+  options.${flake.config.me.namespace}.shell = {
     zsh.enable = lib.mkEnableOption "shell.zsh";
     fish.enable = lib.mkEnableOption "shell.fish";
     nushell.enable = lib.mkEnableOption "shell.nushell";

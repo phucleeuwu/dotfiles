@@ -1,4 +1,9 @@
-{config,pkgs, flake,...}: {
+{
+  config,
+  pkgs,
+  flake,
+  ...
+}: {
   programs = {
     zsh = {
       inherit (config.${flake.config.me.namespace}.shell.zsh) enable;
@@ -6,7 +11,7 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       prezto = {
-      inherit (config.${flake.config.me.namespace}.shell.zsh) enable;
+        inherit (config.${flake.config.me.namespace}.shell.zsh) enable;
         editor.keymap = "vi";
       };
       plugins = [
