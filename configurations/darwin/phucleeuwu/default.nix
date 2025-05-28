@@ -5,19 +5,6 @@ in {
   imports = [
     self.darwinModules.default
   ];
-  nixpkgs.overlays = [
-    (final: _prev: {
-      generated = (import ../../../_sources/generated.nix) {
-        inherit
-          (final)
-          fetchurl
-          fetchgit
-          fetchFromGitHub
-          dockerTools
-          ;
-      };
-    })
-  ];
   networking.hostName = "phucleeuwu";
   nix.enable = false;
   nixos-unified.sshTarget = "myuser@myhost";
