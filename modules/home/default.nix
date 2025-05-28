@@ -29,6 +29,16 @@
       darwin.enable = true;
       linux.enable = false;
     };
+    shells = {
+      prompts = {
+        starship.enable = true;
+        oh-my-posh.enable = false;
+      };
+      multiplexers = {
+        tmux.enable = false;
+        zellij.enable = false;
+      };
+    };
     cli = {
       git = {
         enable = true;
