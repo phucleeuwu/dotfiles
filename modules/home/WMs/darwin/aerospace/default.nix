@@ -30,8 +30,8 @@
           vertical = 10;
         };
         outer = {
-          top = 5;
-          bottom = 45;
+          top = 40;
+          bottom = 5;
           left = 5;
           right = 5;
         };
