@@ -30,6 +30,9 @@
       linux.enable = false;
     };
     shell = {
+      zsh.enable = false;
+      fish.enable = true;
+      nushell.enable = false;
       prompt = {
         starship.enable = true;
         oh-my-posh.enable = false;

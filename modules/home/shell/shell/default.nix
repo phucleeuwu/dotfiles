@@ -1,12 +1,12 @@
-{pkgs, ...}: {
+{config,pkgs, flake,...}: {
   programs = {
     zsh = {
-      enable = false;
+      inherit (config.${flake.config.me.namespace}.shell.zsh) enable;
       autocd = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       prezto = {
-        enable = false;
+      inherit (config.${flake.config.me.namespace}.shell.zsh) enable;
         editor.keymap = "vi";
       };
       plugins = [
@@ -17,7 +17,7 @@
       ];
     };
     fish = {
-      enable = true;
+      inherit (config.${flake.config.me.namespace}.shell.fish) enable;
       preferAbbrs = true;
       interactiveShellInit = "
       set fish_greeting
@@ -31,7 +31,7 @@
       ];
     };
     nushell = {
-      enable = false;
+      inherit (config.${flake.config.me.namespace}.shell.nushell) enable;
       settings = {
         show_banner = false;
         edit_mode = "vi";
