@@ -5,9 +5,9 @@
 }: {
   imports = [
     ./cli/default.nix
-    ./WM/default.nix
     ./gui/default.nix
     ./shell/default.nix
+    ./WM/default.nix
   ];
   xdg.enable = true;
   home = {
