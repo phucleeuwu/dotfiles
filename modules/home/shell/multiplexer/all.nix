@@ -1,4 +1,8 @@
-{config,flake,...}: {
+{
+  config,
+  flake,
+  ...
+}: {
   programs = {
     tmux = {
       inherit (config.${flake.config.me.namespace}.shell.multiplexer.tmux) enable;

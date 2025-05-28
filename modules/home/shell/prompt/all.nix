@@ -1,4 +1,8 @@
-{config,flake,...}: {
+{
+  config,
+  flake,
+  ...
+}: {
   programs = {
     starship = {
       inherit (config.${flake.config.me.namespace}.shell.prompt.starship) enable;

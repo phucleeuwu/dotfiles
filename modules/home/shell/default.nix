@@ -1,5 +1,5 @@
 _: {
-  imports  = [
+  imports = [
     ./shell/default.nix
     ./prompt/default.nix
     ./multiplexer/default.nix
