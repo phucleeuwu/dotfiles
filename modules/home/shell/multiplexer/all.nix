@@ -1,14 +1,14 @@
 {config,flake,...}: {
   programs = {
     tmux = {
-      inherit (config.${flake.config.me.namespace}.shells.multiplexers.tmux) enable;
+      inherit (config.${flake.config.me.namespace}.shell.multiplexer.tmux) enable;
       mouse = true;
       prefix = "C-a";
       tmuxinator.enable = true;
       keyMode = "vi";
     };
     zellij = {
-      inherit (config.${flake.config.me.namespace}.shells.multiplexers.zellij) enable;
+      inherit (config.${flake.config.me.namespace}.shell.multiplexer.zellij) enable;
       enableZshIntegration = true;
       enableFishIntegration = true;
       # enableNushellIntegration = true;

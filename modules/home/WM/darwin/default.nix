@@ -4,7 +4,7 @@
   flake,
   ...
 }: {
-  options.${flake.config.me.namespace}.WMs.darwin.enable = lib.mkEnableOption "WMs.darwin";
+  options.${flake.config.me.namespace}.WM.darwin.enable = lib.mkEnableOption "WM.darwin";
   imports = [
     ./aerospace/default.nix
     ./sketchybar/default.nix

@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./cli/default.nix
-    ./WMs/default.nix
+    ./WM/default.nix
     ./gui/default.nix
     ./shell/default.nix
   ];
@@ -25,16 +25,16 @@
     accent = "mauve";
   };
   ${flake.config.me.namespace} = {
-    WMs = {
+    WM = {
       darwin.enable = true;
       linux.enable = false;
     };
-    shells = {
-      prompts = {
+    shell = {
+      prompt = {
         starship.enable = true;
         oh-my-posh.enable = false;
       };
-      multiplexers = {
+      multiplexer = {
         tmux.enable = false;
         zellij.enable = false;
       };

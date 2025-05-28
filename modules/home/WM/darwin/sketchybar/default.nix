@@ -5,7 +5,7 @@
   flake,
   ...
 }: {
-  config = lib.mkIf config.${flake.config.me.namespace}.WMs.darwin.enable {
+  config = lib.mkIf config.${flake.config.me.namespace}.WM.darwin.enable {
     home.packages = [pkgs.sketchybar-app-font];
     xdg.configFile = {
       "sketchybar" = {

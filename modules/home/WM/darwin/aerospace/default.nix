@@ -6,7 +6,7 @@
   ...
 }: {
   programs.aerospace = {
-    inherit (config.${flake.config.me.namespace}.WMs.darwin) enable;
+    inherit (config.${flake.config.me.namespace}.WM.darwin) enable;
     userSettings = {
       start-at-login = true;
       enable-normalization-flatten-containers = true;

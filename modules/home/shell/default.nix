@@ -1,8 +1,8 @@
 _: {
-  imports = [
-    ./shells/default.nix
-    ./prompts/default.nix
-    ./multiplexers/default.nix
-    ./aliases/default.nix
+  imports  = [
+    ./shell/default.nix
+    ./prompt/default.nix
+    ./multiplexer/default.nix
+    ./alias/default.nix
   ];
 }

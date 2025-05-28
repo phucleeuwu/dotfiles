@@ -1,7 +1,7 @@
 {config,flake,...}: {
   programs = {
     starship = {
-      inherit (config.${flake.config.me.namespace}.shells.prompts.starship) enable;
+      inherit (config.${flake.config.me.namespace}.shell.prompt.starship) enable;
       enableZshIntegration = true;
       enableFishIntegration = true;
       enableNushellIntegration = true;
@@ -25,7 +25,7 @@
       };
     };
     oh-my-posh = {
-      inherit (config.${flake.config.me.namespace}.shells.prompts.oh-my-posh) enable;
+      inherit (config.${flake.config.me.namespace}.shell.prompt.oh-my-posh) enable;
       enableZshIntegration = true;
       enableFishIntegration = true;
       enableNushellIntegration = true;
