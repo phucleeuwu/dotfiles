@@ -4,5 +4,6 @@ _: {
     lg = "lazygit";
     man = "batman";
     rg = "batgrep";
+    vi = "nvim";
   };
 }
