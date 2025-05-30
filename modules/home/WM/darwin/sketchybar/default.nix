@@ -15,8 +15,8 @@
       enable = true;
       extraPackages = with pkgs; [
         aerospace
-      nowplaying-cli
-      switchaudio-osx
+        nowplaying-cli
+        switchaudio-osx
       ];
       configType = "lua";
       config = {
