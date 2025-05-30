@@ -7,13 +7,12 @@
     ./clock-rs/default.nix
     ./eza/default.nix
     ./fastfetch/default.nix
-    ./fd/default.nix
+    ./fd-ripgrep/default.nix
     ./fzf/default.nix
     ./git/default.nix
     ./lazygit/default.nix
     ./neovim/default.nix
     ./pay-respects/default.nix
-    ./ripgrep/default.nix
     ./zoxide/default.nix
     ./navi/default.nix
     ./tealdeer/default.nix
