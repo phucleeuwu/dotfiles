@@ -23,7 +23,6 @@ in {
     self.darwinModules.configuration
     self.nixosModules.common
     self.darwinModules.homebrew
-    self.darwinModules.sketchybar
     self.darwinModules.karabiner-elements
   ];
 }

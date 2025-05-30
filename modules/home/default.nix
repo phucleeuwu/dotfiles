@@ -24,6 +24,8 @@
     flavor = "mocha";
     accent = "mauve";
   };
+
+  # config
   ${flake.config.me.namespace} = {
     WM = {
       darwin.enable = true;

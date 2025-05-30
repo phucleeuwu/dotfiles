@@ -54,7 +54,6 @@
           "alt-r" = "mode resize";
           "alt-shift-semicolon" = "mode service";
         }
-        # Dynamically generated workspace bindings
         // builtins.listToAttrs (
           builtins.concatMap (
             letter: [
@@ -67,7 +66,7 @@
                 value = "move-node-to-workspace ${letter}";
               }
             ]
-          ) (lib.strings.stringToCharacters "1234EBT")
+          ) (lib.strings.stringToCharacters "1234BET")
         );
       mode.resize.binding = {
         "esc" = "mode main";
