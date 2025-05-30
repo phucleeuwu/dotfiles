@@ -15,7 +15,7 @@
       shellWrapperName = "y";
       initLua = ./init.lua;
       settings = {
-        manager = {
+        mgr = {
           show_hidden = true;
         };
         preview = {
@@ -47,7 +47,7 @@
         };
       };
       keymap = {
-        manager.prepend_keymap = [
+        mgr.prepend_keymap = [
           {
             on = "T";
             run = "plugin toggle-pane max-preview";
@@ -57,7 +57,7 @@
             run = "plugin smart-filter";
           }
           {
-            on = "h";
+            on = "H";
             run = "plugin bypass reverse";
           }
           {
