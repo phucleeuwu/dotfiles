@@ -6,14 +6,18 @@
   ...
 }: {
   config = lib.mkIf config.${flake.config.me.namespace}.WM.darwin.enable {
-    home.packages = [pkgs.sketchybar-app-font];
+    home.packages = with pkgs; [
+      sketchybar-app-font
+      switchaudio-osx
+      nowplaying-cli
+    ];
     xdg.configFile = {
       "sketchybar" = {
         source = ./.;
         recursive = true;
         onChange = "${lib.getExe pkgs.sketchybar} --reload";
       };
-      "sketchybar/helpers/app_icons.lua" = {
+      "sketchybar/helpers/icon_map.lua" = {
         source = "${pkgs.sketchybar-app-font}/lib/sketchybar-app-font/icon_map.lua";
       };
       "sketchybar/sketchybarrc" = {

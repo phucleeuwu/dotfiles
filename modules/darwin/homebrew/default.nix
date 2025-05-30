@@ -12,6 +12,9 @@
       "spotify"
       "chatgpt"
       "raycast"
+      "sf-symbols"
+      "font-sf-pro"
+      "font-sf-mono"
     ];
     onActivation = {
       cleanup = "zap"; # Declarative nature of homebrew
