@@ -1,6 +1,6 @@
 return {
-	text = "SF Pro",    -- Used for text
-	numbers = "SF Mono", -- Used for numbers
+	text = "Maple Mono NF", -- Used for text
+	numbers = "Maple Mono NF", -- Used for numbers
 	weather = "Symbols Nerd Font",
 	style_map = {
 		["Regular"] = "Regular",
@@ -8,5 +8,5 @@ return {
 		["Bold"] = "Bold",
 		["Heavy"] = "Heavy",
 		["Black"] = "Black",
-	}
+	},
 }

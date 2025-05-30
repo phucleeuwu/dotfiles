@@ -17,6 +17,7 @@
       maple-mono.NF
       onefetch
       uutils-coreutils-noprefix
+      spotify
     ];
   };
   catppuccin = {

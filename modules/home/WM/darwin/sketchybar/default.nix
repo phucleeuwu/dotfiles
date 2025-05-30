@@ -10,11 +10,13 @@
       sketchybar-app-font
       nowplaying-cli
       switchaudio-osx
+      nerd-fonts.symbols-only
     ];
     programs.sketchybar = {
       enable = true;
       extraPackages = with pkgs; [
         aerospace
+        spotify
         nowplaying-cli
         switchaudio-osx
       ];
