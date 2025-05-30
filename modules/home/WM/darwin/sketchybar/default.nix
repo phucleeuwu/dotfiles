@@ -6,10 +6,18 @@
   ...
 }: {
   config = lib.mkIf config.${flake.config.me.namespace}.WM.darwin.enable {
-    home.packages = [pkgs.sketchybar-app-font];
+    home.packages = with pkgs; [
+      sketchybar-app-font
+      nowplaying-cli
+      switchaudio-osx
+    ];
     programs.sketchybar = {
       enable = true;
-      extraPackages = [pkgs.aerospace];
+      extraPackages = with pkgs; [
+        aerospace
+      nowplaying-cli
+      switchaudio-osx
+      ];
       configType = "lua";
       config = {
         source = ./.;
