@@ -15,7 +15,6 @@
       enable = true;
       extraPackages = with pkgs; [
         aerospace
-        spotify
         nowplaying-cli
         switchaudio-osx
       ];
