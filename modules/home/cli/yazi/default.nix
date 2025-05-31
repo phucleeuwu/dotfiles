@@ -14,25 +14,25 @@
       enableNushellIntegration = true;
       shellWrapperName = "y";
       initLua = ./init.lua;
+      # initLua = ''
+      #   require("full-border"):setup()
+      #   require("git"):setup()
+      #   require("yatline").setup(0,{theme=require("yatline-catppuccin").setup("mocha")})
+      # '';
       settings = {
-        mgr = {
-          show_hidden = true;
-        };
+        mgr.show_hidden = true;
         preview = {
           wrap = "yes";
           max_width = 1500;
           max_height = 1500;
         };
-        opener = {
-          edit = [
+        opener.edit = [
             {
               run = "nvim \"$@\"";
               block = true;
             }
           ];
-        };
-        plugin = {
-          prepend_fetchers = [
+        plugin.prepend_fetchers = [
             {
               id = "git";
               name = "*";
@@ -44,7 +44,6 @@
               run = "git";
             }
           ];
-        };
       };
       keymap = {
         mgr.prepend_keymap = [
