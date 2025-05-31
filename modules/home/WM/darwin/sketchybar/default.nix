@@ -21,7 +21,7 @@
       ];
       configType = "lua";
       config = {
-        source = ./.;
+        source = ./config;
         recursive = true;
       };
     };
