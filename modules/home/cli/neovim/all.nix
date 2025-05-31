@@ -6,8 +6,11 @@
   programs.lazyvim = {
     inherit (config.${flake.config.me.namespace}.editor.neovim.lazyvim) enable;
     extras = {
-      coding = {
-        yanky.enable = true;
+      coding.yanky.enable = true;
+      util.mini-hipatterns.enable = true;
+      editor = {
+        dial.enable = true;
+        inc-rename.enable = true;
       };
       lang = {
         nix.enable = true;
@@ -16,9 +19,6 @@
       ai = {
         copilot.enable = true;
         copilot-chat.enable = true;
-      };
-      editor = {
-        leap.enable = true;
       };
     };
   };
