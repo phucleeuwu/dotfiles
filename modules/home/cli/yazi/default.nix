@@ -27,23 +27,23 @@
           max_height = 1500;
         };
         opener.edit = [
-            {
-              run = "nvim \"$@\"";
-              block = true;
-            }
-          ];
+          {
+            run = "nvim \"$@\"";
+            block = true;
+          }
+        ];
         plugin.prepend_fetchers = [
-            {
-              id = "git";
-              name = "*";
-              run = "git";
-            }
-            {
-              id = "git";
-              name = "*/";
-              run = "git";
-            }
-          ];
+          {
+            id = "git";
+            name = "*";
+            run = "git";
+          }
+          {
+            id = "git";
+            name = "*/";
+            run = "git";
+          }
+        ];
       };
       keymap = {
         mgr.prepend_keymap = [
