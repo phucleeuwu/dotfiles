@@ -12,13 +12,12 @@
       enableZshIntegration = true;
       enableFishIntegration = true;
       enableNushellIntegration = true;
-      initLua = ./init.lua;
-      # initLua = ''
-      #   require("full-border"):setup()
-      #   require("yatline"):setup(0,require("yatline-catppuccin"):setup("mocha"))
-      #   require("git"):setup()
-      #   require("yatline-githead"):setup()
-      # '';
+      initLua = ''
+        require("full-border"):setup()
+        require("yatline"):setup(0,require("yatline-catppuccin"):setup("mocha"))
+        require("git"):setup()
+        require("yatline-githead"):setup()
+      '';
       settings = {
         mgr.show_hidden = true;
         preview = {
@@ -60,7 +59,7 @@
         ];
       };
       plugins = {
-        inherit (pkgs.yaziPlugins) git smart-filter full-border toggle-pane bypass yatline yatline-catppuccin;
+        inherit (pkgs.yaziPlugins) git smart-filter full-border toggle-pane bypass yatline yatline-catppuccin yatlien-githead;
       };
     };
   };
