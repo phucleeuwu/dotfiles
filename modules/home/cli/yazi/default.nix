@@ -59,7 +59,7 @@
         ];
       };
       plugins = {
-        inherit (pkgs.yaziPlugins) git smart-filter full-border toggle-pane bypass yatline yatline-catppuccin yatlien-githead;
+        inherit (pkgs.yaziPlugins) git smart-filter full-border toggle-pane bypass yatline yatline-catppuccin yatline-githead;
       };
     };
   };
