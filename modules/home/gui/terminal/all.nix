@@ -13,7 +13,7 @@
         local wezterm = require 'wezterm'
         local config = {
           font = wezterm.font 'Maple Mono NF',
-          font_size = 19,
+          font_size = 18,
           window_decorations = "RESIZE",
           enable_tab_bar = false,
           window_close_confirmation = 'NeverPrompt',
@@ -30,7 +30,7 @@
       };
       font = {
         name = "Maple Mono NF";
-        size = 19;
+        size = 18;
       };
       settings = {
         hide_window_decorations = true;
@@ -45,7 +45,7 @@
       # enableNushellIntegration = true;
       settings = {
         font-family = "Maple Mono NF";
-        font-size = 19;
+        font-size = 18;
         window-decoration = false;
         mouse-hide-while-typing = true;
         macos-option-as-alt = "left";
