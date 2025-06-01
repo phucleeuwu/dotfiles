@@ -12,7 +12,6 @@
       enableZshIntegration = true;
       enableFishIntegration = true;
       enableNushellIntegration = true;
-      shellWrapperName = "y";
       initLua = ./init.lua;
       # initLua = ''
       #   require("full-border"):setup()
