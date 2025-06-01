@@ -47,10 +47,22 @@
       };
       keymap = {
         mgr.prepend_keymap = [
-          {on = "T";run = "plugin toggle-pane max-preview";}
-          {on = "F";run = "plugin smart-filter";}
-          {on = "H";run = "plugin bypass reverse";}
-          {on = "l";run = "plugin bypass smart-enter";}
+          {
+            on = "T";
+            run = "plugin toggle-pane max-preview";
+          }
+          {
+            on = "F";
+            run = "plugin smart-filter";
+          }
+          {
+            on = "H";
+            run = "plugin bypass reverse";
+          }
+          {
+            on = "l";
+            run = "plugin bypass smart-enter";
+          }
         ];
       };
       plugins = {
