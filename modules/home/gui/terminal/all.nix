@@ -35,7 +35,6 @@
       settings = {
         hide_window_decorations = true;
         macos_option_as_alt = "left";
-        cursor_trail = 3;
       };
     };
     ghostty = {
