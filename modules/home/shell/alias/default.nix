@@ -1,9 +1,8 @@
 _: {
   home.shellAliases = {
     "..." = "cd ../..";
-    lg = "lazygit";
-    man = "batman";
-    rg = "batgrep";
     vi = "nvim";
+    lg = "lazygit";
+    rg = "batgrep";
   };
 }

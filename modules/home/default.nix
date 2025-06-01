@@ -1,6 +1,6 @@
 {
-  flake,
   pkgs,
+  flake,
   ...
 }: {
   imports = [
