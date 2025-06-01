@@ -26,12 +26,6 @@
           max_width = 1500;
           max_height = 1500;
         };
-        opener.edit = [
-          {
-            run = "nvim \"$@\"";
-            block = true;
-          }
-        ];
         plugin.prepend_fetchers = [
           {
             id = "git";
@@ -56,12 +50,12 @@
             run = "plugin smart-filter";
           }
           {
-            on = "H";
-            run = "plugin bypass reverse";
-          }
-          {
             on = "l";
             run = "plugin bypass smart-enter";
+          }
+          {
+            on = "H";
+            run = "plugin bypass reverse";
           }
         ];
       };
