@@ -12,6 +12,9 @@
       enableZshIntegration = true;
       enableFishIntegration = true;
       enableNushellIntegration = true;
+      plugins = {
+        inherit (pkgs.yaziPlugins) git smart-filter full-border toggle-pane bypass yatline yatline-catppuccin yatline-githead;
+      };
       initLua = ''
         require("full-border"):setup()
         require("yatline"):setup(0,require("yatline-catppuccin"):setup("mocha"))
@@ -57,9 +60,6 @@
             run = "plugin bypass reverse";
           }
         ];
-      };
-      plugins = {
-        inherit (pkgs.yaziPlugins) git smart-filter full-border toggle-pane bypass yatline yatline-catppuccin yatline-githead;
       };
     };
   };
