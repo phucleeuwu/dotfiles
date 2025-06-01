@@ -16,7 +16,7 @@
       # initLua = ''
       #   require("full-border"):setup()
       #   require("git"):setup()
-      #   require("yatline").setup(0,{theme=require("yatline-catppuccin").setup("mocha")})
+      #   require("yatline"):setup(0,require("yatline-catppuccin"):setup("mocha"))
       #   require("yatline-githead"):setup()
       # '';
       settings = {
@@ -47,27 +47,14 @@
       };
       keymap = {
         mgr.prepend_keymap = [
-          {
-            on = "T";
-            run = "plugin toggle-pane max-preview";
-          }
-          {
-            on = "F";
-            run = "plugin smart-filter";
-          }
-          {
-            on = "H";
-            run = "plugin bypass reverse";
-          }
-          {
-            on = "l";
-            run = "plugin bypass smart-enter";
-          }
+          {on = "T";run = "plugin toggle-pane max-preview";}
+          {on = "F";run = "plugin smart-filter";}
+          {on = "H";run = "plugin bypass reverse";}
+          {on = "l";run = "plugin bypass smart-enter";}
         ];
       };
       plugins = {
-        inherit (pkgs.yaziPlugins) bypass toggle-pane full-border yatline yatline-catppuccin git smart-filter;
-        # inherit (pkgs.yaziPlugins) bypass toggle-pane full-border yatline yatline-catppuccin yatline-githead git smart-filter;
+        inherit (pkgs.yaziPlugins) git smart-filter full-border toggle-pane bypass yatline yatline-catppuccin;
       };
     };
   };
