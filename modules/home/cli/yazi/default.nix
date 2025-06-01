@@ -18,6 +18,7 @@
       #   require("full-border"):setup()
       #   require("git"):setup()
       #   require("yatline").setup(0,{theme=require("yatline-catppuccin").setup("mocha")})
+      #   require("yatline-githead"):setup()
       # '';
       settings = {
         mgr.show_hidden = true;
