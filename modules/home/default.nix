@@ -18,6 +18,7 @@
       onefetch
       uutils-coreutils-noprefix
       spotify
+      localsend
     ];
   };
   catppuccin = {
