@@ -7,11 +7,12 @@
   homebrew = {
     enable = true;
     casks = [
-      "zen"
       "ghostty"
       "chatgpt"
       "raycast"
       "sf-symbols"
+      "arc"
+      "zen"
     ];
     onActivation = {
       cleanup = "zap"; # Declarative nature of homebrew
