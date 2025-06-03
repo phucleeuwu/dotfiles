@@ -4,10 +4,10 @@
   flake,
   ...
 }: {
-  home.shell = {
-    enableZshIntegration = true;
-    enableFishIntegration = true;
-    enableNushellIntegration = true;
+home.shell = {
+  enableZshIntegration = config.${flake.config.me.namespace}.shell.zsh.enable;
+  enableFishIntegration = config.${flake.config.me.namespace}.shell.fish.enable;
+  enableNushellIntegration = config.${flake.config.me.namespace}.shell.nushell.enable;
   };
   programs = {
     zsh = {
