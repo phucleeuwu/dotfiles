@@ -9,9 +9,7 @@
     programs.nh = {
       enable = true;
       flake = builtins.toString ../../../..;
-      clean = {
-        enable = true;
-      };
+      clean.enable = true;
     };
   };
 }

@@ -13,9 +13,6 @@
     };
     zellij = {
       inherit (config.${flake.config.me.namespace}.shell.multiplexer.zellij) enable;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-      # enableNushellIntegration = true;
       settings = {
         show_startup_tips = false;
       };

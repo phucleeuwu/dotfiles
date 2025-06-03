@@ -8,9 +8,6 @@
   config = lib.mkIf config.${flake.config.me.namespace}.cli.atuin.enable {
     programs.atuin = {
       enable = true;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-      enableNushellIntegration = true;
       settings = {
         auto_sync = true;
         records = true;

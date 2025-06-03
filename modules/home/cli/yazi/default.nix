@@ -9,9 +9,6 @@
   config = lib.mkIf config.${flake.config.me.namespace}.cli.yazi.enable {
     programs.yazi = {
       enable = true;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-      enableNushellIntegration = true;
       plugins = {
         inherit (pkgs.yaziPlugins) git smart-filter full-border toggle-pane bypass yatline yatline-catppuccin yatline-githead;
       };

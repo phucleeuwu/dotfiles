@@ -4,6 +4,11 @@
   flake,
   ...
 }: {
+  home.shell = {
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+    enableNushellIntegration = true;
+  };
   programs = {
     zsh = {
       inherit (config.${flake.config.me.namespace}.shell.zsh) enable;

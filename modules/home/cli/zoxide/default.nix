@@ -8,12 +8,7 @@
   config = lib.mkIf config.${flake.config.me.namespace}.cli.zoxide.enable {
     programs.zoxide = {
       enable = true;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-      enableNushellIntegration = true;
-      options = [
-        "--cmd cd"
-      ];
+      options = ["--cmd cd"];
     };
   };
 }

@@ -6,9 +6,6 @@
   programs = {
     starship = {
       inherit (config.${flake.config.me.namespace}.shell.prompt.starship) enable;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-      enableNushellIntegration = true;
       enableTransience = true;
       settings = {
         character = {
@@ -26,9 +23,6 @@
     };
     oh-my-posh = {
       inherit (config.${flake.config.me.namespace}.shell.prompt.oh-my-posh) enable;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-      enableNushellIntegration = true;
       useTheme = "pure";
     };
   };

@@ -6,9 +6,6 @@
   programs = {
     wezterm = {
       inherit (config.${flake.config.me.namespace}.terminal.wezterm) enable;
-      enableZshIntegration = true;
-      # enableFishIntegration = true;
-      # enableNushellIntegration = true;
       extraConfig = ''
         local wezterm = require 'wezterm'
         local config = {
@@ -23,11 +20,6 @@
     };
     kitty = {
       inherit (config.${flake.config.me.namespace}.terminal.kitty) enable;
-      shellIntegration = {
-        enableZshIntegration = true;
-        enableFishIntegration = true;
-        # enableNushellIntegration = true;
-      };
       font = {
         name = "Maple Mono NF";
         size = 19;
@@ -39,9 +31,6 @@
     };
     ghostty = {
       inherit (config.${flake.config.me.namespace}.terminal.ghostty) enable;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-      # enableNushellIntegration = true;
       settings = {
         font-family = "Maple Mono NF";
         font-size = 19;
