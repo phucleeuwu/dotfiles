@@ -4,7 +4,7 @@
   flake,
   ...
 }: {
-  options.${flake.config.me.namespace}.cli.atuin.enable = lib.mkEnableOption "atuin";
+  options.${flake.config.me.namespace}.cli.atuin.enable = lib.mkEnableOption "cli.atuin";
   config = lib.mkIf config.${flake.config.me.namespace}.cli.atuin.enable {
     programs.atuin = {
       enable = true;
