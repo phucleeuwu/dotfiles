@@ -13,16 +13,16 @@
     ];
     programs.sketchybar = {
       enable = true;
-      extraPackages = with pkgs; [
-        aerospace
-        nowplaying-cli
-        switchaudio-osx
-      ];
       configType = "lua";
       config = {
         source = ./config;
         recursive = true;
       };
+      extraPackages = with pkgs; [
+        aerospace
+        nowplaying-cli
+        switchaudio-osx
+      ];
     };
     xdg.configFile = {
       "sketchybar/helpers/icon_map.lua".source = "${pkgs.sketchybar-app-font}/lib/sketchybar-app-font/icon_map.lua";
