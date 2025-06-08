@@ -21,8 +21,9 @@
         "/usr/bin/osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"
       ];
       on-focus-changed = [
-        "exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"
         "move-mouse window-lazy-center"
+        "exec-and-forget ${lib.getExe pkgs.sketchybar} --trigger aerospace_focus_change"
+        "exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"
       ];
       accordion-padding = 40;
       gaps = {
