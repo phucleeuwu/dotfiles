@@ -18,8 +18,12 @@
         "/bin/bash"
         "-c"
         "${lib.getExe pkgs.sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
+        "/usr/bin/osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"
       ];
-      on-focus-changed = ["move-mouse window-lazy-center"];
+      on-focus-changed = [
+        "exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"
+        "move-mouse window-lazy-center"
+      ];
       accordion-padding = 40;
       gaps = {
         inner = {

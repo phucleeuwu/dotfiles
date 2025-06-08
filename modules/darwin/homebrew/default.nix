@@ -13,6 +13,7 @@
       "sf-symbols"
       "arc"
       "zen"
+      "ubersicht"
     ];
     onActivation = {
       cleanup = "zap"; # Declarative nature of homebrew
