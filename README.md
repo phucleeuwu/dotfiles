@@ -10,7 +10,7 @@
 
 ### Nix ❄️ (RECOMMEND — clones 1:1 setup)
 
-#### Install with [`Dotflow`](https://github.com/phucleeuwu/dotflow)
+#### Install with [`Nix Script`](https://github.com/phucleeuwu/dotflow/main/nix.sh)
 
 > **Note:** For non-NixOS systems, my script will install [`Determinate Nix`](https://github.com/DeterminateSystems/nix-installer#installation).
 
@@ -24,7 +24,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/
 
 ### Stow 🏠 (FASTER)
 
-#### Install with [`Dotflow Script`](https://github.com/phucleeuwu/dotflow)
+#### Install with [`Stow Script`](https://github.com/phucleeuwu/dotflow/main/stow.sh)
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/phucleeuwu/dotflow/main/stow.sh)"
