@@ -12,12 +12,12 @@
         gui = {
           expandFocusedSidePanel = true;
           showBottomLine = false;
-          nerdFontsVersion = "3"; # "2" or "3", empty means no icons
+          nerdFontsVersion = "3";
         };
         git = {
           paging = {
             colorArg = "always";
-            pager = "delta --paging=never --hyperlinks-file-link-format=\"lazygit-edit://{path}:{line}\"";
+            pager = "delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format=\"lazygit-edit://{path}:{line}\"";
           };
         };
       };
