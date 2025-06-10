@@ -9,7 +9,7 @@
       extraConfig = ''
         local wezterm = require 'wezterm'
         local config = {
-          font = wezterm.font 'Maple Mono ',
+          font = wezterm.font 'Maple Mono',
           font_size = 19,
           window_decorations = "RESIZE",
           enable_tab_bar = false,
@@ -21,7 +21,7 @@
     kitty = {
       inherit (config.${flake.config.me.namespace}.terminal.kitty) enable;
       font = {
-        name = "Maple Mono ";
+        name = "Maple Mono";
         size = 19;
       };
       settings = {
@@ -32,7 +32,7 @@
     ghostty = {
       inherit (config.${flake.config.me.namespace}.terminal.ghostty) enable;
       settings = {
-        font-family = "Maple Mono ";
+        font-family = "Maple Mono";
         font-size = 19;
         window-decoration = false;
         mouse-hide-while-typing = true;
