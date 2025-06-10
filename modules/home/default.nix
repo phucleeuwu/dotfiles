@@ -14,7 +14,7 @@
     stateVersion = "25.05";
     inherit (flake.config.me) username;
     packages = with pkgs; [
-      maple-mono.NF
+      maple-mono.variable
       onefetch
       uutils-coreutils-noprefix
       spotify
