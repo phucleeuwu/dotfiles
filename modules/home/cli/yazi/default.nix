@@ -22,7 +22,6 @@
       settings = {
         mgr.show_hidden = true;
         preview = {
-          wrap = "yes";
           max_width = 1500;
           max_height = 1500;
         };
