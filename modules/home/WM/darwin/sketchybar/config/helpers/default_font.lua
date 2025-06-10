@@ -1,6 +1,6 @@
 return {
-	text = "Maple Mono NF", -- Used for text
-	numbers = "Maple Mono NF", -- Used for numbers
+	text = "Maple Mono", -- Used for text
+	numbers = "Maple Mono", -- Used for numbers
 	weather = "Symbols Nerd Font",
 	style_map = {
 		["Regular"] = "Regular",
