@@ -9,6 +9,7 @@
   config = lib.mkIf config.${flake.config.me.namespace}.cli.yazi.enable {
     programs.yazi = {
       enable = true;
+      shellWrapperName = "y";
       plugins = {
         inherit (pkgs.yaziPlugins) git smart-filter full-border toggle-pane bypass yatline yatline-catppuccin yatline-githead;
       };
