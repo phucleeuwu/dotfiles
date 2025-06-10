@@ -79,7 +79,7 @@
     terminal = {
       wezterm.enable = false;
       kitty.enable = false;
-      ghostty.enable = false;
+      ghostty.enable = true;
     };
     editor = {
       zed-editor.enable = false;

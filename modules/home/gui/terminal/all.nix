@@ -31,6 +31,7 @@
     };
     ghostty = {
       inherit (config.${flake.config.me.namespace}.terminal.ghostty) enable;
+      package = null; # Until ghostty is available in darwin
       settings = {
         font-family = "Maple Mono";
         font-size = 19;
