@@ -5,9 +5,7 @@
 in {
   imports = [
     {
-      users.users.${config.me.username} = {
-        home = "/Users/${config.me.username}";
-      };
+      users.users.${config.me.username}.home = "/Users/${config.me.username}";
       system.primaryUser = "${config.me.username}";
       home-manager = {
         users.${config.me.username} = {};
@@ -20,9 +18,9 @@ in {
         ];
       };
     }
+    self.nixosModules.common
     inputs.nix-homebrew.darwinModules.nix-homebrew
     self.darwinModules.configuration
-    self.nixosModules.common
     self.darwinModules.homebrew
     self.darwinModules.karabiner-elements
   ];
