@@ -15,7 +15,8 @@ in {
       theme = spicePkgs.themes.catppuccin;
       colorScheme = "mocha";
       enabledExtensions = with spicePkgs.extensions; [
-        adblockify
+        adblock
+        keyboardShortcut
         hidePodcasts
         beautifulLyrics
       ];
