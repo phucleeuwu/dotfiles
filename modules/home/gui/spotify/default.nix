@@ -20,7 +20,7 @@ in {
         hidePodcasts
         beautifulLyrics
       ];
-      enabledCustomApps = with spicePkgs.customApps; [
+      enabledCustomApps = with spicePkgs.apps; [
         marketplace
       ];
     };
