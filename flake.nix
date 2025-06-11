@@ -17,6 +17,10 @@
     # Software
     catppuccin.url = "github:catppuccin/nix";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     lazyvim = {
       url = "github:matadaniel/LazyVim-module";
       inputs.nixpkgs.follows = "nixpkgs";

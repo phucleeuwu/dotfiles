@@ -92,6 +92,7 @@
       obs-studio.enable = false;
       qutebrowser.enable = false;
       kodi.enable = false;
+      spotify.enable = true;
     };
   };
 }
