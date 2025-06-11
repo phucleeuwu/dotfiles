@@ -25,7 +25,7 @@
         size = 19;
       };
       settings = {
-        hide_window_decorations = true;
+        hide_window_decorations = "titlebar-only";
         macos_option_as_alt = "left";
       };
     };
@@ -35,8 +35,8 @@
       settings = {
         font-family = "Maple Mono";
         font-size = 19;
-        window-decoration = false;
         mouse-hide-while-typing = true;
+        macos-titlebar-style = "hidden";
         macos-option-as-alt = "left";
       };
     };
