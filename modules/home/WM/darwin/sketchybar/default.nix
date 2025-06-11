@@ -12,7 +12,7 @@
       switchaudio-osx
     ];
     programs.sketchybar = {
-      enable = true;
+      enable = false;
       configType = "lua";
       config = {
         source = ./config;
