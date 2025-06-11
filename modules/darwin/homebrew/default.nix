@@ -10,7 +10,6 @@
       "ghostty"
       "chatgpt"
       "sf-symbols"
-      "arc"
       "zen"
       "ubersicht"
     ];
