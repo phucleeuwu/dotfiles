@@ -17,7 +17,6 @@
       maple-mono.variable
       onefetch
       uutils-coreutils-noprefix
-      spotify
       localsend
     ];
   };
