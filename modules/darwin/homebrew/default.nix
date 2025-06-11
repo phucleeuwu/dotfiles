@@ -9,7 +9,6 @@
     casks = [
       "ghostty"
       "chatgpt"
-      "raycast"
       "sf-symbols"
       "arc"
       "zen"
