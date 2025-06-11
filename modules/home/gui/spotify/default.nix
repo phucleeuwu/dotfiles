@@ -20,9 +20,6 @@ in {
         hidePodcasts
         beautifulLyrics
       ];
-      enabledCustomApps = with spicePkgs.apps; [
-        marketplace
-      ];
     };
   };
 }
