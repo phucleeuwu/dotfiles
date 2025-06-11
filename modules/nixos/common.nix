@@ -14,9 +14,7 @@ in {
     };
     overlays = lib.attrValues self.overlays;
   };
-  home-manager = {
-    backupFileExtension = "backup";
-  };
+  home-manager.backupFileExtension = "backup";
   nix = {
     settings = {
       max-jobs = "auto";
