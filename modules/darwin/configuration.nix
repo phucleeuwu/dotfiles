@@ -30,6 +30,9 @@
     finder = {
       FXPreferredViewStyle = "clmv";
       FXDefaultSearchScope = "SCcf";
+      _FXSortFoldersFirst = true;
+      AppleShowAllFiles = true;
+      AppleShowAllExtensions = true;
       NewWindowTarget = "Home";
       CreateDesktop = false;
       ShowStatusBar = true;
@@ -37,10 +40,10 @@
       FXRemoveOldTrashItems = true;
     };
     NSGlobalDomain = {
-      NSWindowShouldDragOnGesture = true;
       AppleInterfaceStyle = "Dark";
+      NSWindowShouldDragOnGesture = true;
       InitialKeyRepeat = 15;
-      AppleKeyboardUIMode = 3;
+      AppleKeyboardUIMode = 2;
       KeyRepeat = 2;
       NSAutomaticCapitalizationEnabled = false;
       NSAutomaticDashSubstitutionEnabled = false;
@@ -48,9 +51,6 @@
       NSAutomaticQuoteSubstitutionEnabled = false;
       NSAutomaticSpellingCorrectionEnabled = false;
       _HIHideMenuBar = true;
-      AppleShowAllFiles = true;
-      AppleShowAllExtensions = true;
-      "com.apple.sound.beep.volume" = 0.7788008;
       "com.apple.trackpad.scaling" = 3.0;
       "com.apple.swipescrolldirection" = false;
     };
