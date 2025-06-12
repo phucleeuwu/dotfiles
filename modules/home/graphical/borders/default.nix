@@ -1,6 +1,5 @@
-_:{
+_: {
   imports = [
     ./jankyborders/default.nix
   ];
 }
-

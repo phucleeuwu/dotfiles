@@ -1,5 +1,9 @@
-{ config, lib, flake, ... }:
-let
+{
+  config,
+  lib,
+  flake,
+  ...
+}: let
   namespace = flake.config.me.namespace;
 in {
   options."${namespace}".graphical.borders.jankyborders.enable = lib.mkEnableOption "jankyborders";

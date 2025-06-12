@@ -1,6 +1,9 @@
-{ config, lib, flake, ... }:
-
-let
+{
+  config,
+  lib,
+  flake,
+  ...
+}: let
   namespace = flake.config.me.namespace;
 in {
   options.${namespace}.terminal.editors.neovim = {
@@ -8,15 +11,15 @@ in {
     nvchad.enable = lib.mkEnableOption "neovim.nvchad";
   };
   config = lib.mkMerge [
-(lib.mkIf (
-  config.${flake.config.me.namespace}.terminal.editors.neovim.lazyvim.enable 
-  || config.${flake.config.me.namespace}.terminal.editors.neovim.nvchad.enable
-) {
-  home = {
-    sessionVariables.EDITOR = "nvim";
-  shellAliases.vi = "nvim";
+    (lib.mkIf (
+        config.${flake.config.me.namespace}.terminal.editors.neovim.lazyvim.enable
+        || config.${flake.config.me.namespace}.terminal.editors.neovim.nvchad.enable
+      ) {
+        home = {
+          sessionVariables.EDITOR = "nvim";
+          shellAliases.vi = "nvim";
         };
-})
+      })
     (lib.mkIf config."${namespace}".terminal.editors.neovim.lazyvim.enable {
       programs.lazyvim = {
         enable = true;

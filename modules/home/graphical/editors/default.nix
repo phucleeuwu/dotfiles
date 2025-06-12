@@ -3,4 +3,3 @@
     ./zed-editor/default.nix
   ];
 }
-

@@ -1,7 +1,7 @@
 {
-pkgs,
-flake,
-...
+  pkgs,
+  flake,
+  ...
 }: {
   imports = [
     ./graphical/default.nix

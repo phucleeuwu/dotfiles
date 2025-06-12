@@ -7,4 +7,3 @@
     ./tools/default.nix
   ];
 }
-
