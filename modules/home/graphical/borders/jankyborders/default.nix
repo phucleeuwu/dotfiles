@@ -4,7 +4,7 @@
   flake,
   ...
 }: let
-  namespace = flake.config.me.namespace;
+  inherit (flake.config.me) namespace;
 in {
   options."${namespace}".graphical.borders.jankyborders.enable = lib.mkEnableOption "jankyborders";
   config = lib.mkIf config."${namespace}".graphical.borders.jankyborders.enable {

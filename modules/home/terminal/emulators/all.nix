@@ -1,5 +1,5 @@
 { config, flake, ... }:
-let namespace = flake.config.me.namespace;
+let inherit (flake.config.me) namespace;
 in {
   programs = {
     wezterm = {

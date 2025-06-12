@@ -4,7 +4,7 @@
   flake,
   ...
 }: let
-  namespace = flake.config.me.namespace;
+  inherit (flake.config.me) namespace;
 in {
   options.${namespace}.graphical.bars.simplebar.enable = lib.mkEnableOption "simplebar";
   config =

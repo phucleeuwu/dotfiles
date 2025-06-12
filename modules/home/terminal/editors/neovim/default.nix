@@ -4,7 +4,7 @@
   flake,
   ...
 }: let
-  namespace = flake.config.me.namespace;
+  inherit (flake.config.me) namespace;
 in {
   options.${namespace}.terminal.editors.neovim = {
     lazyvim.enable = lib.mkEnableOption "neovim.lazyvim";

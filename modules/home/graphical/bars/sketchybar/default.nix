@@ -1,6 +1,6 @@
 { config, pkgs, lib, flake, ... }:
 let
-  namespace = flake.config.me.namespace;
+  inherit (flake.config.me) namespace;
 in {
   options."${namespace}".graphical.bars.sketchybar.enable = lib.mkEnableOption "sketchybar";
   config = lib.mkIf config."${namespace}".graphical.bars.sketchybar.enable {
