@@ -6,10 +6,11 @@
   ...
 }: let
   inherit (flake) inputs;
+  namespace = flake.config.me.namespace;
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
 in {
-  options.${flake.config.me.namespace}.graphical.apps.spotify.enable = lib.mkEnableOption "spotify";
-  config = lib.mkIf config.${flake.config.me.namespace}.graphical.apps.spotify.enable {
+  options.${namespace}.graphical.apps.spotify.enable = lib.mkEnableOption "spotify";
+  config = lib.mkIf config.${namespace}.graphical.apps.spotify.enable {
     programs.spicetify = {
       enable = true;
       theme = spicePkgs.themes.catppuccin;

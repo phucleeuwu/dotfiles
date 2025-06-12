@@ -83,9 +83,15 @@
       };
     };
     graphical = {
+      apps = {
+        kodi.enable = false;
+        obs-studio.enable = false;
+        qutebrowser.enable = false;
+        spotify.enable = true;
+      };
       bars = {
         sketchybar.enable = false;
-        simplebar.enable = true;
+        simplebar.enable = false;
       };
       borders = {
         jankyborders.enable = true;
