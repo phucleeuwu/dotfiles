@@ -1,11 +1,9 @@
-{
-  config,
-  flake,
-  ...
-}: {
+{ config, flake, ... }:
+let namespace = flake.config.me.namespace;
+in {
   programs = {
     wezterm = {
-      inherit (config.${flake.config.me.namespace}.terminal.emulators.wezterm) enable;
+      inherit (config.${namespace}.terminal.emulators.wezterm) enable;
       extraConfig = ''
         local wezterm = require 'wezterm'
         local config = {
@@ -19,7 +17,7 @@
       '';
     };
     kitty = {
-      inherit (config.${flake.config.me.namespace}.terminal.emulators.kitty) enable;
+      inherit (config.${namespace}.terminal.emulators.kitty) enable;
       font = {
         name = "Maple Mono";
         size = 19;
@@ -30,7 +28,7 @@
       };
     };
     ghostty = {
-      inherit (config.${flake.config.me.namespace}.terminal.emulators.ghostty) enable;
+      inherit (config.${namespace}.terminal.emulators.ghostty) enable;
       package = null; # Until ghostty is available in darwin
       settings = {
         font-family = "Maple Mono";

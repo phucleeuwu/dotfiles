@@ -12,8 +12,8 @@ in {
   };
   config = lib.mkMerge [
     (lib.mkIf (
-        config.${flake.config.me.namespace}.terminal.editors.neovim.lazyvim.enable
-        || config.${flake.config.me.namespace}.terminal.editors.neovim.nvchad.enable
+        config.${namespace}.terminal.editors.neovim.lazyvim.enable
+        || config.${namespace}.terminal.editors.neovim.nvchad.enable
       ) {
         home = {
           sessionVariables.EDITOR = "nvim";
