@@ -1,4 +1,4 @@
-{ config, pkgs, lib, flake, ... }:
+{ config, lib, flake, ... }:
 let
   namespace = flake.config.me.namespace;
   in{
