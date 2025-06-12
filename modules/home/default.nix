@@ -1,13 +1,11 @@
 {
-  pkgs,
-  flake,
-  ...
+pkgs,
+flake,
+...
 }: {
   imports = [
-    ./cli/default.nix
-    ./gui/default.nix
-    ./shell/default.nix
-    ./WM/default.nix
+    ./graphical/default.nix
+    ./terminal/default.nix
   ];
   xdg.enable = true;
   home = {
@@ -28,23 +26,6 @@
 
   # config
   ${flake.config.me.namespace} = {
-    WM = {
-      darwin.enable = true;
-      linux.enable = false;
-    };
-    shell = {
-      zsh.enable = false;
-      fish.enable = true;
-      nushell.enable = false;
-      prompt = {
-        starship.enable = true;
-        oh-my-posh.enable = false;
-      };
-      multiplexer = {
-        tmux.enable = false;
-        zellij.enable = false;
-      };
-    };
     cli = {
       git = {
         enable = true;
@@ -72,26 +53,52 @@
       gh-dash.enable = true;
       jujutsu.enable = false;
       btop.enable = false;
-      helix.enable = false;
       navi.enable = false;
     };
     terminal = {
-      wezterm.enable = false;
-      kitty.enable = false;
-      ghostty.enable = true;
-    };
-    editor = {
-      zed-editor.enable = false;
-      neovim = {
-        lazyvim.enable = true;
-        nvchad.enable = false;
+      editors = {
+        neovim = {
+          lazyvim.enable = true;
+          nvchad.enable = false;
+        };
+        helix.enable = false;
+      };
+      emulators = {
+        wezterm.enable = false;
+        kitty.enable = false;
+        ghostty.enable = true;
+      };
+      multiplexers = {
+        tmux.enable = false;
+        zellij.enable = true;
+      };
+      shells = {
+        zsh.enable = false;
+        fish.enable = true;
+        nushell.enable = false;
+        prompts = {
+          starship.enable = true;
+          oh-my-posh.enable = false;
+        };
       };
     };
-    gui = {
-      obs-studio.enable = false;
-      qutebrowser.enable = false;
-      kodi.enable = false;
-      spotify.enable = true;
+    graphical = {
+      bars = {
+        sketchybar.enable = false;
+        simplebar.enable = true;
+      };
+      borders = {
+        jankyborders.enable = true;
+      };
+      editors = {
+        zed-editor.enable = false;
+      };
+      screenlockers = {
+        hyprlock.enable = false;
+      };
+      wms = {
+        aerospace.enable = true;
+      };
     };
   };
 }

@@ -1,0 +1,40 @@
+{
+  config,
+  pkgs,
+  lib,
+  flake,
+  ...
+}: {
+  options.${flake.config.me.namespace}.graphical.bars.sketchybar.enable = lib.mkEnableOption "sketchybar";
+  config = lib.mkIf config.${flake.config.me.namespace}.graphical.bars.sketchybar.enable {
+    home.packages = with pkgs; [
+      sketchybar-app-font
+      nowplaying-cli
+      switchaudio-osx
+    ];
+    programs.sketchybar = {
+      enable = false;
+      configType = "lua";
+      config = {
+        source = ./config;
+        recursive = true;
+      };
+      extraPackages = with pkgs; [
+        aerospace
+        nowplaying-cli
+        switchaudio-osx
+      ];
+    };
+    xdg.configFile = {
+      "sketchybar/helpers/icon_map.lua".source = "${pkgs.sketchybar-app-font}/lib/sketchybar-app-font/icon_map.lua";
+      "sketchybar/sketchybarrc" = {
+        executable = true;
+        text = ''
+          #!/usr/bin/env lua
+          require("helpers")
+          require("init")
+        '';
+      };
+    };
+  };
+}
