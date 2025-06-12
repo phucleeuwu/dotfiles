@@ -1,5 +1,9 @@
-{ config, flake, ... }:
-let inherit (flake.config.me) namespace;
+{
+  config,
+  flake,
+  ...
+}: let
+  inherit (flake.config.me) namespace;
 in {
   programs = {
     wezterm = {
