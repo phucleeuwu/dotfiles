@@ -18,9 +18,7 @@ in {
             "-c"
             "${lib.getExe pkgs.sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
           ];
-          on-focus-changed = [
-            "exec-and-forget ${lib.getExe pkgs.sketchybar} --trigger aerospace_focus_change"
-          ];
+          on-focus-changed = ["exec-and-forget ${lib.getExe pkgs.sketchybar} --trigger aerospace_focus_change"];
           gaps.outer.top = 45;
         })
         (lib.mkIf config.${namespace}.graphical.bars.simplebar.enable {
@@ -29,9 +27,7 @@ in {
             "-c"
             "osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"
           ];
-          on-focus-changed = [
-            "exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"
-          ];
+          on-focus-changed = ["exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"];
           gaps.outer.top = 45;
         })
         {
