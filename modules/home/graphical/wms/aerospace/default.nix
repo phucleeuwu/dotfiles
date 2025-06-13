@@ -28,7 +28,7 @@ in {
             "osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"
           ];
           on-focus-changed = ["exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"];
-          gaps.outer.top = 45;
+          gaps.outer.top = 30;
         })
         {
           start-at-login = true;

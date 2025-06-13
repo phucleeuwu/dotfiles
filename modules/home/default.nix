@@ -91,7 +91,7 @@
       };
       bars = {
         sketchybar.enable = false;
-        simplebar.enable = false;
+        simplebar.enable = true;
       };
       borders = {
         jankyborders.enable = true;
