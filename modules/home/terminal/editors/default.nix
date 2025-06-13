@@ -8,8 +8,8 @@
 in {
   options.${namespace}.terminal.editors = {
     neovim = {
-    lazyvim.enable = lib.mkEnableOption "neovim.lazyvim";
-    nvchad.enable = lib.mkEnableOption "neovim.nvchad";
+      lazyvim.enable = lib.mkEnableOption "neovim.lazyvim";
+      nvchad.enable = lib.mkEnableOption "neovim.nvchad";
     };
     helix.enable = lib.mkEnableOption "helix";
   };
@@ -22,12 +22,12 @@ in {
         home.shellAliases.vi = "nvim";
       })
     (lib.mkIf (
-      !(config.${namespace}.terminal.editors.neovim.lazyvim.enable
-        || config.${namespace}.terminal.editors.neovim.nvchad.enable)
-      && config.${namespace}.terminal.editors.helix.enable
-    ) {
-      home.sessionVariables.EDITOR = "hx";
-    })
+        !(config.${namespace}.terminal.editors.neovim.lazyvim.enable
+          || config.${namespace}.terminal.editors.neovim.nvchad.enable)
+        && config.${namespace}.terminal.editors.helix.enable
+      ) {
+        home.sessionVariables.EDITOR = "hx";
+      })
     {
       programs = lib.mkMerge [
         (lib.mkIf config.${namespace}.terminal.editors.neovim.lazyvim.enable {
@@ -58,25 +58,25 @@ in {
           };
         })
         (lib.mkIf config.${namespace}.terminal.editors.helix.enable {
-    helix = {
-      enable = true;
-      settings = {
-        editor = {
-          line-number = "relative";
-          cursorline = true;
-          color-modes = true;
-          lsp.display-messages = true;
-          cursor-shape = {
-            insert = "bar";
-            normal = "block";
-            select = "underline";
+          helix = {
+            enable = true;
+            settings = {
+              editor = {
+                line-number = "relative";
+                cursorline = true;
+                color-modes = true;
+                lsp.display-messages = true;
+                cursor-shape = {
+                  insert = "bar";
+                  normal = "block";
+                  select = "underline";
+                };
+                indent-guides = {
+                  render = true;
+                };
+              };
+            };
           };
-          indent-guides = {
-            render = true;
-          };
-        };
-      };
-    };
         })
       ];
     }
