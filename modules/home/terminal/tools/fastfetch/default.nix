@@ -2,20 +2,20 @@
 let
   namespace = flake.config.me.namespace;
 in {
-  options.${namespace}.cli.fastfetch = {
+  options.${namespace}.terminal.tools.fastfetch = {
     jakoolit.enable = lib.mkEnableOption "jakoolit.fastfetch";
     hyde.enable = lib.mkEnableOption "hyde.fastfetch";
     ml4w.enable = lib.mkEnableOption "ml4w.fastfetch";
   };
   config = lib.mkIf (
-    config.${namespace}.cli.fastfetch.jakoolit.enable
-    || config.${namespace}.cli.fastfetch.hyde.enable
-    || config.${namespace}.cli.fastfetch.ml4w.enable
+    config.${namespace}.terminal.tools.fastfetch.jakoolit.enable
+    || config.${namespace}.terminal.tools.fastfetch.hyde.enable
+    || config.${namespace}.terminal.tools.fastfetch.ml4w.enable
   ) {
     programs.fastfetch = {
       enable = true;
       settings = lib.mkMerge [
-        (lib.mkIf config.${namespace}.cli.fastfetch.hyde.enable {
+        (lib.mkIf config.${namespace}.terminal.tools.fastfetch.hyde.enable {
           display.separator = " : ";
           modules = [
             {
@@ -129,7 +129,7 @@ in {
           ];
         })
 
-        (lib.mkIf config.${namespace}.cli.fastfetch.ml4w.enable {
+        (lib.mkIf config.${namespace}.terminal.tools.fastfetch.ml4w.enable {
           logo.padding.top = 2;
           display.separator = " ➜  ";
           modules = [
@@ -223,7 +223,7 @@ in {
           ];
         })
 
-        (lib.mkIf config.${namespace}.cli.fastfetch.jakoolit.enable {
+        (lib.mkIf config.${namespace}.terminal.tools.fastfetch.jakoolit.enable {
           display.separator = " 󰑃  ";
           modules = [
             "break"

@@ -37,11 +37,6 @@
       carapace.enable = true;
       clock-rs.enable = true;
       eza.enable = true;
-      fastfetch = {
-        jakoolit.enable = true;
-        hyde.enable = false;
-        ml4w.enable = false;
-      };
       fd.enable = true;
       fzf.enable = true;
       lazygit.enable = true;
@@ -80,6 +75,13 @@
           starship.enable = true;
           oh-my-posh.enable = false;
         };
+      };
+      tools = {
+      fastfetch = {
+        jakoolit.enable = false;
+        hyde.enable = true;
+        ml4w.enable = false;
+      };
       };
     };
     graphical = {
