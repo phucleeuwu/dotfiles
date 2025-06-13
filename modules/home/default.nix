@@ -77,11 +77,11 @@
         };
       };
       tools = {
-      fastfetch = {
-        jakoolit.enable = false;
-        hyde.enable = true;
-        ml4w.enable = false;
-      };
+        fastfetch = {
+          jakoolit.enable = false;
+          hyde.enable = true;
+          ml4w.enable = false;
+        };
       };
     };
     graphical = {
