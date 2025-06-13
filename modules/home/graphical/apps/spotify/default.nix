@@ -19,8 +19,8 @@ in {
         adblock
         keyboardShortcut
         hidePodcasts
-        beautifulLyrics
       ];
+      enabledCustomApps = with spicePkgs.apps; [lyricsPlus];
     };
   };
 }
