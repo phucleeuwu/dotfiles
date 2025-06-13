@@ -1,6 +1,6 @@
 { config, lib, flake, ... }:
 let
-  namespace = flake.config.me.namespace;
+  inherit (flake.config.me) namespace;
 in {
   options.${namespace}.terminal.tools.fastfetch = {
     jakoolit.enable = lib.mkEnableOption "jakoolit.fastfetch";
