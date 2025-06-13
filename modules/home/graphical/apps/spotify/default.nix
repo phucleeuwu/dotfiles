@@ -6,7 +6,7 @@
   ...
 }: let
   inherit (flake) inputs;
-  namespace = flake.config.me.namespace;
+  inherit (flake.config.me) namespace;
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
 in {
   options.${namespace}.graphical.apps.spotify.enable = lib.mkEnableOption "spotify";
