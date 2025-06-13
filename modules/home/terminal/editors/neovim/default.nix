@@ -1,5 +1,9 @@
-{ config, lib, flake, ... }:
-let
+{
+  config,
+  lib,
+  flake,
+  ...
+}: let
   inherit (flake.config.me) namespace;
 in {
   options.${namespace}.terminal.editors.neovim = {
@@ -8,12 +12,12 @@ in {
   };
   config = lib.mkMerge [
     (lib.mkIf (
-      config.${namespace}.terminal.editors.neovim.lazyvim.enable
-      || config.${namespace}.terminal.editors.neovim.nvchad.enable
-    ) {
-      home.sessionVariables.EDITOR = "nvim";
-      home.shellAliases.vi = "nvim";
-    })
+        config.${namespace}.terminal.editors.neovim.lazyvim.enable
+        || config.${namespace}.terminal.editors.neovim.nvchad.enable
+      ) {
+        home.sessionVariables.EDITOR = "nvim";
+        home.shellAliases.vi = "nvim";
+      })
     {
       programs = lib.mkMerge [
         (lib.mkIf config.${namespace}.terminal.editors.neovim.lazyvim.enable {
