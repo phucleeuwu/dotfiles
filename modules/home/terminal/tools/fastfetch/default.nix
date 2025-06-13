@@ -11,8 +11,7 @@ in {
     hyde.enable = lib.mkEnableOption "hyde.fastfetch";
     ml4w.enable = lib.mkEnableOption "ml4w.fastfetch";
   };
-  config =
-    lib.mkIf (
+  config = lib.mkIf (
       config.${namespace}.terminal.tools.fastfetch.jakoolit.enable
       || config.${namespace}.terminal.tools.fastfetch.hyde.enable
       || config.${namespace}.terminal.tools.fastfetch.ml4w.enable
