@@ -88,6 +88,7 @@
         obs-studio.enable = false;
         qutebrowser.enable = false;
         spotify.enable = true;
+        zed-editor.enable = false;
       };
       bars = {
         sketchybar.enable = false;
@@ -95,9 +96,6 @@
       };
       borders = {
         jankyborders.enable = true;
-      };
-      editors = {
-        zed-editor.enable = false;
       };
       screenlockers = {
         hyprlock.enable = false;

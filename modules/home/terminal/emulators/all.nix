@@ -12,7 +12,7 @@ in {
         local wezterm = require 'wezterm'
         local config = {
           font = wezterm.font 'Maple Mono',
-          font_size = 19,
+          font_size = 18,
           window_decorations = "RESIZE",
           enable_tab_bar = false,
           window_close_confirmation = 'NeverPrompt',
@@ -24,7 +24,7 @@ in {
       inherit (config.${namespace}.terminal.emulators.kitty) enable;
       font = {
         name = "Maple Mono";
-        size = 19;
+        size = 18;
       };
       settings = {
         hide_window_decorations = "titlebar-only";
@@ -36,7 +36,7 @@ in {
       package = null; # Until ghostty is available in darwin
       settings = {
         font-family = "Maple Mono";
-        font-size = 19;
+        font-size = 18;
         mouse-hide-while-typing = true;
         macos-titlebar-style = "hidden";
         macos-option-as-alt = "left";
