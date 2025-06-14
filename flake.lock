@@ -264,8 +264,25 @@
         "nix4nvchad": "nix4nvchad",
         "nixos-unified": "nixos-unified",
         "nixpkgs": "nixpkgs_2",
+        "simple-bar": "simple-bar",
         "spicetify-nix": "spicetify-nix",
         "systems": "systems_3"
+      }
+    },
+    "simple-bar": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1749386826,
+        "narHash": "sha256-7fIqm87mc3xUr2fjUL4CES3hXyQYQSk+qHdhzlHSQB0=",
+        "owner": "Jean-Tinland",
+        "repo": "simple-bar",
+        "rev": "ea4e9938d7e62735382738a1686b7be4b5e85de7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Jean-Tinland",
+        "repo": "simple-bar",
+        "type": "github"
       }
     },
     "spicetify-nix": {

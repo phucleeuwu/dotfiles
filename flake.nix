@@ -30,6 +30,10 @@
       url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    simple-bar = {
+      url = "github:Jean-Tinland/simple-bar";
+      flake = false;
+    };
   };
   outputs = inputs:
     inputs.nixos-unified.lib.mkFlake {

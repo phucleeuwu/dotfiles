@@ -7,8 +7,8 @@
 }: let
   inherit (flake.config.me) namespace;
 in {
-  options."${namespace}".graphical.bars.sketchybar.enable = lib.mkEnableOption "sketchybar";
-  config = lib.mkIf config."${namespace}".graphical.bars.sketchybar.enable {
+  options.${namespace}.graphical.bars.sketchybar.enable = lib.mkEnableOption "sketchybar";
+  config = lib.mkIf config.${namespace}.graphical.bars.sketchybar.enable {
     home.packages = with pkgs; [
       sketchybar-app-font
       nowplaying-cli
