@@ -21,8 +21,7 @@
       };
       plugins = [
         {
-          name = "fzf-tab";
-          inherit (pkgs.zsh-fzf-tab) src;
+          inherit (pkgs.zsh-fzf-tab) name src;
         }
       ];
     };
@@ -35,8 +34,7 @@
     ";
       plugins = [
         {
-          name = "fzf-fish";
-          inherit (pkgs.fishPlugins.fzf-fish) src;
+          inherit (pkgs.fishPlugins.fzf-fish) name src;
         }
       ];
     };
