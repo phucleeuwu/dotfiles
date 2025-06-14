@@ -49,12 +49,18 @@ in {
                 copilot-chat.enable = true;
               };
             };
+            pluginsFile."catppuccin.lua".text = ''return{"LazyVim/LazyVim",opts={colorscheme="catppuccin"}}'';
           };
         })
         (lib.mkIf config.${namespace}.terminal.editors.neovim.nvchad.enable {
           nvchad = {
             enable = true;
             backup = false;
+            chadrcConfig = ''
+            local M = {}
+            M.base46 = { theme = "catppuccin" }
+            return M
+            '';
           };
         })
         (lib.mkIf config.${namespace}.terminal.editors.helix.enable {
