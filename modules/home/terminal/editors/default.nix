@@ -57,9 +57,9 @@ in {
             enable = true;
             backup = false;
             chadrcConfig = ''
-            local M = {}
-            M.base46 = { theme = "catppuccin" }
-            return M
+              local M = {}
+              M.base46 = { theme = "catppuccin" }
+              return M
             '';
           };
         })
