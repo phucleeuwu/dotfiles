@@ -4,7 +4,9 @@
   lib,
   flake,
   ...
-}: let inherit (flake.config.me) namespace; in {
+}: let
+  inherit (flake.config.me) namespace;
+in {
   options.${namespace}.terminal.tools.bat.enable = lib.mkEnableOption "bat";
   config = lib.mkIf config.${namespace}.terminal.tools.bat.enable {
     programs.bat = {

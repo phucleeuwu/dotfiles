@@ -3,7 +3,9 @@
   lib,
   flake,
   ...
-}: let inherit (flake.config.me) namespace; in {
+}: let
+  inherit (flake.config.me) namespace;
+in {
   options.${namespace}.terminal.tools.tmux = lib.mkEnableOption "tmux";
   options.${namespace}.terminal.tools.zellij = lib.mkEnableOption "zellij";
   config = lib.mkMerge [

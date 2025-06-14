@@ -4,7 +4,9 @@
   lib,
   flake,
   ...
-}: let inherit (flake.config.me) namespace; in {
+}: let
+  inherit (flake.config.me) namespace;
+in {
   options.${namespace}.terminal.tools.yazi.enable = lib.mkEnableOption "yazi";
   config = lib.mkIf config.${namespace}.terminal.tools.yazi.enable {
     programs.yazi = {

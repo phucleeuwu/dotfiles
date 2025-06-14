@@ -3,7 +3,9 @@
   lib,
   flake,
   ...
-}: let inherit (flake.config.me) namespace; in {
+}: let
+  inherit (flake.config.me) namespace;
+in {
   options.${namespace}.terminal.tools.clock-rs.enable = lib.mkEnableOption "clock-rs";
   config = lib.mkIf config.${namespace}.terminal.tools.clock-rs.enable {
     programs.clock-rs = {

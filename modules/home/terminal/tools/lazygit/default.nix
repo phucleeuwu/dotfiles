@@ -3,7 +3,9 @@
   lib,
   flake,
   ...
-}: let inherit (flake.config.me) namespace; in {
+}: let
+  inherit (flake.config.me) namespace;
+in {
   options.${namespace}.terminal.tools.lazygit.enable = lib.mkEnableOption "lazygit";
   config = lib.mkIf config.${namespace}.terminal.tools.lazygit.enable {
     programs.lazygit = {
