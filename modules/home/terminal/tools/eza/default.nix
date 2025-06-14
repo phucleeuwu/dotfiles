@@ -3,9 +3,9 @@
   lib,
   flake,
   ...
-}: {
-  options.${flake.config.me.namespace}.cli.eza.enable = lib.mkEnableOption "eza";
-  config = lib.mkIf config.${flake.config.me.namespace}.cli.eza.enable {
+}: let inherit (flake.config.me) namespace; in {
+  options.${namespace}.terminal.tools.eza.enable = lib.mkEnableOption "eza";
+  config = lib.mkIf config.${namespace}.terminal.tools.eza.enable {
     programs.eza = {
       enable = true;
       git = true;

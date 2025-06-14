@@ -4,9 +4,9 @@
   lib,
   flake,
   ...
-}: {
-  options.${flake.config.me.namespace}.cli.bat.enable = lib.mkEnableOption "bat";
-  config = lib.mkIf config.${flake.config.me.namespace}.cli.bat.enable {
+}: let inherit (flake.config.me) namespace; in {
+  options.${namespace}.terminal.tools.bat.enable = lib.mkEnableOption "bat";
+  config = lib.mkIf config.${namespace}.terminal.tools.bat.enable {
     programs.bat = {
       enable = true;
       extraPackages = [pkgs.bat-extras.batgrep];

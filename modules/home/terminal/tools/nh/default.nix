@@ -3,12 +3,12 @@
   lib,
   flake,
   ...
-}: {
-  options.${flake.config.me.namespace}.cli.nh.enable = lib.mkEnableOption "nh";
-  config = lib.mkIf config.${flake.config.me.namespace}.cli.nh.enable {
+}: let inherit (flake.config.me) namespace; in {
+  options.${namespace}.terminal.tools.nh.enable = lib.mkEnableOption "nh";
+  config = lib.mkIf config.${namespace}.terminal.tools.nh.enable {
     programs.nh = {
       enable = true;
-      flake = builtins.toString ../../../..;
+      flake = builtins.toString ../../../../../..;
       clean.enable = true;
     };
   };

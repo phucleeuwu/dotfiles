@@ -3,9 +3,9 @@
   lib,
   flake,
   ...
-}: {
-  options.${flake.config.me.namespace}.cli.carapace.enable = lib.mkEnableOption "carapace";
-  config = lib.mkIf config.${flake.config.me.namespace}.cli.carapace.enable {
+}: let inherit (flake.config.me) namespace; in {
+  options.${namespace}.terminal.tools.carapace.enable = lib.mkEnableOption "carapace";
+  config = lib.mkIf config.${namespace}.terminal.tools.carapace.enable {
     programs.carapace.enable = true;
   };
 }

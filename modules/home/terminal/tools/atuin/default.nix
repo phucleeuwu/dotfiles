@@ -3,9 +3,9 @@
   lib,
   flake,
   ...
-}: {
-  options.${flake.config.me.namespace}.cli.atuin.enable = lib.mkEnableOption "cli.atuin";
-  config = lib.mkIf config.${flake.config.me.namespace}.cli.atuin.enable {
+}: let inherit (flake.config.me) namespace; in {
+  options.${namespace}.terminal.tools.atuin.enable = lib.mkEnableOption "atuin";
+  config = lib.mkIf config.${namespace}.terminal.tools.atuin.enable {
     programs.atuin = {
       enable = true;
       settings = {

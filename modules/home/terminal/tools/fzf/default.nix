@@ -3,9 +3,9 @@
   lib,
   flake,
   ...
-}: {
-  options.${flake.config.me.namespace}.cli.fzf.enable = lib.mkEnableOption "fzf";
-  config = lib.mkIf config.${flake.config.me.namespace}.cli.fzf.enable {
+}: let inherit (flake.config.me) namespace; in {
+  options.${namespace}.terminal.tools.fzf.enable = lib.mkEnableOption "fzf";
+  config = lib.mkIf config.${namespace}.terminal.tools.fzf.enable {
     programs.fzf = {
       enable = true;
       defaultOptions = [

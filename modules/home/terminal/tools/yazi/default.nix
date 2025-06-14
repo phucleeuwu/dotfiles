@@ -4,9 +4,9 @@
   lib,
   flake,
   ...
-}: {
-  options.${flake.config.me.namespace}.cli.yazi.enable = lib.mkEnableOption "yazi";
-  config = lib.mkIf config.${flake.config.me.namespace}.cli.yazi.enable {
+}: let inherit (flake.config.me) namespace; in {
+  options.${namespace}.terminal.tools.yazi.enable = lib.mkEnableOption "yazi";
+  config = lib.mkIf config.${namespace}.terminal.tools.yazi.enable {
     programs.yazi = {
       enable = true;
       shellWrapperName = "y";

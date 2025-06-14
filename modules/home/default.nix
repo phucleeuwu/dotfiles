@@ -26,30 +26,6 @@
 
   # config
   ${flake.config.me.namespace} = {
-    cli = {
-      git = {
-        enable = true;
-        delta.enable = true;
-      };
-      yazi.enable = true;
-      atuin.enable = true;
-      bat.enable = true;
-      carapace.enable = true;
-      clock-rs.enable = true;
-      eza.enable = true;
-      fd.enable = true;
-      fzf.enable = true;
-      lazygit.enable = true;
-      pay-respects.enable = true;
-      ripgrep.enable = true;
-      zoxide.enable = true;
-      tealdeer.enable = true;
-      nh.enable = true;
-      gh-dash.enable = true;
-      jujutsu.enable = false;
-      btop.enable = false;
-      navi.enable = false;
-    };
     terminal = {
       editors = {
         neovim = {
@@ -77,6 +53,28 @@
         };
       };
       tools = {
+        git = {
+          enable = true;
+          delta.enable = true;
+        };
+        yazi.enable = true;
+        atuin.enable = true;
+        bat.enable = true;
+        carapace.enable = true;
+        clock-rs.enable = true;
+        eza.enable = true;
+        fd.enable = true;
+        fzf.enable = true;
+        lazygit.enable = true;
+        pay-respects.enable = true;
+        ripgrep.enable = true;
+        zoxide.enable = true;
+        tealdeer.enable = true;
+        nh.enable = true;
+        gh-dash.enable = true;
+        jujutsu.enable = false;
+        btop.enable = false;
+        navi.enable = false;
         fastfetch = {
           jakoolit.enable = false;
           hyde.enable = true;

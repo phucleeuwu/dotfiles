@@ -3,9 +3,9 @@
   lib,
   flake,
   ...
-}: {
-  options.${flake.config.me.namespace}.cli.navi.enable = lib.mkEnableOption "navi";
-  config = lib.mkIf config.${flake.config.me.namespace}.cli.navi.enable {
+}: let inherit (flake.config.me) namespace; in {
+  options.${namespace}.terminal.tools.navi.enable = lib.mkEnableOption "navi";
+  config = lib.mkIf config.${namespace}.terminal.tools.navi.enable {
     programs.navi.enable = true;
   };
 }
