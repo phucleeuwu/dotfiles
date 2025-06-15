@@ -8,7 +8,7 @@
 in {
   options.${namespace}.terminal.multiplexers = {
     tmux.enable = lib.mkEnableOption "tmux";
-  zellij.enable = lib.mkEnableOption "zellij";
+    zellij.enable = lib.mkEnableOption "zellij";
   };
   config = lib.mkMerge [
     (lib.mkIf config.${namespace}.terminal.multiplexers.tmux.enable {
